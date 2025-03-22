@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://j3m2akuejogr"]
+
+[ext_resource type="Material" uid="uid://bqrea6ajwfep7" path="res://materials/floor_material.tres" id="1_0wfyh"]
+[ext_resource type="Material" uid="uid://erx11plvao0j" path="res://materials/wall_material.tres" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://7incfsglra4a" path="res://scenes/player/player.tscn" id="3_sugp2"]
+
+[node name="world" type="Node3D"]
+
+[node name="map" type="Node3D" parent="."]
+
+[node name="floor" type="CSGBox3D" parent="map"]
+material_override = ExtResource("1_0wfyh")
+use_collision = true
+size = Vector3(33.7893, 1, 32.9385)
+
+[node name="wall" type="CSGBox3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.3891, 2, 0)
+material_override = ExtResource("2_sugp2")
+use_collision = true
+size = Vector3(1, 3, 10)
+
+[node name="wall2" type="CSGBox3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.3891, 2, 0)
+material_override = ExtResource("2_sugp2")
+use_collision = true
+size = Vector3(1, 3, 10)
+
+[node name="wall3" type="CSGBox3D" parent="map"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.8891, 2, -4.5)
+material_override = ExtResource("2_sugp2")
+use_collision = true
+size = Vector3(1, 3, 8)
+
+[node name="wall4" type="CSGBox3D" parent="map"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.8891, 2, 4.5)
+material_override = ExtResource("2_sugp2")
+use_collision = true
+size = Vector3(1, 3, 8)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.51496, 0)
+omni_range = 74.8585
+
+[node name="sun" type="DirectionalLight3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 0.577231, 0.816581, 0, -0.816581, 0.577231, 0, 5.89466, 8.07093)
+
+[node name="Player" parent="." instance=ExtResource("3_sugp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.433342, 0.501718, -0.430424)
