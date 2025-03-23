@@ -1,10 +1,11 @@
 extends CharacterBody3D
 
 
-const SPEED = 3.0
+const SPEED = 10.0
 const JUMP_VELOCITY = 4.5
 
 var walking = false
+var running = false
 
 @onready var animation_player: AnimationPlayer = $visuals/playerModel/AnimationPlayer
 @onready var visuals: Node3D = $visuals
@@ -13,19 +14,21 @@ var walking = false
 func _ready() -> void:
 	print("we do get ready")
 	#set the duration of the blend time when going from the idle animation to walking animation
-	animation_player.set_blend_time("idle", "walk", 0.2)
-	animation_player.set_blend_time("walk","idle", 0.2)
+	animation_player.set_blend_time("idle", "run", 0.2)
+	animation_player.set_blend_time("run","idle", 0.2)
 
 	
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
+	#if not is_on_floor():
+		#velocity += get_gravity() * delta
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		#velocity.y = JUMP_VELOCITY
+
+
+
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -42,16 +45,16 @@ func _physics_process(delta: float) -> void:
 		
 		#if the state was not already "walking" when a direction is input, 
 		#then change state to walking
-		if !walking:
-			walking = true
-			animation_player.play("walk")
+		if !running:
+			running = true
+			animation_player.play("run")
 			
 	else: 
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		
-		if walking:
-			walking = false
+		if running:
+			running = false
 			animation_player.play("idle")
 
 
