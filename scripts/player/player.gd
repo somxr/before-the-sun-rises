@@ -27,13 +27,25 @@ func _physics_process(delta: float) -> void:
 	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		#velocity.y = JUMP_VELOCITY
 
-
+	
 
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("left", "right", "forward", "backward")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	
+	# I had the direction working based on the world transform basis
+	# since the camera's rotated 45 degrees, I want to rotate all the input by 45 degrees counter clockwise also
+	# using the rotation matrix multiplication explained at the top of this wikipedia page 
+	# https://en.wikipedia.org/wiki/Rotation_matrix 
+	# lazy solution, would be better to actually reference the camera and calculate the correct directions no matter what way it's rotated
+	var rotated_input = Vector2(
+	input_dir.x * cos(deg_to_rad(-45)) - input_dir.y * sin(deg_to_rad(-45)),
+	input_dir.x * sin(deg_to_rad(-45)) + input_dir.y * cos(deg_to_rad(-45))
+	)
+	var direction := (transform.basis * Vector3(rotated_input.x, 0, rotated_input.y)).normalized()
+	
+	
 	
 	#WALKING LOGIC
 	#when a direction is detected you can start walking
