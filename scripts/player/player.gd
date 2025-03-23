@@ -7,15 +7,16 @@ const JUMP_VELOCITY = 4.5
 var walking = false
 var running = false
 
-@onready var animation_player: AnimationPlayer = $visuals/playerModel/AnimationPlayer
+#@onready var animation_player: AnimationPlayer = $visuals/playerModel/AnimationPlayer
 @onready var visuals: Node3D = $visuals
 
 
 func _ready() -> void:
-	print("we do get ready")
+	pass
 	#set the duration of the blend time when going from the idle animation to walking animation
-	animation_player.set_blend_time("idle", "run", 0.2)
-	animation_player.set_blend_time("run","idle", 0.2)
+	#animation_player.set_blend_time("idle", "run", 0.2)
+	#animation_player.set_blend_time("run","idle", 0.2)
+
 
 	
 
@@ -59,7 +60,7 @@ func _physics_process(delta: float) -> void:
 		#then change state to walking
 		if !running:
 			running = true
-			animation_player.play("run")
+			#animation_player.play("run")
 			
 	else: 
 		velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -67,7 +68,7 @@ func _physics_process(delta: float) -> void:
 		
 		if running:
 			running = false
-			animation_player.play("idle")
+			#animation_player.play("idle")
 
 
 	move_and_slide()
