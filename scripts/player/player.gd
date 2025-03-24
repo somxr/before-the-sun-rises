@@ -16,6 +16,8 @@ var dash_duration = 0.2 # How long the dash lasts in seconds
 var dash_timer = 0.0     # Counts down to keep track of ending dash
 var dash_direction = Vector3.ZERO  # Stores the locked dash direction
 
+var dash_delay = 0.05        # Delay before reaching full speed (in seconds)
+var current_dash_speed = 0.0  # Current dash speed for smooth acceleration
 
 
 
@@ -59,8 +61,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("dash") and dash_cooldown_timer <= 0:
 		dashing=true
 		dash_cooldown_timer = dash_cooldown_duration 
-		dash_timer = dash_duration
+		dash_timer = dash_duration + dash_delay
 		dash_direction = direction
+		current_dash_speed = 0.0  # Reset dash speed
 		print("dash initiated")
 	
 	# Update dash timer if in the middle of a dash
@@ -70,8 +73,8 @@ func _physics_process(delta: float) -> void:
 			dashing = false
 			
 	# Movement based on state (dashing or normal)
-	if dashing:
-		# When dashing, move faster in the current direction
+	if dashing and dash_timer<dash_duration:
+		# When dashing, move faster in the saved dash direction
 		velocity.x = dash_direction.x * dash_speed
 		velocity.z = dash_direction.z * dash_speed
 		aiden_model.look_at(dash_direction + position)
