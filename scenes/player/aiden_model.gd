@@ -13,7 +13,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	
-	if get_parent().get_parent().running:
+	if get_parent().running:
 		$AnimationTree.set("parameters/state_anim/transition_request", "running")
 	else:
 		$AnimationTree.set("parameters/state_anim/transition_request", "idle")
