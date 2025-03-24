@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-const SPEED = 10.0
+const SPEED = 12.0
 const JUMP_VELOCITY = 4.5
 
 
@@ -17,7 +17,6 @@ var dash_timer = 0.0     # Counts down to keep track of ending dash
 var dash_direction = Vector3.ZERO  # Stores the locked dash direction
 
 var dash_delay = 0.05        # Delay before reaching full speed (in seconds)
-var current_dash_speed = 0.0  # Current dash speed for smooth acceleration
 
 
 
@@ -31,6 +30,22 @@ func _ready() -> void:
 	#animation_player.set_blend_time("idle", "run", 0.2)
 	#animation_player.set_blend_time("run","idle", 0.2)
 
+func handle_dashing(delta, direction):
+	if dash_cooldown_timer > 0:
+		dash_cooldown_timer -= delta
+	#if the dash was just input this frame and dash ability is cooled down to 0
+	if Input.is_action_just_pressed("dash") and dash_cooldown_timer <= 0:
+		dashing=true
+		dash_cooldown_timer = dash_cooldown_duration 
+		dash_timer = dash_duration + dash_delay
+		dash_direction = direction
+		print("dash initiated")
+	
+	# Update dash timer if in the middle of a dash
+	if dashing:
+		dash_timer -= delta
+		if dash_timer <= 0:
+			dashing = false
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -39,10 +54,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		#velocity.y = JUMP_VELOCITY
-	
-	if dash_cooldown_timer > 0:
-		dash_cooldown_timer -= delta
-		
+
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -57,20 +69,8 @@ func _physics_process(delta: float) -> void:
 	)
 	var direction := (transform.basis * Vector3(rotated_input.x, 0, rotated_input.y)).normalized()
 	
-	#if the dash was just input this frame and dash ability is cooled down to 0
-	if Input.is_action_just_pressed("dash") and dash_cooldown_timer <= 0:
-		dashing=true
-		dash_cooldown_timer = dash_cooldown_duration 
-		dash_timer = dash_duration + dash_delay
-		dash_direction = direction
-		current_dash_speed = 0.0  # Reset dash speed
-		print("dash initiated")
+	handle_dashing(delta, direction)
 	
-	# Update dash timer if in the middle of a dash
-	if dashing:
-		dash_timer -= delta
-		if dash_timer <= 0:
-			dashing = false
 			
 	# Movement based on state (dashing or normal)
 	if dashing and dash_timer<dash_duration:
