@@ -5,11 +5,13 @@ const SPEED = 12.0
 const JUMP_VELOCITY = 4.5
 
 
+# state variables
 var running = false
+var dashing = false
+var attacking = false
 
 #Dash variables
-var dashing = false
-var dash_cooldown_duration = 0.2 #cool down duration in seconds
+var dash_cooldown_duration = 0.8 #cool down duration in seconds
 var dash_cooldown_timer = 0.0 
 var dash_speed = 40.0    # How fast the dash moves
 var dash_duration = 0.2 # How long the dash lasts in seconds
@@ -36,6 +38,7 @@ func handle_dashing(delta, direction):
 	#if the dash was just input this frame and dash ability is cooled down to 0
 	if Input.is_action_just_pressed("dash") and dash_cooldown_timer <= 0:
 		dashing=true
+		attacking = false
 		dash_cooldown_timer = dash_cooldown_duration 
 		dash_timer = dash_duration + dash_delay
 		dash_direction = direction
@@ -46,6 +49,15 @@ func handle_dashing(delta, direction):
 		dash_timer -= delta
 		if dash_timer <= 0:
 			dashing = false
+
+func handle_attacking(delta, direction):
+	if Input.is_action_just_pressed("attack"):
+		attacking = true
+		dashing = false
+		running = false
+		print("Attack started!")
+		
+	
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -70,6 +82,7 @@ func _physics_process(delta: float) -> void:
 	var direction := (transform.basis * Vector3(rotated_input.x, 0, rotated_input.y)).normalized()
 	
 	handle_dashing(delta, direction)
+	handle_attacking(delta, direction)
 	
 			
 	# Movement based on state (dashing or normal)
@@ -78,7 +91,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = dash_direction.x * dash_speed
 		velocity.z = dash_direction.z * dash_speed
 		aiden_model.look_at(dash_direction + position)
-	
 	else: #normal running movement
 		#WALKING LOGIC: when a direction is detected you can start walking
 		if direction:
@@ -94,10 +106,6 @@ func _physics_process(delta: float) -> void:
 				#animation_player.play("run")
 				
 		else:
-			#this decelrates, takes velocity to 0
-			velocity.x = move_toward(velocity.x, 0, SPEED)
-			velocity.z = move_toward(velocity.z, 0, SPEED)
-			#if no direction detected but the state is running then the player just stopped moving so we update the state
 			if running:
 				running = false
 				#animation_player.play("idle")
