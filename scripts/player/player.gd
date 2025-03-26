@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-const SPEED = 12.0
+@export var run_speed = 12.0
 const JUMP_VELOCITY = 4.5
 
 
@@ -20,11 +20,22 @@ var dash_direction = Vector3.ZERO  # Stores the locked dash direction
 
 var dash_delay = 0.05        # Delay before reaching full speed (in seconds)
 
-
+#attack variables
+var attack_recovery = 0
+var attack_momentum = 3
 
 #this is the visual skin of the Player
 @onready var aiden_model: Node3D = $AidenModel
 
+func get_rotated_isometric_direction(input_dir) -> Vector3:
+	# I had the direction working based on the world transform basis since the camera's rotated 45 degrees, I want to rotate all the input by 45 degrees counter clockwise also
+	# using the rotation matrix multiplication explained at the top of this wikipedia page. This is lazier than actually referencing the camera to find the direction relative to it
+	# https://en.wikipedia.org/wiki/Rotation_matrix 
+	var rotated_input = Vector2(
+	input_dir.x * cos(deg_to_rad(-45)) - input_dir.y * sin(deg_to_rad(-45)),
+	input_dir.x * sin(deg_to_rad(-45)) + input_dir.y * cos(deg_to_rad(-45))
+	)
+	return (transform.basis * Vector3(rotated_input.x, 0, rotated_input.y)).normalized()
 
 func _ready() -> void:
 	pass
@@ -55,8 +66,13 @@ func handle_attacking(delta, direction):
 		attacking = true
 		dashing = false
 		running = false
+		attack_recovery = 0.5
 		print("Attack started!")
-		
+	
+	attack_recovery -= delta
+	
+	if attack_recovery <0:
+		attacking = false
 	
 
 func _physics_process(delta: float) -> void:
@@ -67,19 +83,11 @@ func _physics_process(delta: float) -> void:
 	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		#velocity.y = JUMP_VELOCITY
 
-
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("left", "right", "forward", "backward")
 	
-	# I had the direction working based on the world transform basis since the camera's rotated 45 degrees, I want to rotate all the input by 45 degrees counter clockwise also
-	# using the rotation matrix multiplication explained at the top of this wikipedia page. This is lazier than actually referencing the camera to find the direction relative to it
-	# https://en.wikipedia.org/wiki/Rotation_matrix 
-	var rotated_input = Vector2(
-	input_dir.x * cos(deg_to_rad(-45)) - input_dir.y * sin(deg_to_rad(-45)),
-	input_dir.x * sin(deg_to_rad(-45)) + input_dir.y * cos(deg_to_rad(-45))
-	)
-	var direction := (transform.basis * Vector3(rotated_input.x, 0, rotated_input.y)).normalized()
+	var direction := get_rotated_isometric_direction(input_dir)
 	
 	handle_dashing(delta, direction)
 	handle_attacking(delta, direction)
@@ -91,11 +99,14 @@ func _physics_process(delta: float) -> void:
 		velocity.x = dash_direction.x * dash_speed
 		velocity.z = dash_direction.z * dash_speed
 		aiden_model.look_at(dash_direction + position)
+	elif attacking:
+		velocity.x = direction.x * attack_momentum
+		velocity.z = direction.z * attack_momentum
 	else: #normal running movement
 		#WALKING LOGIC: when a direction is detected you can start walking
 		if direction:
-			velocity.x = direction.x * SPEED
-			velocity.z = direction.z * SPEED
+			velocity.x = direction.x * run_speed
+			velocity.z = direction.z * run_speed
 			
 			aiden_model.look_at(direction+position)
 			
@@ -106,6 +117,9 @@ func _physics_process(delta: float) -> void:
 				#animation_player.play("run")
 				
 		else:
+			velocity.x = 0
+			velocity.z = 0
+			#if no direction detected but the state is running then the player just stopped moving so we update the state
 			if running:
 				running = false
 				#animation_player.play("idle")
