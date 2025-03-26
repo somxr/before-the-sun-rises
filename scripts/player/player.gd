@@ -4,6 +4,7 @@ extends CharacterBody3D
 @export var run_speed = 12.0
 const JUMP_VELOCITY = 4.5
 
+var direction = Vector3(0,0,0)
 
 # state variables
 var running = false
@@ -21,8 +22,12 @@ var dash_direction = Vector3.ZERO  # Stores the locked dash direction
 var dash_delay = 0.05        # Delay before reaching full speed (in seconds)
 
 #attack variables
-var attack_recovery = 0
-var attack_momentum = 3
+var attack_recovery = 0.0
+var attack_momentum = 1.5
+var current_attack_momentum = 0.0
+
+var last_input_direction = Vector3(0,0,0)
+
 
 #this is the visual skin of the Player
 @onready var aiden_model: Node3D = $AidenModel
@@ -52,7 +57,7 @@ func handle_dashing(delta, direction):
 		attacking = false
 		dash_cooldown_timer = dash_cooldown_duration 
 		dash_timer = dash_duration + dash_delay
-		dash_direction = direction
+		dash_direction = last_input_direction
 		print("dash initiated")
 	
 	# Update dash timer if in the middle of a dash
@@ -62,16 +67,23 @@ func handle_dashing(delta, direction):
 			dashing = false
 
 func handle_attacking(delta, direction):
-	if Input.is_action_just_pressed("attack"):
+	if Input.is_action_just_pressed("attack") and attack_recovery <= 0.0:
 		attacking = true
 		dashing = false
 		running = false
-		attack_recovery = 0.5
-		print("Attack started!")
+		attack_recovery = 0.6
+		current_attack_momentum = attack_momentum
+		
 	
 	attack_recovery -= delta
 	
-	if attack_recovery <0:
+	if attack_recovery > 0.0:
+		current_attack_momentum = lerp(current_attack_momentum,0.0,0.1)
+	
+	if current_attack_momentum<0.1:
+		current_attack_momentum=0.0
+		
+	if attack_recovery <0.0:
 		attacking = false
 	
 
@@ -87,12 +99,16 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("left", "right", "forward", "backward")
 	
-	var direction := get_rotated_isometric_direction(input_dir)
+	if not attacking and not dashing:
+		direction = get_rotated_isometric_direction(input_dir)
+	
+	if direction != Vector3(0,0,0):
+		last_input_direction = direction
 	
 	handle_dashing(delta, direction)
 	handle_attacking(delta, direction)
 	
-			
+	
 	# Movement based on state (dashing or normal)
 	if dashing and dash_timer<dash_duration:
 		# When dashing, move faster in the saved dash direction
@@ -100,8 +116,8 @@ func _physics_process(delta: float) -> void:
 		velocity.z = dash_direction.z * dash_speed
 		aiden_model.look_at(dash_direction + position)
 	elif attacking:
-		velocity.x = direction.x * attack_momentum
-		velocity.z = direction.z * attack_momentum
+		velocity.x = last_input_direction.x * current_attack_momentum
+		velocity.z = last_input_direction.z * current_attack_momentum
 	else: #normal running movement
 		#WALKING LOGIC: when a direction is detected you can start walking
 		if direction:
