@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://wexfg3n2fj54"]
+
+[ext_resource type="PackedScene" uid="uid://cwk0gometigh2" path="res://assets/models/enemy/enemyModel1.glb" id="1_4a83h"]
+[ext_resource type="Script" uid="uid://cwx20gcy72efq" path="res://scenes/enemy/enemy.gd" id="1_a3pup"]
+
+[node name="enemy" type="Node3D"]
+script = ExtResource("1_a3pup")
+
+[node name="enemyModel1" parent="." instance=ExtResource("1_4a83h")]

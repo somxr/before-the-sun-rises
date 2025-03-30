@@ -12,7 +12,7 @@ var dashing = false
 var attacking = false
 
 #Dash variables
-var dash_cooldown_duration = 0.8 #cool down duration in seconds
+var dash_cooldown_duration = 0.5 #cool down duration in seconds
 var dash_cooldown_timer = 0.0 
 var dash_speed = 40.0    # How fast the dash moves
 var dash_duration = 0.2 # How long the dash lasts in seconds
@@ -23,11 +23,10 @@ var dash_delay = 0.05        # Delay before reaching full speed (in seconds)
 
 #attack variables
 var attack_recovery = 0.0
-var attack_momentum = 1.5
+var attack_momentum = 1.75
 var current_attack_momentum = 0.0
 
 var last_input_direction = Vector3(0,0,0)
-
 
 #this is the visual skin of the Player
 @onready var aiden_model: Node3D = $AidenModel
@@ -73,7 +72,6 @@ func handle_attacking(delta, direction):
 		running = false
 		attack_recovery = 0.6
 		current_attack_momentum = attack_momentum
-		
 	
 	attack_recovery -= delta
 	
@@ -106,7 +104,9 @@ func _physics_process(delta: float) -> void:
 		last_input_direction = direction
 	
 	handle_dashing(delta, direction)
-	handle_attacking(delta, direction)
+	
+	### Commenting the line below since we scrapped the attack mechanic ###
+	#handle_attacking(delta, direction)
 	
 	
 	# Movement based on state (dashing or normal)
@@ -139,6 +139,5 @@ func _physics_process(delta: float) -> void:
 			if running:
 				running = false
 				#animation_player.play("idle")
-
 
 	move_and_slide()
