@@ -11,8 +11,8 @@ var direction := Vector3.ZERO
 func _ready():
 	timer.wait_time = lifetime
 	timer.start()
-	print("Rock created with layers: ", impact_detector.collision_layer)
-	print("Rock looking for masks: ", impact_detector.collision_mask)
+	#print("Rock created with layers: ", impact_detector.collision_layer)
+	#print("Rock looking for masks: ", impact_detector.collision_mask)
 	
 	# Verify signal connection
 	if not impact_detector.is_connected("body_entered", Callable(self, "_on_impact_detector_body_entered")):
