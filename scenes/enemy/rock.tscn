@@ -1,7 +1,38 @@
-[gd_scene load_steps=2 format=3 uid="uid://wogxsc0mwwt8"]
+[gd_scene load_steps=5 format=3 uid="uid://wogxsc0mwwt8"]
 
 [ext_resource type="PackedScene" uid="uid://de6f1cc4866w2" path="res://assets/models/rocks/small-rock2.glb" id="1_5fxpv"]
+[ext_resource type="Script" uid="uid://dk23tr7ljut43" path="res://scenes/enemy/rock.gd" id="1_tj4lg"]
+[ext_resource type="Script" uid="uid://c15ttkemjglfb" path="res://scenes/enemy/hitbox.gd" id="2_e4vwt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5fxpv"]
+size = Vector3(0.187744, 0.150146, 0.205078)
 
 [node name="rock" type="Node3D"]
+script = ExtResource("1_tj4lg")
 
 [node name="small-rock2" parent="." instance=ExtResource("1_5fxpv")]
+
+[node name="hitbox" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 0
+monitoring = false
+script = ExtResource("2_e4vwt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hitbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0170898)
+shape = SubResource("BoxShape3D_5fxpv")
+
+[node name="impact_detector" type="Area3D" parent="."]
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="impact_detector"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0170898)
+shape = SubResource("BoxShape3D_5fxpv")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="body_entered" from="impact_detector" to="." method="_on_impact_detector_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -7,3 +7,7 @@
 script = ExtResource("1_a3pup")
 
 [node name="enemyModel1" parent="." instance=ExtResource("1_4a83h")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="shootPosition" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11113, 1.77083, -0.703158)

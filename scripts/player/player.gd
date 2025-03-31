@@ -42,7 +42,7 @@ func get_rotated_isometric_direction(input_dir) -> Vector3:
 	return (transform.basis * Vector3(rotated_input.x, 0, rotated_input.y)).normalized()
 
 func _ready() -> void:
-	pass
+	add_to_group("player")
 	#set the duration of the blend time when going from the idle animation to walking animation
 	#animation_player.set_blend_time("idle", "run", 0.2)
 	#animation_player.set_blend_time("run","idle", 0.2)
@@ -57,7 +57,6 @@ func handle_dashing(delta, direction):
 		dash_cooldown_timer = dash_cooldown_duration 
 		dash_timer = dash_duration + dash_delay
 		dash_direction = last_input_direction
-		print("dash initiated")
 	
 	# Update dash timer if in the middle of a dash
 	if dashing:
