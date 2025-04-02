@@ -12,6 +12,8 @@ var current_state = State.IDLE
 ##TESTING VARIABLES
 @export var testing_mode = true
 @export var throw_interval = 2.0  # Seconds between throws
+@export var throw_range = 14.0
+
 var throw_timer = 0.0
 
 func _ready() -> void:
@@ -40,6 +42,7 @@ func throw() -> void:
 
 func spawn_rock_from_animation() -> void:
 	var rock_instance := rock_scene.instantiate()
+	rock_instance.speed = throw_range
 	get_parent().add_child(rock_instance)
 	rock_instance.position = shoot_position.global_position
 	rock_instance.direction = global_position.direction_to(player_pos)

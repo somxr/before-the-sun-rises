@@ -56,9 +56,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.433342, 0.501718, -0.430424
 
 [node name="enemy" parent="." instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.91041, 0.501717, -4.09369)
+throw_interval = 1.0
+throw_range = 30.0
 
 [node name="enemy2" parent="." instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0171, 0.501719, 5.71119)
 
 [node name="enemy3" parent="." instance=ExtResource("4_jyhfs")]
 transform = Transform3D(0.690983, 0, 0.722871, 0, 1, 0, -0.722871, 0, 0.690983, 4.41119, 0.501721, 7.5887)
+throw_interval = 3.0
+throw_range = 16.0

@@ -1,8 +1,11 @@
 extends Node3D
 
-@export var speed := 12.0
+@export var speed := 14.0
 @export var lifetime := 3.0 
 var direction := Vector3.ZERO
+
+@export var gravity_strength := 8.5 
+var vertical_velocity := 0.0
 
 @onready var hitbox: Hitbox = $hitbox
 @onready var impact_detector: Area3D = $impact_detector
@@ -20,7 +23,10 @@ func _ready():
 		impact_detector.connect("body_entered", Callable(self, "_on_impact_detector_body_entered"))
 
 func _physics_process(delta: float) -> void:
-	position += direction * speed * delta
+	position += direction * speed * delta 
+	
+	vertical_velocity += gravity_strength * delta
+	position.y -= vertical_velocity * delta
 
 func _on_impact_detector_body_entered(body: Node3D) -> void:
 	#print("Collision detected with: ", body.name)
