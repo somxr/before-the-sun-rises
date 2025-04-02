@@ -12,7 +12,7 @@ var dashing = false
 var attacking = false
 
 #Dash variables
-var dash_cooldown_duration = 0.5 #cool down duration in seconds
+@export var dash_cooldown_duration = 0.5 #cool down duration in seconds
 var dash_cooldown_timer = 0.0 
 var dash_speed = 40.0    # How fast the dash moves
 var dash_duration = 0.2 # How long the dash lasts in seconds
@@ -27,6 +27,9 @@ var attack_momentum = 1.75
 var current_attack_momentum = 0.0
 
 var last_input_direction = Vector3(0,0,0)
+
+#Health variables
+var health:= 3
 
 #this is the visual skin of the Player
 @onready var aiden_model: Node3D = $AidenModel
@@ -83,6 +86,11 @@ func handle_attacking(delta, direction):
 	if attack_recovery <0.0:
 		attacking = false
 	
+func take_damage(damage: int) -> void:
+	print("OUCH")
+	health -= 1
+	if health <= 0:
+		print("you died")
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -140,3 +148,9 @@ func _physics_process(delta: float) -> void:
 				#animation_player.play("idle")
 
 	move_and_slide()
+
+
+
+	
+	
+	
