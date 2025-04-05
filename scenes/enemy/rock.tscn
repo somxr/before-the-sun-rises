@@ -1,10 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://wogxsc0mwwt8"]
+[gd_scene load_steps=6 format=3 uid="uid://wogxsc0mwwt8"]
 
 [ext_resource type="PackedScene" uid="uid://de6f1cc4866w2" path="res://assets/models/rocks/small-rock2.glb" id="1_5fxpv"]
 [ext_resource type="Script" uid="uid://dk23tr7ljut43" path="res://scenes/enemy/rock.gd" id="1_tj4lg"]
 [ext_resource type="Script" uid="uid://c15ttkemjglfb" path="res://scenes/enemy/hitbox.gd" id="2_e4vwt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5fxpv"]
+size = Vector3(0.187744, 0.150146, 0.205078)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tj4lg"]
 size = Vector3(0.187744, 0.150146, 0.205078)
 
 [node name="rock" type="Node3D"]
@@ -28,7 +31,7 @@ collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="impact_detector"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0170898)
-shape = SubResource("BoxShape3D_5fxpv")
+shape = SubResource("BoxShape3D_tj4lg")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0

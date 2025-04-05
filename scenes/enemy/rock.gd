@@ -4,7 +4,7 @@ extends Node3D
 @export var lifetime := 3.0 
 var direction := Vector3.ZERO
 
-@export var gravity_strength := 8.5 
+@export var gravity_strength := 0
 var vertical_velocity := 0.0
 
 @onready var hitbox: Hitbox = $hitbox
@@ -29,9 +29,10 @@ func _physics_process(delta: float) -> void:
 	position.y -= vertical_velocity * delta
 
 func _on_impact_detector_body_entered(body: Node3D) -> void:
-	#print("Collision detected with: ", body.name)
-	#print("Body collision layer: ", body.get_collision_layer() if body.has_method("get_collision_layer") else "N/A")
+	print("Collision detected with: ", body.name)
+	print("Body collision layer: ", body.get_collision_layer() if body.has_method("get_collision_layer") else "N/A")
 	queue_free()
 
 func _on_timer_timeout() -> void:
-	queue_free()
+	pass
+	#queue_free()
