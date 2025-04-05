@@ -33,6 +33,7 @@ var health:= 3
 
 #this is the visual skin of the Player
 @onready var aiden_model: Node3D = $AidenModel
+@onready var brenna_model: Node3D = $brennaModel
 
 func get_rotated_isometric_direction(input_dir) -> Vector3:
 	# I had the direction working based on the world transform basis since the camera's rotated 45 degrees, I want to rotate all the input by 45 degrees counter clockwise also
@@ -122,6 +123,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = dash_direction.x * dash_speed
 		velocity.z = dash_direction.z * dash_speed
 		aiden_model.look_at(dash_direction + position)
+		brenna_model.look_at(dash_direction + position)
 	elif attacking:
 		velocity.x = last_input_direction.x * current_attack_momentum
 		velocity.z = last_input_direction.z * current_attack_momentum
@@ -132,7 +134,7 @@ func _physics_process(delta: float) -> void:
 			velocity.z = direction.z * run_speed
 			
 			aiden_model.look_at(direction+position)
-			
+			brenna_model.look_at(direction+position)
 			#if the state was not already "walking" when a direction is input, 
 			#then change state to walking
 			if !running:
