@@ -9,7 +9,6 @@ var direction = Vector3(0,0,0)
 # state variables
 var running = false
 var dashing = false
-var attacking = false
 
 #Dash variables
 @export var dash_cooldown_duration = 0.5 #cool down duration in seconds
@@ -57,7 +56,6 @@ func handle_dashing(delta, direction):
 	#if the dash was just input this frame and dash ability is cooled down to 0
 	if Input.is_action_just_pressed("dash") and dash_cooldown_timer <= 0:
 		dashing=true
-		attacking = false
 		dash_cooldown_timer = dash_cooldown_duration 
 		dash_timer = dash_duration + dash_delay
 		dash_direction = last_input_direction
@@ -68,28 +66,10 @@ func handle_dashing(delta, direction):
 		if dash_timer <= 0:
 			dashing = false
 
-func handle_attacking(delta, direction):
-	if Input.is_action_just_pressed("attack") and attack_recovery <= 0.0:
-		attacking = true
-		dashing = false
-		running = false
-		attack_recovery = 0.6
-		current_attack_momentum = attack_momentum
-	
-	attack_recovery -= delta
-	
-	if attack_recovery > 0.0:
-		current_attack_momentum = lerp(current_attack_momentum,0.0,0.1)
-	
-	if current_attack_momentum<0.1:
-		current_attack_momentum=0.0
-		
-	if attack_recovery <0.0:
-		attacking = false
-	
 func take_damage(damage: int) -> void:
 	print("OUCH")
 	health -= 1
+	
 	if health <= 0:
 		print("you died")
 
@@ -105,17 +85,13 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("left", "right", "forward", "backward")
 	
-	if not attacking and not dashing:
+	if not dashing:
 		direction = get_rotated_isometric_direction(input_dir)
 	
 	if direction != Vector3(0,0,0):
 		last_input_direction = direction
 	
 	handle_dashing(delta, direction)
-	
-	### Commenting the line below since we scrapped the attack mechanic ###
-	#handle_attacking(delta, direction)
-	
 	
 	# Movement based on state (dashing or normal)
 	if dashing and dash_timer<dash_duration:
@@ -124,9 +100,6 @@ func _physics_process(delta: float) -> void:
 		velocity.z = dash_direction.z * dash_speed
 		aiden_model.look_at(dash_direction + position)
 		brenna_model.look_at(dash_direction + position)
-	elif attacking:
-		velocity.x = last_input_direction.x * current_attack_momentum
-		velocity.z = last_input_direction.z * current_attack_momentum
 	else: #normal running movement
 		#WALKING LOGIC: when a direction is detected you can start walking
 		if direction:

@@ -17,8 +17,6 @@ func _physics_process(delta: float) -> void:
 		$AnimationTree.set("parameters/state_anim/transition_request", "running")
 	elif get_parent().dashing:
 		$AnimationTree.set("parameters/state_anim/transition_request", "dashing")
-	elif get_parent().attacking:
-		$AnimationTree.set("parameters/state_anim/transition_request", "attacking")
 	else:
 		$AnimationTree.set("parameters/state_anim/transition_request", "idle")
 

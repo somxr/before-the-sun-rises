@@ -21,7 +21,7 @@ func _ready() -> void:
 	animation_player.connect("animation_finished", Callable(self, "_on_animation_finished"))
 	
 	# Start idle animation
-	animation_player.play("idle")
+	animation_player.play("stand")
 
 func _physics_process(delta: float) -> void:
 	var player_group = get_tree().get_nodes_in_group("player")
@@ -51,4 +51,4 @@ func _on_animation_finished(anim_name: StringName) -> void:
 	#print("Animation finished: ", anim_name)
 	if anim_name == "throw" and current_state == State.THROWING:
 		current_state = State.IDLE
-		animation_player.play("idle")
+		animation_player.play("stand")

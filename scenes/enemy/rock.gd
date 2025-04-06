@@ -29,8 +29,8 @@ func _physics_process(delta: float) -> void:
 	position.y -= vertical_velocity * delta
 
 func _on_impact_detector_body_entered(body: Node3D) -> void:
-	print("Collision detected with: ", body.name)
-	print("Body collision layer: ", body.get_collision_layer() if body.has_method("get_collision_layer") else "N/A")
+	#print("Collision detected with: ", body.name)
+	#print("Body collision layer: ", body.get_collision_layer() if body.has_method("get_collision_layer") else "N/A")
 	queue_free()
 
 func _on_timer_timeout() -> void:

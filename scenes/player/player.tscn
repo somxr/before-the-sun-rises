@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b6nb1vhgf1r7l" path="res://scenes/player/brenna_model.tscn" id="4_lvxji"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dovo2"]
-radius = 0.240458
+radius = 0.346127
 height = 1.74107
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gmlin"]
