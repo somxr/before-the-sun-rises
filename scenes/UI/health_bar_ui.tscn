@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://fjarw2dx7gv4"]
+
+[ext_resource type="Script" uid="uid://de2vfgw68i8s7" path="res://scenes/UI/health_bar_ui.gd" id="1_ax8cs"]
+[ext_resource type="Texture2D" uid="uid://cm5xj1dkmpuq2" path="res://assets/UI/health bar/health_empty.png" id="1_qhs35"]
+[ext_resource type="Texture2D" uid="uid://bpi1iga2ox3xh" path="res://assets/UI/health bar/health_bar1.png" id="2_ax8cs"]
+[ext_resource type="Texture2D" uid="uid://c5hfuh2vescv6" path="res://assets/UI/health bar/health_bar2.png" id="3_x1qb0"]
+[ext_resource type="Texture2D" uid="uid://cmitt777h505b" path="res://assets/UI/health bar/health_bar3.png" id="4_gwsp0"]
+
+[node name="HealthBarUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ax8cs")
+
+[node name="HealthbarBackground" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = -91.0
+offset_right = 2048.0
+offset_bottom = 1957.0
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_qhs35")
+expand_mode = 1
+
+[node name="healthPoint1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = -91.0
+offset_right = 2048.0
+offset_bottom = 1957.0
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_ax8cs")
+expand_mode = 1
+
+[node name="healthPoint2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = -91.0
+offset_right = 2048.0
+offset_bottom = 1957.0
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("3_x1qb0")
+expand_mode = 1
+
+[node name="healthPoint3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = -91.0
+offset_right = 2048.0
+offset_bottom = 1957.0
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("4_gwsp0")
+expand_mode = 1

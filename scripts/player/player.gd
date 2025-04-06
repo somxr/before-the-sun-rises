@@ -34,7 +34,9 @@ var health:= 3
 @export var hurt_duration = 0.4
 var hurt_timer = 0.0
 
+###SIGNALS###
 signal player_died
+signal health_changed(new_health)
 
 
 #this is the visual skin of the Player
@@ -75,15 +77,16 @@ func handle_dashing(delta, direction):
 			dashing = false
 
 func take_damage(damage: int) -> void:
-	print("OUCH")
-	health -= 1
-	
 	running = false
 	dashing = false
 	hurt = true
-	
-	hurt_timer = hurt_duration
 	collision_shape_3d.disabled = true
+	
+	health -= 1
+	health_changed.emit(health)
+
+	hurt_timer = hurt_duration
+	
 	if health <= 0:
 		die()
 		

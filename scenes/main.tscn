@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://j3m2akuejogr"]
+[gd_scene load_steps=7 format=3 uid="uid://j3m2akuejogr"]
 
 [ext_resource type="Material" uid="uid://b331c3hdlx14g" path="res://materials/green_material.tres" id="1_sugp2"]
 [ext_resource type="Material" uid="uid://erx11plvao0j" path="res://materials/wall_material.tres" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://7incfsglra4a" path="res://scenes/player/player.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://wexfg3n2fj54" path="res://scenes/enemy/enemy.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://c8xb7gyrs7n1o" path="res://scenes/UI/game_over_screen.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://fjarw2dx7gv4" path="res://scenes/UI/health_bar_ui.tscn" id="6_tefeu"]
 
 [node name="world" type="Node3D"]
 
@@ -71,3 +72,5 @@ throw_range = 16.0
 
 [node name="GameOverScreen" parent="." instance=ExtResource("5_tbgi4")]
 visible = false
+
+[node name="HealthBarUi" parent="." instance=ExtResource("6_tefeu")]
