@@ -34,6 +34,8 @@ var health:= 3
 @export var hurt_duration = 0.4
 var hurt_timer = 0.0
 
+signal player_died
+
 
 #this is the visual skin of the Player
 @onready var aiden_model: Node3D = $AidenModel
@@ -86,14 +88,13 @@ func take_damage(damage: int) -> void:
 		die()
 		
 
-
 func die() -> void:
 	running = false
 	dashing = false
 	hurt = false
 	dead = true
 	collision_shape_3d.disabled = true
-	print("you died")
+	player_died.emit()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -103,6 +104,8 @@ func _physics_process(delta: float) -> void:
 	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		#velocity.y = JUMP_VELOCITY
 	if dead:
+		if Input.is_action_just_pressed("dash"):
+			get_tree().reload_current_scene()
 		return
 		
 	if hurt:

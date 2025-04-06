@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://j3m2akuejogr"]
+[gd_scene load_steps=6 format=3 uid="uid://j3m2akuejogr"]
 
 [ext_resource type="Material" uid="uid://b331c3hdlx14g" path="res://materials/green_material.tres" id="1_sugp2"]
 [ext_resource type="Material" uid="uid://erx11plvao0j" path="res://materials/wall_material.tres" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://7incfsglra4a" path="res://scenes/player/player.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://wexfg3n2fj54" path="res://scenes/enemy/enemy.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://c8xb7gyrs7n1o" path="res://scenes/UI/game_over_screen.tscn" id="5_tbgi4"]
 
 [node name="world" type="Node3D"]
 
@@ -67,3 +68,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0171, 0.501719, 5.71119)
 transform = Transform3D(0.690983, 0, 0.722871, 0, 1, 0, -0.722871, 0, 0.690983, 4.41119, 0.501721, 7.5887)
 throw_interval = 3.0
 throw_range = 16.0
+
+[node name="GameOverScreen" parent="." instance=ExtResource("5_tbgi4")]
+visible = false
