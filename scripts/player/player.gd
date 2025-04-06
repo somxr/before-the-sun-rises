@@ -9,6 +9,7 @@ var direction = Vector3(0,0,0)
 # state variables
 var running = false
 var dashing = false
+var hurt = false
 
 #Dash variables
 @export var dash_cooldown_duration = 0.5 #cool down duration in seconds
@@ -29,6 +30,9 @@ var last_input_direction = Vector3(0,0,0)
 
 #Health variables
 var health:= 3
+@export var hurt_duration = 0.4
+var hurt_timer = 0.0
+
 
 #this is the visual skin of the Player
 @onready var aiden_model: Node3D = $AidenModel
@@ -70,6 +74,12 @@ func take_damage(damage: int) -> void:
 	print("OUCH")
 	health -= 1
 	
+	running = false
+	dashing = false
+	hurt = true
+	
+	hurt_timer = hurt_duration
+	
 	if health <= 0:
 		print("you died")
 
@@ -80,6 +90,14 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		#velocity.y = JUMP_VELOCITY
+	if hurt:
+		hurt_timer -= delta
+		if hurt_timer <= 0:
+			hurt = false
+		# Skip all other input processing while hurt
+		velocity = Vector3.ZERO  # Optional: stop movement immediately when hurt
+		move_and_slide()
+		return
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -90,6 +108,7 @@ func _physics_process(delta: float) -> void:
 	
 	if direction != Vector3(0,0,0):
 		last_input_direction = direction
+	
 	
 	handle_dashing(delta, direction)
 	

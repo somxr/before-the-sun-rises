@@ -43,4 +43,6 @@ shape = SubResource("CapsuleShape3D_gmlin")
 
 [node name="brennaModel" parent="." instance=ExtResource("4_lvxji")]
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="area_entered" from="hurtBox" to="hurtBox" method="_on_area_entered"]
