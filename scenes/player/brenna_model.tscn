@@ -48,7 +48,7 @@ input_2/break_loop_at_end = false
 input_2/reset = true
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_cnkll"]
-graph_offset = Vector2(-468.335, -174.196)
+graph_offset = Vector2(-687.983, 297.03)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_074fp")
 nodes/Animation/position = Vector2(-420, 320)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_riu7c")
@@ -73,175 +73,175 @@ script = ExtResource("2_p4go6")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="model_FKParentConstraintToChest_M" parent="Group/model_MotionSystem/model_FKSystem" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0496825, 1.37078, -0.0101822)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0496825, 1.36874, -0.00821019)
 
 [node name="Skeleton3D" parent="Group/model_MotionSystem/model_FKSystem/model_FKParentConstraintToChest_M/model_FKOffsetNeck_M" index="1"]
-bones/15/position = Vector3(-0.00762865, -0.0159239, -0.0107228)
+bones/15/position = Vector3(-0.00762235, -0.0159107, -0.010714)
 bones/17/rotation = Quaternion(-0.159062, -0.185993, 0.889087, -0.38682)
 
 [node name="model_FKScapula_R" parent="Group/model_MotionSystem/model_FKSystem/model_FKParentConstraintToChest_M/model_FKOffsetScapula_R/model_FKExtraScapula_R" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000896286, 0.00365857, -0.00878583)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000826783, 0.00337487, -0.00810452)
 
 [node name="Skeleton3D" parent="Group/model_MotionSystem/model_FKSystem/model_FKParentConstraintToChest_M/model_FKOffsetScapula_R/model_FKExtraScapula_R/model_FKScapula_R" index="0"]
-bones/3/rotation = Quaternion(0.100852, 0.23697, 0.0844827, 0.962568)
-bones/7/rotation = Quaternion(0.0328859, -0.077553, 0.196043, 0.97697)
+bones/3/rotation = Quaternion(0.100406, 0.236596, 0.0831103, 0.962826)
+bones/7/rotation = Quaternion(0.0328783, -0.0763305, 0.195929, 0.97709)
 
 [node name="model_FKScapula_L" parent="Group/model_MotionSystem/model_FKSystem/model_FKParentConstraintToChest_M/model_FKOffsetScapula_L/model_FKExtraScapula_L" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000732585, -0.00365929, 0.00880069)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000675776, -0.00337553, 0.00811823)
 
 [node name="Skeleton3D" parent="Group/model_MotionSystem/model_FKSystem/model_FKParentConstraintToChest_M/model_FKOffsetScapula_L/model_FKExtraScapula_L/model_FKScapula_L" index="0"]
-bones/3/rotation = Quaternion(0.0022942, 0.00188888, 0.282175, 0.959359)
-bones/7/rotation = Quaternion(0.00266257, 0.0123117, 0.140975, 0.989933)
+bones/3/rotation = Quaternion(0.00281476, 0.00362329, 0.282607, 0.959225)
+bones/7/rotation = Quaternion(0.00117075, 0.0117535, 0.141594, 0.989854)
 
 [node name="model_FKParentConstraintToRoot_M" parent="Group/model_MotionSystem/model_FKSystem" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0432865, 1.02219, -0.0816109)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0432865, 1.02016, -0.0796389)
 
 [node name="model_FKOffsetRoot_M" parent="Group/model_MotionSystem/model_FKSystem" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0428593, 1.06588, -0.07799)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0428593, 1.06384, -0.076018)
 
 [node name="model_FKRoot_M" parent="Group/model_MotionSystem/model_FKSystem/model_FKOffsetRoot_M/model_FKExtraRoot_M" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="model_IKcvOffsetSplineTailB1_R" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.122236, 1.52448, -0.0980382)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.122236, 1.52245, -0.0960109)
 
 [node name="model_IKcvOffsetSplineTailB2_R" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.186096, 1.41681, -0.154546)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.186096, 1.41477, -0.152518)
 
 [node name="model_IKcvOffsetSplineTailB3_R" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.232924, 1.30695, -0.191366)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.232924, 1.30491, -0.189339)
 
 [node name="model_IKcvOffsetSplineTailB4_R" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.268653, 1.17316, -0.187477)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.268653, 1.17112, -0.18545)
 
 [node name="model_IKcvOffsetSplineTailB5_R" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.278411, 1.02259, -0.114021)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.278411, 1.02056, -0.111994)
 
 [node name="model_IKOffsetSplineTailB2_R" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.180818, 1.4199, -0.149007)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.180818, 1.41786, -0.14698)
 
 [node name="model_IKOffsetSplineTailB3_R" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.263092, 1.17168, -0.173924)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.263092, 1.16964, -0.171896)
 
 [node name="model_IKOffsetConstrainedSplineTailB1_R" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0408515, 1.65205, -0.00033951)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0408515, 1.65001, 0.00168778)
 
 [node name="model_IKcvOffsetSpine1_M" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0443661, 1.1291, -0.0627077)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0443661, 1.12707, -0.0607357)
 
 [node name="model_IKcvOffsetSpine2_M" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="10"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0458729, 1.19233, -0.0474254)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0458729, 1.19029, -0.0454534)
 
 [node name="model_IKcvOffsetSpine3_M" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="11"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0473797, 1.25556, -0.032143)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0473797, 1.25352, -0.0301711)
 
 [node name="model_IKcvOffsetSpine4_M" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="12"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0459194, 1.30943, -0.0320878)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0459194, 1.3074, -0.0301158)
 
 [node name="model_IKcvOffsetSpine5_M" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="13"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0444591, 1.36331, -0.0320326)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0444591, 1.36128, -0.0300606)
 
 [node name="model_IKOffsetSpine2_M" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="14"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0467956, 1.23929, -0.037003)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0467956, 1.23725, -0.035031)
 
 [node name="model_IKOffsetConstrainedSpine1_M" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="15"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0428593, 1.06588, -0.07799)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0428593, 1.06384, -0.076018)
 
 [node name="model_IKLeg_R" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain/model_IKOffsetLeg_R/model_IKExtraLeg_R" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="model_IKcvOffsetSplineTailB1_L" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="17"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0445576, 1.52752, -0.0985144)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0445576, 1.52548, -0.0964871)
 
 [node name="model_IKcvOffsetSplineTailB2_L" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="18"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.111966, 1.42223, -0.155396)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.111966, 1.42019, -0.153369)
 
 [node name="model_IKcvOffsetSplineTailB3_L" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="19"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162545, 1.31414, -0.192495)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162545, 1.3121, -0.190468)
 
 [node name="model_IKcvOffsetSplineTailB4_L" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="20"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.203135, 1.18174, -0.188824)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.203135, 1.1797, -0.186796)
 
 [node name="model_IKcvOffsetSplineTailB5_L" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="21"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.218779, 1.03163, -0.115441)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.218779, 1.0296, -0.113414)
 
 [node name="model_IKOffsetSplineTailB2_L" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="22"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.106611, 1.42512, -0.149828)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.106611, 1.42309, -0.147801)
 
 [node name="model_IKOffsetSplineTailB3_L" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="23"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19771, 1.18006, -0.175239)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19771, 1.17802, -0.173212)
 
 [node name="model_IKOffsetConstrainedSplineTailB1_L" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain" index="24"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0408515, 1.65205, -0.00033951)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0408515, 1.65001, 0.00168778)
 
 [node name="model_IKLeg_L" parent="Group/model_MotionSystem/model_IKSystem/model_IKHandle/model_IKHandleFollowMain/model_IKOffsetLeg_L/model_IKExtraLeg_L" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="model_IKmessureLoc1Arm_R" parent="Group/model_MotionSystem/model_IKSystem/model_IKMessure" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.130903, 1.48558, -0.107029)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.130903, 1.48429, -0.105057)
 
 [node name="model_IKmessureLoc2Arm_R" parent="Group/model_MotionSystem/model_IKSystem/model_IKMessure/model_IKmessureLoc1Arm_R" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35656, -0.323633, 0.149475)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35656, -0.322345, 0.147503)
 
 [node name="model_IKmessureLoc1Leg_R" parent="Group/model_MotionSystem/model_IKSystem/model_IKMessure" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.127684, 1.0047, -0.119008)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.127684, 1.00266, -0.117036)
 
 [node name="model_IKmessureLoc2Leg_R" parent="Group/model_MotionSystem/model_IKSystem/model_IKMessure/model_IKmessureLoc1Leg_R" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0655629, -0.944761, -0.0797627)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0655629, -0.942726, -0.0817347)
 
 [node name="model_IKmessureLoc1Arm_L" parent="Group/model_MotionSystem/model_IKSystem/model_IKMessure" index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0878342, 1.46658, 0.0321698)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0878342, 1.46529, 0.0341418)
 
 [node name="model_IKmessureLoc2Arm_L" parent="Group/model_MotionSystem/model_IKSystem/model_IKMessure/model_IKmessureLoc1Arm_L" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.399629, -0.304628, 0.0102762)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.399629, -0.30334, 0.00830423)
 
 [node name="model_IKmessureLoc1Leg_L" parent="Group/model_MotionSystem/model_IKSystem/model_IKMessure" index="6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0436917, 0.994393, -0.0594846)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0436917, 0.992357, -0.0575126)
 
 [node name="model_IKmessureLoc2Leg_L" parent="Group/model_MotionSystem/model_IKSystem/model_IKMessure/model_IKmessureLoc1Leg_L" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0719041, -0.934458, 0.138922)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0719041, -0.932422, 0.13695)
 
 [node name="model_FKIKParentConstraintSplineTailB_R" parent="Group/model_MotionSystem/model_FKIKSystem" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0408515, 1.65205, -0.00033951)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0408515, 1.65001, 0.00168778)
 
 [node name="model_FKIKSplineTailB_R" parent="Group/model_MotionSystem/model_FKIKSystem/model_FKIKParentConstraintSplineTailB_R" index="0"]
 transform = Transform3D(1.31134e-07, 1, 0.000976519, -8.537e-11, -0.000976519, 1, 1, -1.31134e-07, -4.2685e-11, -0.0893135, -0.0554999, -0.14054)
 
 [node name="model_FKIKParentConstraintArm_R" parent="Group/model_MotionSystem/model_FKIKSystem" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0589669, 1.47722, -0.0580634)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0589669, 1.47593, -0.0560915)
 
 [node name="model_FKIKArm_R" parent="Group/model_MotionSystem/model_FKIKSystem/model_FKIKParentConstraintArm_R" index="0"]
-transform = Transform3D(-0.999958, 0.00912526, 3.98878e-10, 0, -4.37114e-08, 1, 0.00912526, 0.999958, 4.37096e-08, 0.226879, 0.0458623, -0.0113529)
+transform = Transform3D(-0.999958, 0.00912525, 3.98878e-10, 0, -4.37114e-08, 1, 0.00912525, 0.999958, 4.37096e-08, 0.226879, 0.0458623, -0.0113529)
 
 [node name="model_FKIKParentConstraintLeg_R" parent="Group/model_MotionSystem/model_FKIKSystem" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0432865, 1.02219, -0.0816109)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0432865, 1.02016, -0.0796389)
 
 [node name="model_FKIKLeg_R" parent="Group/model_MotionSystem/model_FKIKSystem/model_FKIKParentConstraintLeg_R" index="0"]
-transform = Transform3D(3.74399e-07, 0.987556, 0.157266, 6.12417e-08, -0.157266, 0.987556, 1, -3.60108e-07, -1.1936e-07, -0.13, 0.00428228, -0.215661)
+transform = Transform3D(1.30046e-07, 0.987556, 0.157266, -1.37487e-08, -0.157266, 0.987556, 1, -1.3059e-07, -6.87433e-09, -0.13, 0.00428228, -0.215661)
 
 [node name="model_FKIKParentConstraintSpine_M" parent="Group/model_MotionSystem/model_FKIKSystem" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0432865, 1.02219, -0.0816109)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0432865, 1.02016, -0.0796389)
 
 [node name="model_FKIKSpine_M" parent="Group/model_MotionSystem/model_FKIKSystem/model_FKIKParentConstraintSpine_M" index="0"]
-transform = Transform3D(3.74399e-07, 0.987556, 0.157266, 6.12417e-08, -0.157266, 0.987556, 1, -3.60108e-07, -1.1936e-07, 0.112825, -3.55271e-17, 0.210996)
+transform = Transform3D(1.30046e-07, 0.987556, 0.157266, -1.37487e-08, -0.157266, 0.987556, 1, -1.3059e-07, -6.87433e-09, 0.112825, -3.55271e-17, 0.210996)
 
 [node name="model_FKIKParentConstraintSplineTailB_L" parent="Group/model_MotionSystem/model_FKIKSystem" index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0408515, 1.65205, -0.00033951)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0408515, 1.65001, 0.00168778)
 
 [node name="model_FKIKSplineTailB_L" parent="Group/model_MotionSystem/model_FKIKSystem/model_FKIKParentConstraintSplineTailB_L" index="0"]
 transform = Transform3D(1.31134e-07, 1, 0.000976519, -8.537e-11, -0.000976519, 1, 1, -1.31134e-07, -4.2685e-11, -0.0893135, -0.0554999, 0.14054)
 
 [node name="model_FKIKParentConstraintArm_L" parent="Group/model_MotionSystem/model_FKIKSystem" index="5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0135544, 1.46996, -0.0138017)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0135544, 1.46867, -0.0118297)
 
 [node name="model_FKIKParentConstraintLeg_L" parent="Group/model_MotionSystem/model_FKIKSystem" index="6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0432865, 1.02219, -0.0816109)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0432865, 1.02016, -0.0796389)
 
 [node name="model_FKIKLeg_L" parent="Group/model_MotionSystem/model_FKIKSystem/model_FKIKParentConstraintLeg_L" index="0"]
-transform = Transform3D(3.74399e-07, 0.987556, 0.157266, 6.12417e-08, -0.157266, 0.987556, 1, -3.60108e-07, -1.1936e-07, -0.13, 0.00428228, 0.215661)
+transform = Transform3D(1.30046e-07, 0.987556, 0.157266, -1.37487e-08, -0.157266, 0.987556, 1, -1.3059e-07, -6.87433e-09, -0.13, 0.00428228, 0.215661)
 
 [node name="Skeleton3D" parent="Group/model_DeformationSystem" index="0"]
-bones/1/position = Vector3(-0.0432865, 1.02219, -0.0816109)
+bones/1/position = Vector3(-0.0432865, 1.02016, -0.0796389)
 bones/2/rotation = Quaternion(4.93038e-32, 3.08149e-32, 1.38778e-17, 1)
 bones/3/rotation = Quaternion(4.93038e-32, 3.08149e-32, 1.38778e-17, 1)
 bones/4/rotation = Quaternion(0, 8.75811e-17, -0.120409, 0.992724)
@@ -252,43 +252,43 @@ bones/7/rotation = Quaternion(6.09715e-17, -7.27959e-17, -0.193456, 0.981109)
 bones/8/rotation = Quaternion(-3.34806e-17, -1.47037e-17, 0.165745, 0.986169)
 bones/9/rotation = Quaternion(2.46519e-32, 6.16298e-33, 0, 1)
 bones/10/rotation = Quaternion(2.46519e-32, 6.16298e-33, 0, 1)
-bones/11/position = Vector3(0.0402281, -0.0196288, -0.00362887)
+bones/11/position = Vector3(0.0402325, -0.0196126, -0.00362587)
 bones/11/rotation = Quaternion(-7.70161e-18, 5.95938e-17, 0.0703375, 0.997523)
 bones/12/rotation = Quaternion(-0.259826, -0.0131519, 0.831291, -0.491195)
 bones/18/rotation = Quaternion(-0.185993, 0.159062, 0.38682, 0.889087)
-bones/84/position = Vector3(0.105804, -0.0277695, -0.0418213)
+bones/84/position = Vector3(0.10654, -0.0277112, -0.0418844)
 bones/84/rotation = Quaternion(-0.165176, 0.684218, 0.166386, 0.690564)
-bones/85/rotation = Quaternion(-0.208106, 0.559111, 0.13134, 0.79173)
-bones/86/rotation = Quaternion(0.0343955, 1.34417e-22, 3.30873e-23, 0.999408)
-bones/87/rotation = Quaternion(0.0343955, 1.34417e-22, 3.30873e-23, 0.999408)
-bones/88/rotation = Quaternion(0.0491229, -0.0958036, 0.386372, 0.916038)
-bones/89/rotation = Quaternion(0.0106569, 9.51258e-24, 1.14771e-23, 0.999943)
-bones/90/rotation = Quaternion(0.0106569, 9.51258e-24, 1.14771e-23, 0.999943)
+bones/85/rotation = Quaternion(-0.208653, 0.55867, 0.130026, 0.792114)
+bones/86/rotation = Quaternion(0.0343059, -7.75482e-25, 0, 0.999411)
+bones/87/rotation = Quaternion(0.0343059, -7.75482e-25, 0, 0.999411)
+bones/88/rotation = Quaternion(0.0487357, -0.0945645, 0.386382, 0.916183)
+bones/89/rotation = Quaternion(0.0106569, 1.68021e-25, -1.68021e-25, 0.999943)
+bones/90/rotation = Quaternion(0.0106569, 1.68021e-25, -1.68021e-25, 0.999943)
 bones/91/rotation = Quaternion(0.213483, -0.128351, -0.0227587, 0.968211)
-bones/108/position = Vector3(0.105804, -0.0277695, 0.0434502)
+bones/108/position = Vector3(0.10654, -0.0277112, 0.0433871)
 bones/108/rotation = Quaternion(-0.664875, -0.188884, 0.698072, -0.186974)
-bones/109/rotation = Quaternion(-0.127437, 0.391787, 0.340435, 0.845202)
-bones/110/rotation = Quaternion(0.00179739, -9.55707e-23, 1.28729e-23, 0.999998)
-bones/111/rotation = Quaternion(0.00179739, -9.55707e-23, 1.28729e-23, 0.999998)
-bones/112/rotation = Quaternion(-0.00169173, 0.0114027, 0.340825, 0.940056)
-bones/113/rotation = Quaternion(0.000775069, -2.0913e-25, -1.29247e-26, 1)
-bones/114/rotation = Quaternion(0.000775069, -2.0913e-25, -1.29247e-26, 1)
-bones/115/rotation = Quaternion(0.203905, -0.128569, -0.0214892, 0.970274)
-bones/132/rotation = Quaternion(0.210455, 0.969985, -0.0933794, 0.0782234)
-bones/133/rotation = Quaternion(0.103582, -6.20387e-24, -1.38553e-23, 0.994621)
-bones/134/rotation = Quaternion(0.103582, -6.20387e-24, -1.38553e-23, 0.994621)
-bones/135/rotation = Quaternion(0.0970192, 0.0382609, -0.364867, 0.9252)
-bones/136/rotation = Quaternion(-0.0951978, 0.00230844, 0.222953, 0.970167)
+bones/109/rotation = Quaternion(-0.127398, 0.393278, 0.340453, 0.844508)
+bones/110/rotation = Quaternion(0.0018577, 1.13414e-24, -1.74483e-25, 0.999998)
+bones/111/rotation = Quaternion(0.0018577, 1.13414e-24, -1.74483e-25, 0.999998)
+bones/112/rotation = Quaternion(-0.00144747, 0.0109969, 0.341402, 0.939852)
+bones/113/rotation = Quaternion(0.000375684, -1.08531e-37, 0, 1)
+bones/114/rotation = Quaternion(0.000375684, -1.08531e-37, 0, 1)
+bones/115/rotation = Quaternion(0.203517, -0.128578, -0.0214379, 0.970355)
+bones/132/rotation = Quaternion(0.211397, 0.969589, -0.0935931, 0.0803018)
+bones/133/rotation = Quaternion(0.103552, 2.26982e-35, 0, 0.994624)
+bones/134/rotation = Quaternion(0.103552, 2.26982e-35, 0, 0.994624)
+bones/135/rotation = Quaternion(0.0967626, 0.0387142, -0.369444, 0.92339)
+bones/136/rotation = Quaternion(-0.095387, 0.00301047, 0.225774, 0.969494)
 bones/137/rotation = Quaternion(-0.043392, 0.0431879, 0.628588, 0.775325)
-bones/138/rotation = Quaternion(0.921261, -0.375273, -0.060138, -0.082658)
-bones/139/rotation = Quaternion(-0.0256517, -1.24077e-24, 8.8405e-24, 0.999671)
-bones/140/rotation = Quaternion(-0.0256517, -1.24077e-24, 8.8405e-24, 0.999671)
-bones/141/rotation = Quaternion(-0.0235519, -0.00950018, -0.373963, 0.927096)
-bones/142/rotation = Quaternion(0.0125091, 0.0593301, 0.116654, 0.99132)
+bones/138/rotation = Quaternion(0.920407, -0.37746, -0.0597741, -0.0824807)
+bones/139/rotation = Quaternion(-0.0256517, -4.7978e-35, 1.74483e-25, 0.999671)
+bones/140/rotation = Quaternion(-0.0256517, -4.7978e-35, 1.74483e-25, 0.999671)
+bones/141/rotation = Quaternion(-0.0235422, -0.00966081, -0.379516, 0.924835)
+bones/142/rotation = Quaternion(0.0123812, 0.0592251, 0.120257, 0.990897)
 bones/143/rotation = Quaternion(-0.0433934, 0.0431877, 0.628605, 0.775311)
 
 [node name="model_FaceMotionSystem" parent="Group/model_FaceGroup" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0408515, 1.65205, -0.00033951)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0408515, 1.65001, 0.00168778)
 
 [node name="model_lowerLipFollow_M" parent="Group/model_FaceGroup/model_FaceMotionSystem/model_ControlsSetup/model_OnFacecontrols/model_SideReverse_M/model_LipRegionOffset_M/model_SDKLipRegion_M/model_LipRegion_M/model_lowerLipOffset_M" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
@@ -309,22 +309,22 @@ transform = Transform3D(1, 3.73101e-17, 1.11031e-16, -3.73101e-17, 1, 1.70897e-1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="model_LipFollowHead" parent="Group/model_FaceGroup/model_FaceDeformationSystem/model_LipSetup" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0408515, 1.65205, -0.00033951)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0408515, 1.65001, 0.00168778)
 
 [node name="Skeleton3D" parent="Group/model_FaceGroup/model_FaceDeformationSystem/model_LipSetup/model_LipFollowHead/model_LipRibbonJoints" index="0"]
-bones/0/rotation = Quaternion(0, 0.969179, -7.56012e-09, 0.246357)
+bones/0/rotation = Quaternion(0, 0.969179, 0, 0.246357)
 bones/0/scale = Vector3(1.12106, 1.12106, -1.12106)
-bones/2/rotation = Quaternion(6.08265e-05, -0.902377, -0.000127383, -0.430947)
+bones/2/rotation = Quaternion(6.08309e-05, -0.902377, -0.000127376, -0.430947)
 bones/2/scale = Vector3(1.12106, 1.12106, -1.12106)
-bones/4/rotation = Quaternion(2.08616e-05, 0.881407, -3.89806e-05, 0.472358)
+bones/4/rotation = Quaternion(2.08858e-05, 0.881407, -3.89724e-05, 0.472358)
 bones/4/scale = Vector3(1.12106, 1.12106, -1.12106)
-bones/6/rotation = Quaternion(0.000110373, 0.875643, -0.000200139, 0.482959)
+bones/6/rotation = Quaternion(0.000110389, 0.875643, -0.000200144, 0.482959)
 bones/6/scale = Vector3(1.12106, 1.12106, -1.12106)
-bones/16/rotation = Quaternion(-1.49012e-08, 0.963369, 0, 0.268179)
+bones/16/rotation = Quaternion(0, 0.963369, 0, 0.268179)
 bones/16/scale = Vector3(1.12106, 1.12106, -1.12106)
-bones/18/rotation = Quaternion(0.000150263, 0.901144, -0.000312357, 0.433519)
+bones/18/rotation = Quaternion(0.000150265, 0.901144, -0.000312352, 0.433519)
 bones/18/scale = Vector3(1.12106, 1.12106, -1.12106)
-bones/20/rotation = Quaternion(0.000162452, 0.881387, -0.000303127, 0.472394)
+bones/20/rotation = Quaternion(0.000162459, 0.881387, -0.000303114, 0.472394)
 bones/20/scale = Vector3(1.12106, 1.12106, -1.12106)
 
 [node name="model_upperfollicle1_R" parent="Group/model_FaceGroup/model_FaceDeformationSystem/model_LipSetup/model_LipFollowHead/model_LipFollicles" index="0"]
@@ -384,9 +384,9 @@ speed_scale = 3.0
 [node name="AnimationTree" type="AnimationTree" parent="." index="2"]
 tree_root = SubResource("AnimationNodeBlendTree_cnkll")
 anim_player = NodePath("../AnimationPlayer")
-parameters/TimeScale/scale = 1.66083e-280
-"parameters/TimeScale 2/scale" = 3.0
-"parameters/TimeScale 3/scale" = 0.14168
-parameters/state_anim/current_state = "dashing"
+parameters/TimeScale/scale = 1.5
+"parameters/TimeScale 2/scale" = 3.1
+"parameters/TimeScale 3/scale" = 4.0
+parameters/state_anim/current_state = "idle"
 parameters/state_anim/transition_request = ""
-parameters/state_anim/current_index = 2
+parameters/state_anim/current_index = 0
