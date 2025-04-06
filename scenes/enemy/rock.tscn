@@ -8,9 +8,6 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_5fxpv"]
 size = Vector3(0.187744, 0.150146, 0.205078)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_tj4lg"]
-size = Vector3(0.187744, 0.150146, 0.205078)
-
 [sub_resource type="Gradient" id="Gradient_tj4lg"]
 offsets = PackedFloat32Array(0.35396, 0.886139)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -21,14 +18,18 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 0.5)
 
-[node name="rock" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_erpfd"]
+size = Vector3(0.187744, 0.150146, 0.205078)
+
+[node name="rock" type="CharacterBody3D"]
+collision_layer = 5
+collision_mask = 5
 script = ExtResource("1_tj4lg")
 speed = 20.0
 
 [node name="small-rock2" parent="." instance=ExtResource("1_5fxpv")]
 
 [node name="hitbox" type="Area3D" parent="."]
-visible = false
 collision_layer = 4
 collision_mask = 0
 monitoring = false
@@ -37,14 +38,6 @@ script = ExtResource("2_e4vwt")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hitbox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0170898)
 shape = SubResource("BoxShape3D_5fxpv")
-
-[node name="impact_detector" type="Area3D" parent="."]
-visible = false
-collision_layer = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="impact_detector"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0170898)
-shape = SubResource("BoxShape3D_tj4lg")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
@@ -61,5 +54,8 @@ texture = SubResource("GradientTexture2D_erpfd")
 [node name="RayCast3D" type="RayCast3D" parent="cast_shadow"]
 target_position = Vector3(0, -2, 0)
 
-[connection signal="body_entered" from="impact_detector" to="." method="_on_impact_detector_body_entered"]
+[node name="ImpactCollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0170898)
+shape = SubResource("BoxShape3D_erpfd")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

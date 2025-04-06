@@ -10,6 +10,7 @@ var direction = Vector3(0,0,0)
 var running = false
 var dashing = false
 var hurt = false
+var dead = false
 
 #Dash variables
 @export var dash_cooldown_duration = 0.5 #cool down duration in seconds
@@ -37,6 +38,7 @@ var hurt_timer = 0.0
 #this is the visual skin of the Player
 @onready var aiden_model: Node3D = $AidenModel
 @onready var brenna_model: Node3D = $brennaModel
+@onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
 
 func get_rotated_isometric_direction(input_dir) -> Vector3:
 	# I had the direction working based on the world transform basis since the camera's rotated 45 degrees, I want to rotate all the input by 45 degrees counter clockwise also
@@ -79,9 +81,19 @@ func take_damage(damage: int) -> void:
 	hurt = true
 	
 	hurt_timer = hurt_duration
-	
+	collision_shape_3d.disabled = true
 	if health <= 0:
-		print("you died")
+		die()
+		
+
+
+func die() -> void:
+	running = false
+	dashing = false
+	hurt = false
+	dead = true
+	collision_shape_3d.disabled = true
+	print("you died")
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -90,10 +102,14 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		#velocity.y = JUMP_VELOCITY
+	if dead:
+		return
+		
 	if hurt:
 		hurt_timer -= delta
 		if hurt_timer <= 0:
 			hurt = false
+			collision_shape_3d.disabled = false
 		# Skip all other input processing while hurt
 		velocity = Vector3.ZERO  # Optional: stop movement immediately when hurt
 		move_and_slide()

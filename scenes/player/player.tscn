@@ -6,11 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://b6nb1vhgf1r7l" path="res://scenes/player/brenna_model.tscn" id="4_lvxji"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dovo2"]
-radius = 0.346127
+radius = 0.202922
 height = 1.74107
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gmlin"]
-radius = 0.144967
+radius = 0.154822
 height = 1.57198
 
 [node name="Player" type="CharacterBody3D"]
@@ -40,6 +40,7 @@ script = ExtResource("3_gmlin")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hurtBox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0412103, 0.961926, 0)
 shape = SubResource("CapsuleShape3D_gmlin")
+disabled = true
 
 [node name="brennaModel" parent="." instance=ExtResource("4_lvxji")]
 
