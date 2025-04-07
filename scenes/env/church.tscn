@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd1f027628hpf"]
+
+[ext_resource type="PackedScene" uid="uid://uary0wlkc5fe" path="res://assets/models/environment/Church.fbx" id="1_qusgn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mof2u"]
+size = Vector3(13.3411, 16.373, 6.23914)
+
+[node name="Church" type="StaticBody3D"]
+
+[node name="Church" parent="." instance=ExtResource("1_qusgn")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.684448, 7.68652, 0.530701)
+shape = SubResource("BoxShape3D_mof2u")

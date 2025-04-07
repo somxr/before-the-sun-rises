@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://j3m2akuejogr"]
+[gd_scene load_steps=16 format=3 uid="uid://j3m2akuejogr"]
 
 [ext_resource type="Material" uid="uid://b331c3hdlx14g" path="res://materials/green_material.tres" id="1_sugp2"]
 [ext_resource type="Material" uid="uid://erx11plvao0j" path="res://materials/wall_material.tres" id="2_sugp2"]
@@ -6,6 +6,15 @@
 [ext_resource type="PackedScene" uid="uid://wexfg3n2fj54" path="res://scenes/enemy/enemy.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://c8xb7gyrs7n1o" path="res://scenes/UI/game_over_screen.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://fjarw2dx7gv4" path="res://scenes/UI/health_bar_ui.tscn" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://dplo6xm7ktdex" path="res://scenes/env/house_1_1.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://bdam1tc3s8n00" path="res://scenes/env/house_2_2.tscn" id="8_85g3d"]
+[ext_resource type="PackedScene" uid="uid://bt3ajwqvryb8g" path="res://scenes/env/house_2_1.tscn" id="9_choun"]
+[ext_resource type="PackedScene" uid="uid://bd1f027628hpf" path="res://scenes/env/church.tscn" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://dve58e2g7mifh" path="res://scenes/env/fence_1_pole.tscn" id="11_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://cvb5bkmsnlh2l" path="res://scenes/env/fence_1_wal.tscn" id="12_eb6dy"]
+[ext_resource type="PackedScene" uid="uid://da5geqfaamg0v" path="res://scenes/env/fence_2.tscn" id="13_trceg"]
+[ext_resource type="PackedScene" uid="uid://c8xl1dlm4gxr7" path="res://scenes/env/fence_3.tscn" id="14_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://ceghdmd0rogpx" path="res://scenes/env/torch.tscn" id="15_jbj1t"]
 
 [node name="world" type="Node3D"]
 
@@ -74,3 +83,33 @@ throw_range = 16.0
 visible = false
 
 [node name="HealthBarUi" parent="." instance=ExtResource("6_tefeu")]
+
+[node name="House1_1" parent="." instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.59363, 0.499999, -6.38333)
+
+[node name="House2_1" parent="." instance=ExtResource("8_85g3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3871, 0.512342, 2.30089)
+
+[node name="House2_2" parent="." instance=ExtResource("9_choun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.86705, 0.512341, 11.1058)
+
+[node name="Church" parent="." instance=ExtResource("10_choun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.879, 0, -9.80138)
+
+[node name="fence1_pole" parent="." instance=ExtResource("11_ya4ey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 10)
+
+[node name="fence1_wal" parent="." instance=ExtResource("12_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4358, 0.500001, 1.66604)
+
+[node name="fence2" parent="." instance=ExtResource("13_trceg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.26636, 0.514028, 0.233722)
+
+[node name="fence3" parent="." instance=ExtResource("14_jkv2x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.06941, 0.514029, 4.04044)
+
+[node name="fence4" parent="." instance=ExtResource("13_trceg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5059, 0.514028, 3.92814)
+
+[node name="Torch" parent="." instance=ExtResource("15_jbj1t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.638768, 0.5, 4.33157)
