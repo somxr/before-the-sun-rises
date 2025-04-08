@@ -17,36 +17,40 @@ script = ExtResource("1_ax8cs")
 
 [node name="HealthbarBackground" type="TextureRect" parent="."]
 layout_mode = 0
-offset_top = -91.0
-offset_right = 2048.0
-offset_bottom = 1957.0
-scale = Vector2(0.15, 0.15)
+offset_left = 78.0
+offset_top = -90.0
+offset_right = 2126.0
+offset_bottom = 1958.0
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_qhs35")
 expand_mode = 1
 
 [node name="healthPoint1" type="TextureRect" parent="."]
 layout_mode = 0
-offset_top = -91.0
-offset_right = 2048.0
-offset_bottom = 1957.0
-scale = Vector2(0.15, 0.15)
+offset_left = 78.0
+offset_top = -90.0
+offset_right = 2126.0
+offset_bottom = 1958.0
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_ax8cs")
 expand_mode = 1
 
 [node name="healthPoint2" type="TextureRect" parent="."]
 layout_mode = 0
-offset_top = -91.0
-offset_right = 2048.0
-offset_bottom = 1957.0
-scale = Vector2(0.15, 0.15)
+offset_left = 78.0
+offset_top = -90.0
+offset_right = 2126.0
+offset_bottom = 1958.0
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_x1qb0")
 expand_mode = 1
 
 [node name="healthPoint3" type="TextureRect" parent="."]
 layout_mode = 0
-offset_top = -91.0
-offset_right = 2048.0
-offset_bottom = 1957.0
-scale = Vector2(0.15, 0.15)
+offset_left = 78.0
+offset_top = -90.0
+offset_right = 2126.0
+offset_bottom = 1958.0
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_gwsp0")
 expand_mode = 1
