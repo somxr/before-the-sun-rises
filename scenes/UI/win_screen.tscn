@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://c8xb7gyrs7n1o"]
+[gd_scene load_steps=5 format=3 uid="uid://q5vbmlymbvtc"]
 
-[ext_resource type="Script" uid="uid://cdfh1cfma2tvc" path="res://scenes/UI/game_over_screen.gd" id="1_yjf6n"]
+[ext_resource type="Script" uid="uid://dnksrqwxly87o" path="res://scenes/UI/win_screen.gd" id="1_ofhcv"]
 
 [sub_resource type="Animation" id="Animation_yjf6n"]
 length = 0.001
@@ -39,14 +39,14 @@ _data = {
 &"fadeIn": SubResource("Animation_8cox7")
 }
 
-[node name="GameOverScreen" type="Control"]
+[node name="WInScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_yjf6n")
+script = ExtResource("1_ofhcv")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -55,7 +55,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.180392, 0, 0.2, 0.839216)
+color = Color(0.180392, 0, 0.2, 1)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -71,7 +71,7 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 106
-text = "Game Over"
+text = "You Win"
 horizontal_alignment = 1
 vertical_alignment = 1
 

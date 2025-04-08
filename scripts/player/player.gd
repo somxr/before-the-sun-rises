@@ -11,6 +11,7 @@ var running = false
 var dashing = false
 var hurt = false
 var dead = false
+var won = false
 
 #Dash variables
 @export var dash_cooldown_duration = 0.5 #cool down duration in seconds
@@ -43,6 +44,8 @@ signal health_changed(new_health)
 @onready var aiden_model: Node3D = $AidenModel
 @onready var brenna_model: Node3D = $brennaModel
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
+@onready var hurt_collision_shape_3d: CollisionShape3D = $hurtBox/hurtCollisionShape3D
+
 
 func get_rotated_isometric_direction(input_dir) -> Vector3:
 	# I had the direction working based on the world transform basis since the camera's rotated 45 degrees, I want to rotate all the input by 45 degrees counter clockwise also
@@ -56,6 +59,9 @@ func get_rotated_isometric_direction(input_dir) -> Vector3:
 
 func _ready() -> void:
 	add_to_group("player")
+	var win_area = get_node("../bridgidSprite/WinArea3D") # Adjust the path as needed
+	win_area.player_won.connect(_on_player_won)
+
 	#set the duration of the blend time when going from the idle animation to walking animation
 	#animation_player.set_blend_time("idle", "run", 0.2)
 	#animation_player.set_blend_time("run","idle", 0.2)
@@ -99,6 +105,20 @@ func die() -> void:
 	collision_shape_3d.disabled = true
 	player_died.emit()
 
+func _on_player_won():
+	# Disable colliders so you don't lose during win screen
+	collision_shape_3d.disabled = true
+	hurt_collision_shape_3d.disabled = true
+	won = true
+	running = false
+	dashing = false
+	hurt = false
+
+
+
+
+	
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	#if not is_on_floor():
@@ -106,9 +126,10 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		#velocity.y = JUMP_VELOCITY
-	if dead:
-		if Input.is_action_just_pressed("dash"):
-			get_tree().reload_current_scene()
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()
+	
+	if dead or won:
 		return
 		
 	if hurt:

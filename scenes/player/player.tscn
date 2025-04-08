@@ -37,10 +37,9 @@ collision_mask = 4
 monitorable = false
 script = ExtResource("3_gmlin")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="hurtBox"]
+[node name="hurtCollisionShape3D" type="CollisionShape3D" parent="hurtBox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0412103, 0.961926, 0)
 shape = SubResource("CapsuleShape3D_gmlin")
-disabled = true
 
 [node name="brennaModel" parent="." instance=ExtResource("4_lvxji")]
 
