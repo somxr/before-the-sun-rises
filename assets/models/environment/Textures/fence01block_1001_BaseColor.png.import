@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhpr5b52mq82h"
-path.s3tc="res://.godot/imported/fence01block_1001_BaseColor.png-254e39c14a3a4c71daa2d667abdb25eb.s3tc.ctex"
+path.s3tc="res://.godot/imported/fence01block_1001_BaseColor.png-b9e50989b279154b2870fab409a4086a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/environment/textures/fence01block_1001_BaseColor.png"
-dest_files=["res://.godot/imported/fence01block_1001_BaseColor.png-254e39c14a3a4c71daa2d667abdb25eb.s3tc.ctex"]
+source_file="res://assets/models/environment/Textures/fence01block_1001_BaseColor.png"
+dest_files=["res://.godot/imported/fence01block_1001_BaseColor.png-b9e50989b279154b2870fab409a4086a.s3tc.ctex"]
 
 [params]
 

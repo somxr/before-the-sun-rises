@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpj1k18ev3npv"
-path.s3tc="res://.godot/imported/house02_v02_BaseColor.png-c0936e2b0ba2ed3141c8a41ca1d4910b.s3tc.ctex"
+path.s3tc="res://.godot/imported/house02_v02_BaseColor.png-b638aa6fc330ea62db43a99035dfb95c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/environment/textures/house02_v02_BaseColor.png"
-dest_files=["res://.godot/imported/house02_v02_BaseColor.png-c0936e2b0ba2ed3141c8a41ca1d4910b.s3tc.ctex"]
+source_file="res://assets/models/environment/Textures/house02_v02_BaseColor.png"
+dest_files=["res://.godot/imported/house02_v02_BaseColor.png-b638aa6fc330ea62db43a99035dfb95c.s3tc.ctex"]
 
 [params]
 

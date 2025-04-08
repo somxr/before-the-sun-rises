@@ -10,7 +10,7 @@ var player_pos
 var current_state = State.IDLE
 
 ##TESTING VARIABLES
-@export var testing_mode = true
+@export var throwing_mode = true
 @export var throw_interval = 2.0  # Seconds between throws
 @export var throw_speed = 14.0
 @export var rock_gravity = 6.0
@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 		player_pos = player_group[0].global_transform.origin
 		look_at(player_pos, Vector3.UP)
 		
-	if testing_mode and current_state == State.IDLE:
+	if throwing_mode and current_state == State.IDLE:
 		throw_timer += delta
 		if throw_timer >= throw_interval:
 			throw_timer = 0

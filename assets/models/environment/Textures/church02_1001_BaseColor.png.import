@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dik1ikauupc8t"
-path.s3tc="res://.godot/imported/church02_1001_BaseColor.png-c8a059d330b2f0f50de90b0fbf2180c7.s3tc.ctex"
+path.s3tc="res://.godot/imported/church02_1001_BaseColor.png-7fe685a38af7845e3070f32b7c8df1ed.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/environment/textures/church02_1001_BaseColor.png"
-dest_files=["res://.godot/imported/church02_1001_BaseColor.png-c8a059d330b2f0f50de90b0fbf2180c7.s3tc.ctex"]
+source_file="res://assets/models/environment/Textures/church02_1001_BaseColor.png"
+dest_files=["res://.godot/imported/church02_1001_BaseColor.png-7fe685a38af7845e3070f32b7c8df1ed.s3tc.ctex"]
 
 [params]
 
