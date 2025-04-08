@@ -15,8 +15,8 @@ var dead = false
 #Dash variables
 @export var dash_cooldown_duration = 0.5 #cool down duration in seconds
 var dash_cooldown_timer = 0.0 
-var dash_speed = 40.0    # How fast the dash moves
-var dash_duration = 0.2 # How long the dash lasts in seconds
+@export var dash_speed = 20.0    # How fast the dash moves
+@export var dash_duration = 0.2 # How long the dash lasts in seconds
 var dash_timer = 0.0     # Counts down to keep track of ending dash
 var dash_direction = Vector3.ZERO  # Stores the locked dash direction
 
