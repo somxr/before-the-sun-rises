@@ -103,6 +103,7 @@ func die() -> void:
 	hurt = false
 	dead = true
 	collision_shape_3d.disabled = true
+	hurt_collision_shape_3d.disabled = true
 	player_died.emit()
 
 func _on_player_won():
