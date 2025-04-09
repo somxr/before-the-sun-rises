@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dctwm6wk5b6wt" path="res://assets/textures/Green/texture_10.png" id="1_v73tj"]
 
 [resource]
+shading_mode = 2
 albedo_texture = ExtResource("1_v73tj")
 uv1_scale = Vector3(0.5, 0.5, 0.5)
 uv1_triplanar = true

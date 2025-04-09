@@ -7,7 +7,7 @@
 size = Vector3(1.22278, 2.13971, 1.29388)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qhgh1"]
-size = Vector3(3.4104, 2.29541, 2.48706)
+size = Vector3(1.909, 2.29541, 2.48706)
 
 [node name="bridgidSprite" type="StaticBody3D"]
 
@@ -25,5 +25,5 @@ monitorable = false
 script = ExtResource("2_qhgh1")
 
 [node name="WinCollisionShape3D" type="CollisionShape3D" parent="WinArea3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2937, 0.0233154)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32724, 1.2937, 0.0233154)
 shape = SubResource("BoxShape3D_qhgh1")
