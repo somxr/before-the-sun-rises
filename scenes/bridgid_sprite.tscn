@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cnn8t5iu0qcbi" path="res://scenes/win_area_3d.gd" id="2_qhgh1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l8w7a"]
-size = Vector3(1.22278, 2.13971, 1.29388)
+size = Vector3(1.22278, 1.79739, 1.29388)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qhgh1"]
 size = Vector3(1.909, 2.29541, 2.48706)
@@ -13,10 +13,11 @@ size = Vector3(1.909, 2.29541, 2.48706)
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 transform = Transform3D(0.0909512, -0.0454756, 0.612373, 0, 0.111392, 0.5, -0.0909512, -0.0454756, 0.612373, 0, 1.04682, 0)
+render_priority = 1
 texture = ExtResource("1_l8w7a")
 
 [node name="physical_collision" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.111389, 0.746674, 0.146942)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.111389, 0.917832, 0.146942)
 shape = SubResource("BoxShape3D_l8w7a")
 
 [node name="WinArea3D" type="Area3D" parent="."]

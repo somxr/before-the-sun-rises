@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0i6t17vv7wkk"]
+
+[ext_resource type="Texture2D" uid="uid://cqdej6j20wkl8" path="res://assets/textures/environment/floor plane07.png" id="1_2qfsa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ex708"]
+size = Vector3(141.429, 0.990356, 142.438)
+
+[node name="floor" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.490771, 0)
+shape = SubResource("BoxShape3D_ex708")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(3.52441, 0, 0, 0, -1.5498e-07, 1.00582, 0, -3.54553, -4.3966e-08, 0, 0, 0)
+texture = ExtResource("1_2qfsa")

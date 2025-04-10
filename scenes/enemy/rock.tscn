@@ -8,12 +8,12 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_5fxpv"]
 size = Vector3(0.187744, 0.150146, 0.205078)
 
-[sub_resource type="Gradient" id="Gradient_tj4lg"]
+[sub_resource type="Gradient" id="Gradient_erpfd"]
 offsets = PackedFloat32Array(0.35396, 0.886139)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_erpfd"]
-gradient = SubResource("Gradient_tj4lg")
+gradient = SubResource("Gradient_erpfd")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 0.5)
@@ -49,6 +49,7 @@ script = ExtResource("4_erpfd")
 [node name="ShadowSprite" type="Sprite3D" parent="cast_shadow"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -0.0872075, 0)
 modulate = Color(0.0768358, 0.0768358, 0.0768358, 1)
+render_priority = 1
 texture = SubResource("GradientTexture2D_erpfd")
 
 [node name="RayCast3D" type="RayCast3D" parent="cast_shadow"]
