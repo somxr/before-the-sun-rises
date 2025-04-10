@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://j3m2akuejogr"]
+[gd_scene load_steps=22 format=3 uid="uid://j3m2akuejogr"]
 
 [ext_resource type="Material" uid="uid://b331c3hdlx14g" path="res://materials/green_material.tres" id="1_sugp2"]
 [ext_resource type="Material" uid="uid://erx11plvao0j" path="res://materials/wall_material.tres" id="2_sugp2"]
@@ -19,14 +19,10 @@
 [ext_resource type="PackedScene" uid="uid://cdtss8v574xv1" path="res://scenes/bridgid_sprite.tscn" id="16_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://3q7pbcag2u0h" path="res://scenes/env/house_1_2.tscn" id="17_muem4"]
 [ext_resource type="PackedScene" uid="uid://q5vbmlymbvtc" path="res://scenes/UI/win_screen.tscn" id="18_dp3eg"]
-[ext_resource type="Texture2D" uid="uid://cqdej6j20wkl8" path="res://assets/textures/environment/floor plane07.png" id="20_gqmmt"]
+[ext_resource type="PackedScene" uid="uid://b0i6t17vv7wkk" path="res://scenes/env/floor.tscn" id="20_gqmmt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jscy8"]
 albedo_texture = ExtResource("15_gqmmt")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yc10j"]
-shading_mode = 0
-albedo_texture = ExtResource("20_gqmmt")
 
 [node name="world" type="Node3D"]
 
@@ -1370,8 +1366,5 @@ material_override = ExtResource("1_sugp2")
 use_collision = true
 size = Vector3(11.7457, 3.06369, 0.34668)
 
-[node name="Proper Floor" type="CSGBox3D" parent="."]
-transform = Transform3D(-6.09496e-06, 0, -139.437, 0, 0.93092, 0, 139.437, 0, -6.09496e-06, 1.678, 0, 43.164)
-material_override = SubResource("StandardMaterial3D_yc10j")
-use_collision = true
-flip_faces = true
+[node name="floor" parent="." instance=ExtResource("20_gqmmt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.06238, 0, 41.7966)
