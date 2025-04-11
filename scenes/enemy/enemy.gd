@@ -4,7 +4,8 @@ enum State {IDLE, THROWING}
 
 const rock_scene := preload("res://scenes/enemy/rock.tscn")
 @onready var shoot_position: Node3D = $shootPosition
-@onready var animation_player: AnimationPlayer = $enemyModel1/AnimationPlayer
+#@onready var animation_player: AnimationPlayer = $enemyModel1/AnimationPlayer
+@onready var animation_player2: AnimationPlayer = $friarModel/AnimationPlayer
 
 var player_pos
 var current_state = State.IDLE
@@ -19,10 +20,14 @@ var throw_timer = 0.0
 
 func _ready() -> void:
 	# Connect animation finished signal
-	animation_player.connect("animation_finished", Callable(self, "_on_animation_finished"))
+	#animation_player.connect("animation_finished", Callable(self, "_on_animation_finished"))
+	animation_player2.connect("animation_finished", Callable(self, "_on_animation_finished"))
+
 	
 	# Start idle animation
-	animation_player.play("stand")
+	#animation_player.play("stand")
+	animation_player2.play("friar_anim/idle_enemy")
+
 
 func _physics_process(delta: float) -> void:
 	var player_group = get_tree().get_nodes_in_group("player")
@@ -39,7 +44,9 @@ func _physics_process(delta: float) -> void:
 func throw() -> void:
 	if current_state == State.IDLE:
 		current_state = State.THROWING
-		animation_player.play("throw")
+		#animation_player.play("throw")
+		animation_player2.play("friar_anim/throw_enemy")
+
 
 func spawn_rock_from_animation() -> void:
 	var rock_instance := rock_scene.instantiate()
@@ -51,6 +58,7 @@ func spawn_rock_from_animation() -> void:
 
 func _on_animation_finished(anim_name: StringName) -> void:
 	#print("Animation finished: ", anim_name)
-	if anim_name == "throw" and current_state == State.THROWING:
+	if anim_name == "friar_anim/throw_enemy" and current_state == State.THROWING:
 		current_state = State.IDLE
-		animation_player.play("stand")
+		#animation_player.play("idle_enemy")
+		animation_player2.play("friar_anim/idle_enemy")

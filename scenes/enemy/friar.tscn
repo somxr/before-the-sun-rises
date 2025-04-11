@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4ter31yckf35"]
+
+[ext_resource type="PackedScene" uid="uid://bqwyaedxxdky6" path="res://assets/models/enemy/enemyv02.fbx" id="1_ggke3"]
+[ext_resource type="Animation" uid="uid://dfkdabx6mgd5o" path="res://assets/models/enemy/idle_enemy.res" id="2_h6ve0"]
+[ext_resource type="Animation" uid="uid://cdg8l16vv6xur" path="res://assets/models/enemy/throw_enemy.res" id="3_kwuo1"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o17hj"]
+_data = {
+&"idle_enemy": ExtResource("2_h6ve0"),
+&"throw_enemy": ExtResource("3_kwuo1")
+}
+
+[node name="friar" type="Node3D"]
+
+[node name="enemyv02" parent="." instance=ExtResource("1_ggke3")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="enemyv02"]
+libraries = {
+&"enemy": SubResource("AnimationLibrary_o17hj")
+}

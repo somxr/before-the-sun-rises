@@ -755,11 +755,6 @@ use_collision = true
 flip_faces = true
 size = Vector3(77.4934, 1, 35.0081)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="actualMap"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.51496, 0)
-visible = false
-omni_range = 74.8585
-
 [node name="sun" type="DirectionalLight3D" parent="actualMap"]
 transform = Transform3D(1, 0, 0, 0, 0.577231, 0.816581, 0, -0.816581, 0.577231, 0, 5.89466, 8.07093)
 
