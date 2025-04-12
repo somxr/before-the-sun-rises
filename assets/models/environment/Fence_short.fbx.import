@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c8rluq3doj2vo"
-path="res://.godot/imported/House2_1.fbx-081263a4dab0fdcce0582dbf6d0a7687.scn"
+uid="uid://b3my1xipv4c34"
+path="res://.godot/imported/Fence_short.fbx-1acd8e8c21ca2c0af3ae2bd68dd056dc.scn"
 
 [deps]
 
-source_file="res://assets/models/environment/House2_1.fbx"
-dest_files=["res://.godot/imported/House2_1.fbx-081263a4dab0fdcce0582dbf6d0a7687.scn"]
+source_file="res://assets/models/environment/Fence_short.fbx"
+dest_files=["res://.godot/imported/Fence_short.fbx-1acd8e8c21ca2c0af3ae2bd68dd056dc.scn"]
 
 [params]
 
@@ -34,9 +34,9 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "materials": {
-"standardSurface4": {
+"standardSurface10": {
 "use_external/enabled": true,
-"use_external/path": "uid://b02w1cfqmac2y"
+"use_external/path": "uid://dmdjbgu6hkulf"
 }
 }
 }
