@@ -358,6 +358,7 @@ transform = Transform3D(0.510753, 0, 0.859728, 0, 1, 0, -0.859728, 0, 0.510753, 
 
 [node name="fenceGroupOld" type="Node3D" parent="actualMap"]
 transform = Transform3D(0.998813, 0, 0.0487103, 0, 1, 0, -0.0487103, 0, 0.998813, 27.591, 0, 80.856)
+visible = false
 
 [node name="fence2" parent="actualMap/fenceGroupOld" instance=ExtResource("13_trceg")]
 transform = Transform3D(-0.99923, 0, -0.039225, 0, 1, 0, 0.039225, 0, -0.99923, 0.0492096, 0, 26.5537)
@@ -460,6 +461,18 @@ transform = Transform3D(0.994696, 0, 0.102862, 0, 1, 0, -0.102862, 0, 0.994696, 
 
 [node name="fence20" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
 transform = Transform3D(-0.999289, 0, -0.0377075, 0, 1, 0, 0.0377075, 0, -0.999289, -64.7451, 2.38419e-07, 25.7028)
+
+[node name="fence87" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
+transform = Transform3D(-0.99952, 0, -0.0309746, 0, 1, 0, 0.0309746, 0, -0.99952, -72.5218, 2.38419e-07, 14.9082)
+
+[node name="fence92" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
+transform = Transform3D(-0.999289, 0, -0.0377075, 0, 1, 0, 0.0377075, 0, -0.999289, -65.9049, 2.38419e-07, 14.6574)
+
+[node name="fence93" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
+transform = Transform3D(-0.999519, 0, -0.0309746, 0, 0.999999, 0, 0.0309746, 0, -0.999519, -61.1369, 2.38419e-07, 14.4947)
+
+[node name="fence94" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
+transform = Transform3D(-0.999289, 0, -0.0377075, 0, 1, 0, 0.0377075, 0, -0.999289, -54.52, 2.38419e-07, 14.2439)
 
 [node name="fence21" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
 transform = Transform3D(0.998805, 0, 0.0488847, 0, 1, 0, -0.0488847, 0, 0.998805, -52.5487, 0, 25.1622)
@@ -831,6 +844,33 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 32.343
 
 [node name="fence_short4" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 32.3439, 0, 92.9694)
+
+[node name="fence_short38" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21.2636, 0, 100.588)
+
+[node name="fence_short39" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21.2636, 0, 96.0235)
+
+[node name="fence_short40" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21.2636, 0, 91.4636)
+
+[node name="fence_short45" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21.2636, 0, 93.7275)
+
+[node name="fence_short44" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21.2636, 0, 98.2759)
+
+[node name="fence_short41" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21.2636, 0, 89.1958)
+
+[node name="fence_short46" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21.2636, 0, 86.9083)
+
+[node name="fence_short42" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21.2636, 0, 84.6311)
+
+[node name="fence_short43" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21.2636, 0, 82.3351)
 
 [node name="fence_short5" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 32.3439, 0, 90.6503)
