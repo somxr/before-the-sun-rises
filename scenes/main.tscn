@@ -22,8 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://b0i6t17vv7wkk" path="res://scenes/env/floor.tscn" id="20_gqmmt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gqmmt"]
-sky_top_color = Color(0.44457, 0.45288, 0.423741, 1)
-sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+sky_top_color = Color(0.481086, 0.207247, 0.656654, 1)
+sky_horizon_color = Color(0.76, 0.381267, 0.266, 1)
 ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
 
 [sub_resource type="Sky" id="Sky_yc10j"]
@@ -32,6 +32,7 @@ sky_material = SubResource("ProceduralSkyMaterial_gqmmt")
 [sub_resource type="Environment" id="Environment_jscy8"]
 background_mode = 2
 sky = SubResource("Sky_yc10j")
+ambient_light_sky_contribution = 0.82
 tonemap_mode = 2
 glow_enabled = true
 
@@ -41,7 +42,10 @@ albedo_texture = ExtResource("15_gqmmt")
 [node name="world" type="Node3D"]
 
 [node name="sun" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.577231, 0.816581, 0, -0.816581, 0.577231, 0, 41.4739, 126.022)
+transform = Transform3D(0.567025, -3.72529e-09, -0.823701, 0.672618, 0.577231, 0.463021, 0.475466, -0.816581, 0.327304, 0, 41.4739, 126.022)
+light_color = Color(1, 0.813333, 0.44, 1)
+light_energy = 0.513
+shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jscy8")
