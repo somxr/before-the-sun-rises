@@ -1,9 +1,55 @@
-[gd_scene load_steps=3 format=3 uid="uid://ceghdmd0rogpx"]
+[gd_scene load_steps=14 format=3 uid="uid://ceghdmd0rogpx"]
 
 [ext_resource type="PackedScene" uid="uid://d5wpatkaykxi" path="res://assets/models/environment/Torch.fbx" id="1_bvbsb"]
+[ext_resource type="Texture2D" uid="uid://34xabhaio6pw" path="res://assets/sprites/flamelet_smooth.png" id="2_ni3t4"]
+[ext_resource type="Script" uid="uid://m7es7v14mu57" path="res://scenes/env/flicker_light.gd" id="2_otwqw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ni3t4"]
 size = Vector3(0.284546, 2.51074, 0.225952)
+
+[sub_resource type="Curve" id="Curve_ni3t4"]
+_data = [Vector2(0, 0.00185013), 0.0, 0.0, 0, 0, Vector2(0.497585, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_otwqw"]
+curve = SubResource("Curve_ni3t4")
+
+[sub_resource type="Gradient" id="Gradient_lmgit"]
+offsets = PackedFloat32Array(0, 0.257732, 0.585052, 0.780928, 1)
+colors = PackedColorArray(0.136217, 1.75226e-07, 0.000987487, 1, 0.92, 0.0613333, 0, 1, 0.95, 0.86735, 0.1235, 1, 0.556951, 0.556954, 0.556951, 1, 0.154874, 0.154877, 0.154876, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_65orj"]
+gradient = SubResource("Gradient_lmgit")
+
+[sub_resource type="Curve" id="Curve_ponft"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.549029), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_07usx"]
+curve = SubResource("Curve_ponft")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_p5f5m"]
+emission_shape = 1
+emission_sphere_radius = 0.1
+gravity = Vector3(0, 9.8, 0)
+scale_min = 0.7
+scale_max = 0.9
+scale_curve = SubResource("CurveTexture_07usx")
+color_ramp = SubResource("GradientTexture1D_65orj")
+alpha_curve = SubResource("CurveTexture_otwqw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_otwqw"]
+render_priority = 2
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_ni3t4")
+billboard_mode = 1
+billboard_keep_scale = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_lmgit"]
+material = SubResource("StandardMaterial3D_otwqw")
+size = Vector2(0.25, 0.25)
 
 [node name="Torch" type="StaticBody3D"]
 
@@ -24,3 +70,11 @@ light_size = 0.726
 light_specular = 2.907
 shadow_enabled = true
 omni_range = 6.21
+script = ExtResource("2_otwqw")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0298635, 2.42706, 0)
+amount = 200
+lifetime = 0.2
+process_material = SubResource("ParticleProcessMaterial_p5f5m")
+draw_pass_1 = SubResource("QuadMesh_lmgit")

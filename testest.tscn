@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu7d3skb1tpf3"]
+
+[ext_resource type="PackedScene" uid="uid://7incfsglra4a" path="res://scenes/player/player.tscn" id="1_v8ooy"]
+[ext_resource type="PackedScene" uid="uid://wexfg3n2fj54" path="res://scenes/enemy/enemy.tscn" id="2_evfvk"]
+[ext_resource type="PackedScene" uid="uid://cdtss8v574xv1" path="res://scenes/bridgid_sprite.tscn" id="3_evfvk"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_v8ooy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00891948, 0, 1.52621)
+
+[node name="enemy" parent="." instance=ExtResource("2_evfvk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.757725, 0, -8.97262)
+
+[node name="bridgidSprite" parent="." instance=ExtResource("3_evfvk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.19312, 0, -7.39536)
