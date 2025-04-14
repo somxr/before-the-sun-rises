@@ -10,6 +10,8 @@ var vertical_velocity := 0.0
 @onready var hitbox: Hitbox = $hitbox
 @onready var timer: Timer = $Timer
 
+@onready var impact_particles: GPUParticles3D = $impactParticles
+
 func _ready():
 	timer.wait_time = lifetime
 	timer.start()
@@ -36,8 +38,30 @@ func handle_collision(collider):
 	if collider.has_method("take_damage"):
 		collider.take_damage(1)  # Or whatever damage value
 	
-	# Play impact effect
-	# spawn_impact_effect()
+		# Play impact particles
+	if impact_particles:
+		# Reparent to keep particles alive after rock is freed
+		var scene_root = get_tree().get_root()
+		remove_child(impact_particles)
+		scene_root.add_child(impact_particles)
+		
+		# Position particles at current location
+		impact_particles.global_transform.origin = global_transform.origin
+		
+		# Trigger particles
+		impact_particles.emitting = true
+		
+		# Set up particles to free themselves after emission
+		if not impact_particles.one_shot:
+			impact_particles.one_shot = true
+		
+		# Create a timer to free the particles after they're done
+		var cleanup_timer = Timer.new()
+		impact_particles.add_child(cleanup_timer)
+		cleanup_timer.wait_time = impact_particles.lifetime + 0.5  # Add a small buffer
+		cleanup_timer.one_shot = true
+		cleanup_timer.timeout.connect(func(): impact_particles.queue_free())
+		cleanup_timer.start()
 	
 	# Destroy the projectile
 	queue_free()

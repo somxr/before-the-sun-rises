@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://wogxsc0mwwt8"]
+[gd_scene load_steps=14 format=3 uid="uid://wogxsc0mwwt8"]
 
 [ext_resource type="PackedScene" uid="uid://de6f1cc4866w2" path="res://assets/models/rocks/small-rock2.glb" id="1_5fxpv"]
 [ext_resource type="Script" uid="uid://dk23tr7ljut43" path="res://scenes/enemy/rock.gd" id="1_tj4lg"]
@@ -20,6 +20,32 @@ fill_to = Vector2(1, 0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_erpfd"]
 size = Vector3(0.187744, 0.150146, 0.205078)
+
+[sub_resource type="Curve" id="Curve_erpfd"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.660622, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_qxbdh"]
+curve = SubResource("Curve_erpfd")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_erpfd"]
+emission_shape = 1
+emission_sphere_radius = 0.02
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 22.36
+radial_accel_max = 39.27
+scale_min = 0.04
+scale_max = 0.04
+scale_curve = SubResource("CurveTexture_qxbdh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxbdh"]
+shading_mode = 0
+albedo_color = Color(0.273873, 0.273873, 0.273873, 1)
+billboard_mode = 1
+billboard_keep_scale = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_6gex4"]
+material = SubResource("StandardMaterial3D_qxbdh")
 
 [node name="rock" type="CharacterBody3D"]
 collision_layer = 5
@@ -58,5 +84,13 @@ target_position = Vector3(0, -2, 0)
 [node name="ImpactCollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0170898)
 shape = SubResource("BoxShape3D_erpfd")
+
+[node name="impactParticles" type="GPUParticles3D" parent="."]
+emitting = false
+amount = 70
+lifetime = 0.12
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_erpfd")
+draw_pass_1 = SubResource("QuadMesh_6gex4")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
