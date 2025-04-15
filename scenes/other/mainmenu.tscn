@@ -68,7 +68,9 @@ corner_radius_bottom_left = 15
 position = Vector2(960.389, 540.344)
 scale = Vector2(1.00064, 1.00064)
 sprite_frames = SubResource("SpriteFrames_sq25o")
-frame_progress = 0.480928
+autoplay = "default"
+frame = 5
+frame_progress = 0.956263
 
 [node name="title" type="Label" parent="."]
 offset_left = 1481.0

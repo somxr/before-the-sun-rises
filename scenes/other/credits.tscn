@@ -67,6 +67,7 @@ corner_radius_bottom_left = 15
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_eaax6")
+autoplay = "default"
 frame_progress = 0.371815
 
 [node name="goback_btn" type="Button" parent="."]
