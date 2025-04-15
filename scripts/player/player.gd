@@ -126,8 +126,9 @@ func _on_player_won():
 	running = false
 	dashing = false
 	hurt = false
-
-
+	
+	#get_tree().change_scene_to_file("uid://dcdaghr2y3dg5")
+	
 
 
 	

@@ -12,3 +12,6 @@ func _on_player_won():
 	
 	animation_player.play("fadeIn")
 	visible = true
+	
+func load_end_scene():
+	get_tree().change_scene_to_file("uid://dcdaghr2y3dg5")

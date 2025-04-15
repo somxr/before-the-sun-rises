@@ -121,3 +121,4 @@ flat = true
 
 [connection signal="pressed" from="play_btn" to="." method="_on_play_btn_pressed"]
 [connection signal="pressed" from="credits_btn" to="." method="_on_credits_btn_pressed"]
+[connection signal="pressed" from="quit_btn" to="." method="_on_quit_btn_pressed"]
