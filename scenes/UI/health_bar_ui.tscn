@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://fjarw2dx7gv4"]
+[gd_scene load_steps=10 format=3 uid="uid://fjarw2dx7gv4"]
 
 [ext_resource type="Script" uid="uid://de2vfgw68i8s7" path="res://scenes/UI/health_bar_ui.gd" id="1_ax8cs"]
 [ext_resource type="Texture2D" uid="uid://cm5xj1dkmpuq2" path="res://assets/UI/health bar/health_empty.png" id="1_qhs35"]
-[ext_resource type="Texture2D" uid="uid://bpi1iga2ox3xh" path="res://assets/UI/health bar/health_bar1.png" id="2_ax8cs"]
-[ext_resource type="Texture2D" uid="uid://c5hfuh2vescv6" path="res://assets/UI/health bar/health_bar2.png" id="3_x1qb0"]
-[ext_resource type="Texture2D" uid="uid://cmitt777h505b" path="res://assets/UI/health bar/health_bar3.png" id="4_gwsp0"]
+[ext_resource type="Texture2D" uid="uid://csvmmwr83wd11" path="res://assets/UI/Health bar 2/Health bar empty.png" id="3_gwsp0"]
+[ext_resource type="Texture2D" uid="uid://bjagtyxr5gcll" path="res://assets/UI/Health bar 2/Dash bar dark.png" id="4_afmxa"]
+[ext_resource type="Texture2D" uid="uid://dx7pkiwcn5ogp" path="res://assets/UI/Health bar 2/Dash bar bright.png" id="4_xx8kf"]
+[ext_resource type="Texture2D" uid="uid://djl31kg0j13ha" path="res://assets/UI/Health bar 2/Health bar 01.png" id="5_afmxa"]
+[ext_resource type="Script" uid="uid://qph1os44qx8w" path="res://scenes/UI/dash_bar_ui.gd" id="6_hn2ry"]
+[ext_resource type="Texture2D" uid="uid://dk8tc28mfu1ve" path="res://assets/UI/Health bar 2/Health bar 02.png" id="6_ut0mp"]
+[ext_resource type="Texture2D" uid="uid://ceckwuds05kne" path="res://assets/UI/Health bar 2/Health bar 03.png" id="7_hn2ry"]
 
 [node name="HealthBarUi" type="Control"]
 layout_mode = 3
@@ -16,6 +20,7 @@ grow_vertical = 2
 script = ExtResource("1_ax8cs")
 
 [node name="HealthbarBackground" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 78.0
 offset_top = -90.0
@@ -25,6 +30,28 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_qhs35")
 expand_mode = 1
 
+[node name="Healthbar2Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 78.0
+offset_top = -90.0
+offset_right = 2126.0
+offset_bottom = 1958.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_gwsp0")
+expand_mode = 1
+
+[node name="dash_bar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 78.0
+offset_top = -90.0
+offset_right = 2126.0
+offset_bottom = 1958.0
+scale = Vector2(0.2, 0.2)
+value = 100.0
+texture_under = ExtResource("4_afmxa")
+texture_progress = ExtResource("4_xx8kf")
+script = ExtResource("6_hn2ry")
+
 [node name="healthPoint1" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 78.0
@@ -32,7 +59,7 @@ offset_top = -90.0
 offset_right = 2126.0
 offset_bottom = 1958.0
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_ax8cs")
+texture = ExtResource("5_afmxa")
 expand_mode = 1
 
 [node name="healthPoint2" type="TextureRect" parent="."]
@@ -42,7 +69,7 @@ offset_top = -90.0
 offset_right = 2126.0
 offset_bottom = 1958.0
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("3_x1qb0")
+texture = ExtResource("6_ut0mp")
 expand_mode = 1
 
 [node name="healthPoint3" type="TextureRect" parent="."]
@@ -52,5 +79,5 @@ offset_top = -90.0
 offset_right = 2126.0
 offset_bottom = 1958.0
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_gwsp0")
+texture = ExtResource("7_hn2ry")
 expand_mode = 1

@@ -74,7 +74,7 @@ script = ExtResource("2_otwqw")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0298635, 2.42706, 0)
-amount = 200
+amount = 100
 lifetime = 0.2
 process_material = SubResource("ParticleProcessMaterial_p5f5m")
 draw_pass_1 = SubResource("QuadMesh_lmgit")

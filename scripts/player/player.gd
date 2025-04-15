@@ -38,7 +38,9 @@ var hurt_timer = 0.0
 ###SIGNALS###
 signal player_died
 signal health_changed(new_health)
-
+#dash UI signals
+signal dash_used(cooldown_duration)
+signal dash_cooldown_progress(percent)
 
 #this is the visual skin of the Player
 @onready var aiden_model: Node3D = $AidenModel
@@ -69,10 +71,20 @@ func _ready() -> void:
 func handle_dashing(delta, direction):
 	if dash_cooldown_timer > 0:
 		dash_cooldown_timer -= delta
+		# Calculate and emit progress percentage (0-100)
+		var progress = (1.0 - (dash_cooldown_timer / dash_cooldown_duration)) * 100
+		emit_signal("dash_cooldown_progress", progress)
+	elif dash_cooldown_timer <= 0 and Input.is_action_just_pressed("dash"):
+		# This else branch ensures we emit 100% when cooldown is complete
+		emit_signal("dash_cooldown_progress", 100)
+		
+	#if the dash was just input this frame and dash ability is cooled down to 0
 	#if the dash was just input this frame and dash ability is cooled down to 0
 	if Input.is_action_just_pressed("dash") and dash_cooldown_timer <= 0:
-		dashing=true
-		dash_cooldown_timer = dash_cooldown_duration 
+		dashing = true
+		dash_cooldown_timer = dash_cooldown_duration
+		# Emit signal that dash was used with the cooldown duration
+		emit_signal("dash_used", dash_cooldown_duration)
 		dash_timer = dash_duration + dash_delay
 		dash_direction = last_input_direction
 	

@@ -246,7 +246,7 @@ size = Vector3(1, 3, 8)
 [node name="Player" parent="." instance=ExtResource("3_sugp2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.442, 0, 102.356)
 run_speed = 7.0
-dash_cooldown_duration = 0.75
+dash_cooldown_duration = 2.0
 
 [node name="GameOverScreen" parent="." instance=ExtResource("5_tbgi4")]
 visible = false
