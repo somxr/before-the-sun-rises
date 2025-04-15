@@ -686,7 +686,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.17219, 0, -6.46686)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.43379, 0, -6.46441)
 
 [node name="Torch9" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2569, 0, -10.176)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.12575, 0, -4.44956)
 
 [node name="Torch33" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5746, 0, -1.76977)
@@ -722,13 +722,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.499, 0, 90.1359)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7522, 0, 78.0239)
 
 [node name="Torch21" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.705, 0, 74.6832)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.714, 0, 73.3058)
 
 [node name="Torch22" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.8919, 0, 66.015)
 
 [node name="Torch23" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.9915, 0, 67.4317)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9772, 0, 67.1124)
 
 [node name="Torch24" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6798, 0, 55.372)
@@ -746,16 +746,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55348, 0, 52.8615)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.64295, 0, 44.4996)
 
 [node name="Torch29" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.66741, 0, 32.2954)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5053, 0, 32.2524)
 
 [node name="Torch30" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2491, 0, 16.6833)
-
-[node name="Torch31" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1502, 0, 4.54871)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02287, 0, 17.5917)
 
 [node name="Torch32" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.962, 0, -4.41562)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.93595, 0, 0.113983)
 
 [node name="Torch14" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6687, 0, 47.8347)
@@ -860,6 +857,18 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21.263
 [node name="fence_short43" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21.2636, 0, 82.3351)
 
+[node name="fence_short47" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21.2636, 0, 80.0446)
+
+[node name="fence_short48" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
+transform = Transform3D(0.750861, 0, -0.660461, 0, 1, 0, 0.660461, 0, 0.750861, 10.6564, 0, 63.1992)
+
+[node name="fence_short49" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
+transform = Transform3D(0.750861, 0, -0.660461, 0, 1, 0, 0.660461, 0, 0.750861, 8.93199, 0, 61.6876)
+
+[node name="fence_short50" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
+transform = Transform3D(-0.128034, 0, -0.99177, 0, 1, 0, 0.99177, 0, -0.128034, -10.2452, 0, -6.92481)
+
 [node name="fence_short5" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 32.3439, 0, 90.6503)
 
@@ -913,6 +922,27 @@ transform = Transform3D(0.243497, 0, -0.969902, 0, 1, 0, 0.969902, 0, 0.243497, 
 
 [node name="fence_short_group2" parent="actualMap/ShortFenceGroup" instance=ExtResource("18_jscy8")]
 transform = Transform3D(0.181154, 0, -0.983455, 0, 1, 0, 0.983455, 0, 0.181154, 24.4947, 0, 47.2579)
+
+[node name="fence_short_group5" parent="actualMap/ShortFenceGroup" instance=ExtResource("18_jscy8")]
+transform = Transform3D(0.334169, 0, -0.942514, 0, 1, 0, 0.942514, 0, 0.334169, 21.2331, 0, 78.9344)
+
+[node name="fence_short_group6" parent="actualMap/ShortFenceGroup" instance=ExtResource("18_jscy8")]
+transform = Transform3D(0.722666, 0, -0.691198, 0, 1, 0, 0.691198, 0, 0.722666, 18.1498, 0, 70.2929)
+
+[node name="fence_short_group7" parent="actualMap/ShortFenceGroup" instance=ExtResource("18_jscy8")]
+transform = Transform3D(0.0222508, 0, -0.999753, 0, 1, 0, 0.999753, 0, 0.0222508, -0.43926, 0, 48.8385)
+
+[node name="fence_short_group8" parent="actualMap/ShortFenceGroup" instance=ExtResource("18_jscy8")]
+transform = Transform3D(0.663926, 0, -0.747798, 0, 1, 0, 0.747798, 0, 0.663926, -0.640471, 0, 39.6882)
+
+[node name="fence_short_group9" parent="actualMap/ShortFenceGroup" instance=ExtResource("18_jscy8")]
+transform = Transform3D(0.592097, 0, -0.805867, 0, 1, 0, 0.805867, 0, 0.592097, -10.1939, 0, 18.955)
+
+[node name="fence_short_group10" parent="actualMap/ShortFenceGroup" instance=ExtResource("18_jscy8")]
+transform = Transform3D(-0.239398, 0, -0.970922, 0, 1, 0, 0.970922, 0, -0.239398, -15.6078, 0, 11.6238)
+
+[node name="fence_short_group11" parent="actualMap/ShortFenceGroup" instance=ExtResource("18_jscy8")]
+transform = Transform3D(-0.336438, 0, -0.941705, 0, 1, 0, 0.941705, 0, -0.336438, -13.4189, 0, 2.82279)
 
 [node name="fence_short21" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.8514, 0, 37.1301)
@@ -1223,7 +1253,7 @@ throw_interval = 1.5
 throw_speed = 15.0
 
 [node name="enemy_slowest8" parent="enemies" instance=ExtResource("4_jyhfs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.34855, 0, -6.44051)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.62109, 0, -4.88518)
 throw_interval = 1.5
 throw_speed = 15.0
 
@@ -1233,12 +1263,12 @@ throw_interval = 1.5
 throw_speed = 15.0
 
 [node name="enemy_slowest5" parent="enemies" instance=ExtResource("4_jyhfs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.54762, 0, 38.3724)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35675, 0, 34.8388)
 throw_interval = 1.5
 throw_speed = 15.0
 
 [node name="enemy_slowest2" parent="enemies" instance=ExtResource("4_jyhfs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2995, 0, 64.9571)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.438, 0, 63.9436)
 throw_interval = 1.5
 throw_speed = 15.0
 
@@ -1248,7 +1278,7 @@ throw_interval = 1.5
 throw_speed = 15.0
 
 [node name="enemy_slowest3" parent="enemies" instance=ExtResource("4_jyhfs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7908, 0, 66.5978)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9293, 0, 65.5843)
 throw_interval = 1.0
 throw_speed = 13.0
 rock_gravity = 40.0
@@ -1392,7 +1422,7 @@ throw_speed = 30.0
 rock_gravity = 50.0
 
 [node name="enemy_fastest4" parent="enemies" instance=ExtResource("4_jyhfs")]
-transform = Transform3D(-0.767373, -0.00283462, -0.637317, -0.00613127, 0.997495, 0.00294583, 0.637294, 0.00618347, -0.767373, 21.7212, 0, 77.1985)
+transform = Transform3D(-0.767373, -0.00283462, -0.637317, -0.00613127, 0.997495, 0.00294583, 0.637294, 0.00618347, -0.767373, 22.49, 0, 76.3817)
 throw_interval = 0.7
 throw_speed = 35.0
 rock_gravity = 72.0
@@ -1535,3 +1565,6 @@ size = Vector3(11.7457, 3.06369, 0.34668)
 
 [node name="floor" parent="." instance=ExtResource("20_gqmmt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.06238, 0, 41.7966)
+
+[node name="floor2" parent="." instance=ExtResource("20_gqmmt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.06238, 0, 183.28)
