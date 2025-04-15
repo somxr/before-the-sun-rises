@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://j3m2akuejogr"]
+[gd_scene load_steps=25 format=3 uid="uid://j3m2akuejogr"]
 
 [ext_resource type="Material" uid="uid://b331c3hdlx14g" path="res://materials/green_material.tres" id="1_sugp2"]
 [ext_resource type="Material" uid="uid://erx11plvao0j" path="res://materials/wall_material.tres" id="2_sugp2"]
@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://cvb5bkmsnlh2l" path="res://scenes/env/fence_1_wal.tscn" id="12_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://bc1802t148mi0" path="res://scenes/env/fence_2.tscn" id="13_trceg"]
 [ext_resource type="PackedScene" uid="uid://c8xl1dlm4gxr7" path="res://scenes/env/fence_3.tscn" id="14_jkv2x"]
-[ext_resource type="Texture2D" uid="uid://cnkj12btfddnt" path="res://assets/textures/Green/texture_01.png" id="15_gqmmt"]
 [ext_resource type="PackedScene" uid="uid://ceghdmd0rogpx" path="res://scenes/env/torch.tscn" id="15_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://cdtss8v574xv1" path="res://scenes/bridgid_sprite.tscn" id="16_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://3q7pbcag2u0h" path="res://scenes/env/house_1_2.tscn" id="17_muem4"]
@@ -38,9 +37,6 @@ ambient_light_sky_contribution = 0.82
 tonemap_mode = 2
 ssao_enabled = true
 glow_enabled = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jscy8"]
-albedo_texture = ExtResource("15_gqmmt")
 
 [node name="world" type="Node3D"]
 
@@ -668,14 +664,6 @@ transform = Transform3D(0.816485, 0.0192643, 0.0437319, 0.045311, 1.00428, 0.022
 
 [node name="fence91" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
 transform = Transform3D(0.861508, -0.0193172, -0.0560354, 0.0817553, 1.00521, 0.0145349, 0.0487161, -0.00413509, 0.98594, -0.123955, -0.199081, 0.0498438)
-
-[node name="floor" type="CSGBox3D" parent="actualMap"]
-transform = Transform3D(-0.0395143, 0, -2.15595, 0, 0.963561, 0, 2.15595, 0, -0.0395143, 0.941758, 0, 28.8055)
-visible = false
-material_override = SubResource("StandardMaterial3D_jscy8")
-use_collision = true
-flip_faces = true
-size = Vector3(77.4934, 1, 35.0081)
 
 [node name="torches" type="Node3D" parent="actualMap"]
 
