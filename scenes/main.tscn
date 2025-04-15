@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://j3m2akuejogr"]
+[gd_scene load_steps=33 format=3 uid="uid://j3m2akuejogr"]
 
 [ext_resource type="Material" uid="uid://b331c3hdlx14g" path="res://materials/green_material.tres" id="1_sugp2"]
 [ext_resource type="Material" uid="uid://erx11plvao0j" path="res://materials/wall_material.tres" id="2_sugp2"]
@@ -19,9 +19,14 @@
 [ext_resource type="PackedScene" uid="uid://3q7pbcag2u0h" path="res://scenes/env/house_1_2.tscn" id="17_muem4"]
 [ext_resource type="PackedScene" uid="uid://q5vbmlymbvtc" path="res://scenes/UI/win_screen.tscn" id="18_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://dp0gpvvcfjkbr" path="res://scenes/env/fence_short_group.tscn" id="18_jscy8"]
+[ext_resource type="PackedScene" uid="uid://c6hhjsfv202o" path="res://scenes/env/short_shrub.tscn" id="19_y6deb"]
 [ext_resource type="PackedScene" uid="uid://b0i6t17vv7wkk" path="res://scenes/env/floor.tscn" id="20_gqmmt"]
+[ext_resource type="PackedScene" uid="uid://by7lc1b2oyq0j" path="res://scenes/env/spiky_shrub2.tscn" id="20_og1vs"]
 [ext_resource type="PackedScene" uid="uid://btxd00d8hsthh" path="res://scenes/env/fence_short.tscn" id="21_yc10j"]
 [ext_resource type="Script" uid="uid://m7es7v14mu57" path="res://scenes/env/flicker_light.gd" id="22_jscy8"]
+[ext_resource type="PackedScene" uid="uid://c0t02wojsv0rf" path="res://scenes/env/long_shrub.tscn" id="23_pm3ni"]
+[ext_resource type="PackedScene" uid="uid://cungtlvjfe7np" path="res://scenes/env/rock_sprite1.tscn" id="26_2wyq8"]
+[ext_resource type="PackedScene" uid="uid://dw2cbbhs4h6j2" path="res://scenes/env/rock_sprite2.tscn" id="27_vxglm"]
 
 [sub_resource type="Gradient" id="Gradient_yc10j"]
 offsets = PackedFloat32Array(0, 0.0233918, 0.0935673, 0.85138, 1)
@@ -774,6 +779,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6687, 0, 47.8347)
 [node name="Torch12" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.98592, 0, 37.4943)
 
+[node name="Torch31" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6436, 0, 29.8142)
+
 [node name="Torch15" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0599, 0, 47.7846)
 
@@ -1017,6 +1025,146 @@ transform = Transform3D(0.245341, 0, -0.969437, 0, 1, 0, 0.969437, 0, 0.245341, 
 
 [node name="fence_short_group4" parent="actualMap/ShortFenceGroup" instance=ExtResource("18_jscy8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8575, 0.688016, -7.7229)
+
+[node name="environmentSprites2D" type="Node3D" parent="actualMap"]
+
+[node name="longShrub2" parent="actualMap/environmentSprites2D" instance=ExtResource("23_pm3ni")]
+transform = Transform3D(0.978721, 0, 0.205196, 0, 1, 0, -0.205196, 0, 0.978721, 10.3535, 9.53674e-07, 45.3505)
+
+[node name="longShrub3" parent="actualMap/environmentSprites2D" instance=ExtResource("23_pm3ni")]
+transform = Transform3D(0.978721, 0, 0.205196, 0, 1, 0, -0.205196, 0, 0.978721, 9.63518, 9.53674e-07, 42.4164)
+
+[node name="longShrub6" parent="actualMap/environmentSprites2D" instance=ExtResource("23_pm3ni")]
+transform = Transform3D(0.978721, 0, 0.205196, 0, 1, 0, -0.205196, 0, 0.978721, 8.57111, 9.53674e-07, 37.7101)
+
+[node name="longShrub7" parent="actualMap/environmentSprites2D" instance=ExtResource("23_pm3ni")]
+transform = Transform3D(0.978721, 0, 0.205196, 0, 1, 0, -0.205196, 0, 0.978721, 8.70882, 9.53674e-07, 35.4361)
+
+[node name="longShrub9" parent="actualMap/environmentSprites2D" instance=ExtResource("23_pm3ni")]
+transform = Transform3D(0.978721, 0, 0.205196, 0, 1, 0, -0.205196, 0, 0.978721, 9.53906, 9.53674e-07, 30.3123)
+
+[node name="longShrub10" parent="actualMap/environmentSprites2D" instance=ExtResource("23_pm3ni")]
+transform = Transform3D(0.978721, 0, 0.205196, 0, 1, 0, -0.205196, 0, 0.978721, 9.87642, 9.53674e-07, 27.754)
+
+[node name="longShrub11" parent="actualMap/environmentSprites2D" instance=ExtResource("23_pm3ni")]
+transform = Transform3D(0.978721, 0, 0.205196, 0, 1, 0, -0.205196, 0, 0.978721, 10.3065, 9.53674e-07, 25.1425)
+
+[node name="shortShrub" parent="actualMap/environmentSprites2D" instance=ExtResource("19_y6deb")]
+transform = Transform3D(0.830217, 0, 0.557441, 0, 1, 0, -0.557441, 0, 0.830217, 8.645, 0.0299838, 40.2504)
+
+[node name="shortShrub2" parent="actualMap/environmentSprites2D" instance=ExtResource("19_y6deb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.82067, 0.0299838, 44.3178)
+
+[node name="shortShrub3" parent="actualMap/environmentSprites2D" instance=ExtResource("19_y6deb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.45731, 0.0299833, 35.1002)
+
+[node name="shortShrub4" parent="actualMap/environmentSprites2D" instance=ExtResource("19_y6deb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.10048, 0.0299838, 35.3123)
+
+[node name="shortShrub9" parent="actualMap/environmentSprites2D" instance=ExtResource("19_y6deb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.25357, 0.0299838, 38.2358)
+
+[node name="shortShrub10" parent="actualMap/environmentSprites2D" instance=ExtResource("19_y6deb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.28755, 0.0299838, 41.4632)
+
+[node name="shortShrub5" parent="actualMap/environmentSprites2D" instance=ExtResource("19_y6deb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.50888, 0.0299838, 23.264)
+
+[node name="shortShrub6" parent="actualMap/environmentSprites2D" instance=ExtResource("19_y6deb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1486, 0.0299842, 25.9919)
+
+[node name="shortShrub7" parent="actualMap/environmentSprites2D" instance=ExtResource("19_y6deb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.02806, 0.0299842, 31.1825)
+
+[node name="shortShrub8" parent="actualMap/environmentSprites2D" instance=ExtResource("19_y6deb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.87948, 0.0299842, 33.4304)
+
+[node name="spikyShrub" parent="actualMap/environmentSprites2D" instance=ExtResource("20_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9091, 0, 46.122)
+
+[node name="spikyShrub2" parent="actualMap/environmentSprites2D" instance=ExtResource("20_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.37, 0, 47.3205)
+
+[node name="spikyShrub3" parent="actualMap/environmentSprites2D" instance=ExtResource("20_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.88137, 4.76837e-07, 40.6434)
+
+[node name="spikyShrub4" parent="actualMap/environmentSprites2D" instance=ExtResource("20_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.95683, 2.38419e-07, 43.4576)
+
+[node name="spikyShrub5" parent="actualMap/environmentSprites2D" instance=ExtResource("20_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.7291, 2.38419e-07, 36.462)
+
+[node name="spikyShrub6" parent="actualMap/environmentSprites2D" instance=ExtResource("20_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9846, -2.38419e-07, 29.0221)
+
+[node name="spikyShrub7" parent="actualMap/environmentSprites2D" instance=ExtResource("20_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.01897, -2.38419e-07, 19.8741)
+
+[node name="spikyShrub8" parent="actualMap/environmentSprites2D" instance=ExtResource("20_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.75969, -2.38419e-07, 34.594)
+
+[node name="spikyShrub9" parent="actualMap/environmentSprites2D" instance=ExtResource("20_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.793, -7.15256e-07, 33.1579)
+
+[node name="spikyShrub10" parent="actualMap/environmentSprites2D" instance=ExtResource("20_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.54518, -7.15256e-07, 31.9499)
+
+[node name="spikyShrub11" parent="actualMap/environmentSprites2D" instance=ExtResource("20_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.45803, -7.15256e-07, 32.248)
+
+[node name="spikyShrub12" parent="actualMap/environmentSprites2D" instance=ExtResource("20_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.1111, -1.19209e-06, 29.1928)
+
+[node name="spikyShrub13" parent="actualMap/environmentSprites2D" instance=ExtResource("20_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.13874, -1.66893e-06, 26.7981)
+
+[node name="spikyShrub14" parent="actualMap/environmentSprites2D" instance=ExtResource("20_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0526, -1.66893e-06, 28.3439)
+
+[node name="spikyShrub15" parent="actualMap/environmentSprites2D" instance=ExtResource("20_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.57836, -1.19209e-06, 24.4394)
+
+[node name="spikyShrub16" parent="actualMap/environmentSprites2D" instance=ExtResource("20_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4946, -2.14577e-06, 22.5424)
+
+[node name="spikyShrub17" parent="actualMap/environmentSprites2D" instance=ExtResource("20_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.63898, -2.14577e-06, 21.817)
+
+[node name="rockSprite" parent="actualMap/environmentSprites2D" instance=ExtResource("26_2wyq8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.19617, 0, 37.6934)
+
+[node name="rockSprite2" parent="actualMap/environmentSprites2D" instance=ExtResource("26_2wyq8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4465, 0, 44.6546)
+
+[node name="rockSprite8" parent="actualMap/environmentSprites2D" instance=ExtResource("26_2wyq8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6988, 0, 48.1996)
+
+[node name="rockSprite3" parent="actualMap/environmentSprites2D" instance=ExtResource("26_2wyq8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4074, 0, 27.804)
+
+[node name="rockSprite10" parent="actualMap/environmentSprites2D" instance=ExtResource("26_2wyq8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.55653, 9.53674e-07, 20.7195)
+
+[node name="rockSprite11" parent="actualMap/environmentSprites2D" instance=ExtResource("26_2wyq8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88983, 9.53674e-07, 20.8263)
+
+[node name="rockSprite12" parent="actualMap/environmentSprites2D" instance=ExtResource("26_2wyq8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.82126, 4.76837e-07, 18.2525)
+
+[node name="rockSprite4" parent="actualMap/environmentSprites2D" instance=ExtResource("27_vxglm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.60858, -4.76837e-07, 39.169)
+
+[node name="rockSprite5" parent="actualMap/environmentSprites2D" instance=ExtResource("27_vxglm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.36635, -4.76837e-07, 42.0503)
+
+[node name="rockSprite6" parent="actualMap/environmentSprites2D" instance=ExtResource("27_vxglm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9524, -4.76837e-07, 43.0807)
+
+[node name="rockSprite9" parent="actualMap/environmentSprites2D" instance=ExtResource("27_vxglm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.70518, -4.76837e-07, 39.9263)
+
+[node name="rockSprite7" parent="actualMap/environmentSprites2D" instance=ExtResource("27_vxglm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.10334, -4.76837e-07, 47.2631)
 
 [node name="enemies" type="Node3D" parent="."]
 

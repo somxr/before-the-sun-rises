@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://by7lc1b2oyq0j"]
+
+[ext_resource type="Texture2D" uid="uid://gs0pe6i8tg3h" path="res://assets/textures/environment/shrub01.png" id="1_ogv86"]
+
+[node name="spikyShrub" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.141421, -0.0707107, 0.122474, 0, 0.173205, 0.1, -0.141421, -0.0707107, 0.122474, 0, 0.519, 0)
+modulate = Color(0.6, 0.6, 0.6, 1)
+shaded = true
+render_priority = 1
+texture = ExtResource("1_ogv86")

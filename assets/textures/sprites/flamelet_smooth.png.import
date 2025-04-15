@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnc3c5drdq1aa"
-path.s3tc="res://.godot/imported/bridgid_sprite.png-5276c9097b2ac1112918960cdeea85fe.s3tc.ctex"
+uid="uid://34xabhaio6pw"
+path.s3tc="res://.godot/imported/flamelet_smooth.png-38fae1bdc791b6715c3b598fe10e6dd8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/sprites/bridgid_sprite.png"
-dest_files=["res://.godot/imported/bridgid_sprite.png-5276c9097b2ac1112918960cdeea85fe.s3tc.ctex"]
+source_file="res://assets/textures/sprites/flamelet_smooth.png"
+dest_files=["res://.godot/imported/flamelet_smooth.png-38fae1bdc791b6715c3b598fe10e6dd8.s3tc.ctex"]
 
 [params]
 

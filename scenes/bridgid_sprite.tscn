@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cdtss8v574xv1"]
 
-[ext_resource type="Texture2D" uid="uid://dnc3c5drdq1aa" path="res://assets/sprites/bridgid_sprite.png" id="1_l8w7a"]
+[ext_resource type="Texture2D" uid="uid://dnc3c5drdq1aa" path="res://assets/textures/sprites/bridgid_sprite.png" id="1_l8w7a"]
 [ext_resource type="Script" uid="uid://cnn8t5iu0qcbi" path="res://scenes/win_area_3d.gd" id="2_qhgh1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l8w7a"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://ceghdmd0rogpx"]
 
 [ext_resource type="PackedScene" uid="uid://d5wpatkaykxi" path="res://assets/models/environment/Torch.fbx" id="1_bvbsb"]
-[ext_resource type="Texture2D" uid="uid://34xabhaio6pw" path="res://assets/sprites/flamelet_smooth.png" id="2_ni3t4"]
+[ext_resource type="Texture2D" uid="uid://34xabhaio6pw" path="res://assets/textures/sprites/flamelet_smooth.png" id="2_ni3t4"]
 [ext_resource type="Script" uid="uid://m7es7v14mu57" path="res://scenes/env/flicker_light.gd" id="2_otwqw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ni3t4"]
