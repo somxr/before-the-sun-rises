@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvwy7kxy7clc6"]
+
+[ext_resource type="FontFile" uid="uid://c8reywm06mjji" path="res://extra/fonts/BlackPoser-Regular.ttf" id="1_pdoif"]
+[ext_resource type="Texture2D" uid="uid://h7wqyxl2c1mr" path="res://extra/background/paper.png" id="2_77p1o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2aq7"]
+bg_color = Color(0.267, 0.3, 0.28625, 0.878431)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p0gd1"]
+bg_color = Color(0.392157, 0.439216, 0.419608, 0.878431)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="intro" type="Node2D"]
+
+[node name="background" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.0862745, 0.0666667, 0.105882, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 95.0
+offset_top = 102.0
+offset_right = 848.0
+offset_bottom = 944.0
+theme_override_constants/line_separation = -16
+theme_override_fonts/normal_font = ExtResource("1_pdoif")
+theme_override_font_sizes/normal_font_size = 50
+text = "Early one morning, your sleep is interupted by a series of frantic knocking at your door. Before you could open it, a letter is slid under your door, written anonymously. It says..."
+horizontal_alignment = 1
+
+[node name="play_btn" type="Button" parent="."]
+offset_left = 95.0
+offset_top = 904.0
+offset_right = 469.0
+offset_bottom = 1012.0
+theme_override_fonts/font = ExtResource("1_pdoif")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/hover = SubResource("StyleBoxFlat_h2aq7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_p0gd1")
+text = "Next"
+
+[node name="Paper" type="Sprite2D" parent="."]
+position = Vector2(1247, 840)
+rotation = 0.227545
+scale = Vector2(1.07364, 1.07364)
+texture = ExtResource("2_77p1o")
+
+[node name="papertext" type="RichTextLabel" parent="."]
+offset_left = 996.0
+offset_top = 255.0
+offset_right = 1812.0
+offset_bottom = 1109.0
+rotation = 0.208779
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -7
+theme_override_fonts/normal_font = ExtResource("1_pdoif")
+theme_override_font_sizes/normal_font_size = 53
+text = "Dearest Brenna,
+
+We are writing to you in the upmost secrecy. 
+Your sister was taken from her bed in the night while you slept peacefully. 
+A witch, they called her. 
+Those soulless creatures are planning on burning her at the church come sunrise. 
+Be swift, sweet Brenna, and stop the event from taking place. 
+For all of our sakes. "
