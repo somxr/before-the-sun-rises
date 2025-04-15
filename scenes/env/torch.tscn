@@ -16,7 +16,7 @@ curve = SubResource("Curve_ni3t4")
 
 [sub_resource type="Gradient" id="Gradient_lmgit"]
 offsets = PackedFloat32Array(0, 0.257732, 0.585052, 0.780928, 1)
-colors = PackedColorArray(0.136217, 1.75226e-07, 0.000987487, 1, 0.92, 0.0613333, 0, 1, 0.95, 0.86735, 0.1235, 1, 0.556951, 0.556954, 0.556951, 1, 0.154874, 0.154877, 0.154876, 1)
+colors = PackedColorArray(0.136217, 1.75226e-07, 0.000987487, 1, 1, 0.199389, 0.0830987, 1, 0.95, 0.86735, 0.1235, 1, 0.556951, 0.556954, 0.556951, 1, 0.154874, 0.154877, 0.154876, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_65orj"]
 gradient = SubResource("Gradient_lmgit")
@@ -62,7 +62,7 @@ shape = SubResource("BoxShape3D_ni3t4")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.042725, 2.54235, -0.00261056)
-light_color = Color(0.89, 0.6586, 0.3115, 1)
+light_color = Color(0.89, 0.68352, 0.3738, 1)
 light_energy = 4.219
 light_indirect_energy = 2.911
 light_volumetric_fog_energy = 5.885

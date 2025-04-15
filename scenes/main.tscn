@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://j3m2akuejogr"]
+[gd_scene load_steps=28 format=3 uid="uid://j3m2akuejogr"]
 
 [ext_resource type="Material" uid="uid://b331c3hdlx14g" path="res://materials/green_material.tres" id="1_sugp2"]
 [ext_resource type="Material" uid="uid://erx11plvao0j" path="res://materials/wall_material.tres" id="2_sugp2"]
@@ -21,6 +21,14 @@
 [ext_resource type="PackedScene" uid="uid://dp0gpvvcfjkbr" path="res://scenes/env/fence_short_group.tscn" id="18_jscy8"]
 [ext_resource type="PackedScene" uid="uid://b0i6t17vv7wkk" path="res://scenes/env/floor.tscn" id="20_gqmmt"]
 [ext_resource type="PackedScene" uid="uid://btxd00d8hsthh" path="res://scenes/env/fence_short.tscn" id="21_yc10j"]
+[ext_resource type="Script" uid="uid://m7es7v14mu57" path="res://scenes/env/flicker_light.gd" id="22_jscy8"]
+
+[sub_resource type="Gradient" id="Gradient_yc10j"]
+offsets = PackedFloat32Array(0, 0.0233918, 0.0935673, 0.85138, 1)
+colors = PackedColorArray(0.000693898, 0.000693898, 0.000693898, 1, 0.068955, 0.0351, 0.09, 1, 0.17, 0.085, 0.164333, 1, 0.911844, 0.833734, 0.812873, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_jscy8"]
+gradient = SubResource("Gradient_yc10j")
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gqmmt"]
 sky_top_color = Color(0.481086, 0.207247, 0.656654, 1)
@@ -32,11 +40,16 @@ sky_material = SubResource("ProceduralSkyMaterial_gqmmt")
 
 [sub_resource type="Environment" id="Environment_jscy8"]
 background_mode = 2
+background_energy_multiplier = 0.78
 sky = SubResource("Sky_yc10j")
 ambient_light_sky_contribution = 0.82
-tonemap_mode = 2
+tonemap_mode = 3
+tonemap_exposure = 1.15
 ssao_enabled = true
 glow_enabled = true
+volumetric_fog_density = 0.005
+adjustment_enabled = true
+adjustment_color_correction = SubResource("GradientTexture1D_jscy8")
 
 [node name="world" type="Node3D"]
 
@@ -711,7 +724,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.53313, 0, 23.0894)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.7315, 0, 99.9831)
 
 [node name="Torch17" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9898, 0, 100.715)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.3749, 0, 102.557)
 
 [node name="Torch18" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.956, 0, 89.404)
@@ -833,6 +846,9 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 32.343
 
 [node name="fence_short38" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21.2636, 0, 100.588)
+
+[node name="fence_short51" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21.2636, 0, 102.819)
 
 [node name="fence_short39" parent="actualMap/ShortFenceGroup" instance=ExtResource("21_yc10j")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21.2636, 0, 96.0235)
@@ -1569,3 +1585,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.06238, 0, 41.7966)
 
 [node name="floor2" parent="." instance=ExtResource("20_gqmmt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.06238, 0, 183.28)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.7441, 2.54235, 22.8085)
+light_color = Color(0.89, 0.719713, 0.5251, 1)
+light_energy = 4.219
+light_indirect_energy = 2.911
+light_volumetric_fog_energy = 5.885
+light_size = 0.726
+light_specular = 2.907
+shadow_enabled = true
+omni_range = 6.21
+script = ExtResource("22_jscy8")
