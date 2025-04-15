@@ -1,0 +1,116 @@
+[gd_scene load_steps=12 format=3 uid="uid://w1b4dxwtypo0"]
+
+[ext_resource type="Texture2D" uid="uid://bkfads7o6xsm7" path="res://extra/background/title screen01.png" id="1_umdf5"]
+[ext_resource type="Texture2D" uid="uid://cxefyhyiss5sl" path="res://extra/background/title screen02.png" id="2_7pim1"]
+[ext_resource type="Texture2D" uid="uid://doqdjul8ne5p1" path="res://extra/background/title screen03.png" id="3_deube"]
+[ext_resource type="Texture2D" uid="uid://bqlx4skveuu3e" path="res://extra/background/title screen04.png" id="4_q4hrf"]
+[ext_resource type="Texture2D" uid="uid://c4a31nacchksl" path="res://extra/background/title screen05.png" id="5_mylma"]
+[ext_resource type="Texture2D" uid="uid://b81skd255pkqf" path="res://extra/background/title screen06.png" id="6_qelcn"]
+[ext_resource type="Texture2D" uid="uid://4ehr13cogd2c" path="res://extra/background/title screen07.png" id="7_8rs17"]
+[ext_resource type="FontFile" uid="uid://c8reywm06mjji" path="res://extra/fonts/BlackPoser-Regular.ttf" id="8_7pim1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sq25o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_umdf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7pim1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_deube")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q4hrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mylma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qelcn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8rs17")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7pim1"]
+bg_color = Color(0.267, 0.3, 0.28625, 0.878431)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_deube"]
+bg_color = Color(0.392157, 0.439216, 0.419608, 0.878431)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="mainmenu" type="Node2D"]
+
+[node name="background" type="AnimatedSprite2D" parent="."]
+position = Vector2(960.389, 540.344)
+scale = Vector2(1.00064, 1.00064)
+sprite_frames = SubResource("SpriteFrames_sq25o")
+frame_progress = 0.480928
+
+[node name="title" type="Label" parent="."]
+offset_left = 1481.0
+offset_right = 1842.0
+offset_bottom = 560.0
+theme_override_constants/line_spacing = -35
+theme_override_fonts/font = ExtResource("8_7pim1")
+theme_override_font_sizes/font_size = 155
+text = "Before
+the Sun
+Rises"
+horizontal_alignment = 2
+
+[node name="play_btn" type="Button" parent="."]
+offset_left = 95.0
+offset_top = 904.0
+offset_right = 469.0
+offset_bottom = 1012.0
+theme_override_fonts/font = ExtResource("8_7pim1")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/hover = SubResource("StyleBoxFlat_7pim1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_deube")
+text = "Play"
+
+[node name="credits_btn" type="Button" parent="."]
+offset_left = 516.0
+offset_top = 904.0
+offset_right = 889.0
+offset_bottom = 1012.0
+theme_override_fonts/font = ExtResource("8_7pim1")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/hover = SubResource("StyleBoxFlat_7pim1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_deube")
+text = "Credits"
+
+[node name="quit_btn" type="Button" parent="."]
+offset_left = 1700.0
+offset_top = 900.0
+offset_right = 1847.0
+offset_bottom = 1010.0
+theme_override_colors/font_hover_color = Color(0.63, 0.63, 0.63, 1)
+theme_override_fonts/font = ExtResource("8_7pim1")
+theme_override_font_sizes/font_size = 75
+text = "Quit"
+flat = true
