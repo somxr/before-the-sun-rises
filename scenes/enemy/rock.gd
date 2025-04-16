@@ -11,6 +11,8 @@ var vertical_velocity := 0.0
 @onready var timer: Timer = $Timer
 
 @onready var impact_particles: GPUParticles3D = $impactParticles
+@onready var impact_sound: AudioStreamPlayer3D = $impactSound
+
 
 func _ready():
 	timer.wait_time = lifetime
@@ -37,6 +39,28 @@ func handle_collision(collider):
 	# Apply damage if the collider has a health component
 	if collider.has_method("take_damage"):
 		collider.take_damage(1)  # Or whatever damage value
+	
+	
+		# Play sound effect
+	if impact_sound:
+		# Reparent to keep sound playing after rock is freed
+		var scene_root = get_tree().get_root()
+		remove_child(impact_sound)
+		scene_root.add_child(impact_sound)
+		
+		# Position sound at impact location
+		impact_sound.global_transform.origin = global_transform.origin
+		
+		# Play the sound
+		impact_sound.play()
+		
+		# Set up timer to free the sound after it finishes playing
+		var sound_cleanup_timer = Timer.new()
+		impact_sound.add_child(sound_cleanup_timer)
+		sound_cleanup_timer.wait_time = impact_sound.stream.get_length() + 0.5  # Add small buffer
+		sound_cleanup_timer.one_shot = true
+		sound_cleanup_timer.timeout.connect(func(): impact_sound.queue_free())
+		sound_cleanup_timer.start()
 	
 		# Play impact particles
 	if impact_particles:

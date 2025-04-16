@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://j3m2akuejogr"]
+[gd_scene load_steps=35 format=3 uid="uid://j3m2akuejogr"]
 
 [ext_resource type="Material" uid="uid://b331c3hdlx14g" path="res://materials/green_material.tres" id="1_sugp2"]
 [ext_resource type="Material" uid="uid://erx11plvao0j" path="res://materials/wall_material.tres" id="2_sugp2"]
@@ -27,6 +27,8 @@
 [ext_resource type="PackedScene" uid="uid://c0t02wojsv0rf" path="res://scenes/env/long_shrub.tscn" id="23_pm3ni"]
 [ext_resource type="PackedScene" uid="uid://cungtlvjfe7np" path="res://scenes/env/rock_sprite1.tscn" id="26_2wyq8"]
 [ext_resource type="PackedScene" uid="uid://dw2cbbhs4h6j2" path="res://scenes/env/rock_sprite2.tscn" id="27_vxglm"]
+[ext_resource type="AudioStream" uid="uid://dn4g1pclvjhnp" path="res://audio/fire crackling sound.mp3" id="28_2f3dj"]
+[ext_resource type="AudioStream" uid="uid://dyaxosm380kjf" path="res://audio/angry mob loop.mp3" id="28_yq6so"]
 
 [sub_resource type="Gradient" id="Gradient_yc10j"]
 offsets = PackedFloat32Array(0, 0.0233918, 0.0935673, 0.85138, 1)
@@ -1745,3 +1747,13 @@ light_specular = 2.907
 shadow_enabled = true
 omni_range = 6.21
 script = ExtResource("22_jscy8")
+
+[node name="MobSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("28_yq6so")
+autoplay = true
+bus = &"Mob"
+
+[node name="fireCrackle" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("28_2f3dj")
+autoplay = true
+bus = &"fire crackle"

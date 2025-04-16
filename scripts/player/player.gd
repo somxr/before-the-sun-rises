@@ -47,6 +47,11 @@ signal dash_cooldown_progress(percent)
 @onready var brenna_model: Node3D = $brennaModel
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
 @onready var hurt_collision_shape_3d: CollisionShape3D = $hurtBox/hurtCollisionShape3D
+@onready var rock_hurt_sound: AudioStreamPlayer = $Rock_hurt_sound
+@onready var death_sound: AudioStreamPlayer = $death_sound
+@onready var dash_sound: AudioStreamPlayer = $dash_sound
+@onready var gasp_sound: AudioStreamPlayer = $gasp_sound
+@onready var footsteps_sound: AudioStreamPlayer = $footsteps_sound
 
 
 func get_rotated_isometric_direction(input_dir) -> Vector3:
@@ -77,6 +82,7 @@ func handle_dashing(delta, direction):
 	elif dash_cooldown_timer <= 0 and Input.is_action_just_pressed("dash"):
 		# This else branch ensures we emit 100% when cooldown is complete
 		emit_signal("dash_cooldown_progress", 100)
+		dash_sound.play()
 		
 	#if the dash was just input this frame and dash ability is cooled down to 0
 	#if the dash was just input this frame and dash ability is cooled down to 0
@@ -100,6 +106,9 @@ func take_damage(damage: int) -> void:
 	hurt = true
 	collision_shape_3d.disabled = true
 	
+	rock_hurt_sound.play()
+	gasp_sound.play()
+	
 	health -= 1
 	health_changed.emit(health)
 
@@ -116,6 +125,9 @@ func die() -> void:
 	dead = true
 	collision_shape_3d.disabled = true
 	hurt_collision_shape_3d.disabled = true
+	death_sound.play()
+	
+	
 	player_died.emit()
 
 func _on_player_won():
@@ -182,12 +194,15 @@ func _physics_process(delta: float) -> void:
 			velocity.x = direction.x * run_speed
 			velocity.z = direction.z * run_speed
 			
+			
 			aiden_model.look_at(direction+position)
 			brenna_model.look_at(direction+position)
+			
 			#if the state was not already "walking" when a direction is input, 
 			#then change state to walking
 			if !running:
 				running = true
+				footsteps_sound.play()
 				#animation_player.play("run")
 				
 		else:
@@ -196,6 +211,7 @@ func _physics_process(delta: float) -> void:
 			#if no direction detected but the state is running then the player just stopped moving so we update the state
 			if running:
 				running = false
+				footsteps_sound.stop()
 				#animation_player.play("idle")
 
 	move_and_slide()

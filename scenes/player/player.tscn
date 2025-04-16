@@ -1,9 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://7incfsglra4a"]
+[gd_scene load_steps=12 format=3 uid="uid://7incfsglra4a"]
 
 [ext_resource type="Script" uid="uid://ds0qu2ojtffvd" path="res://scripts/player/player.gd" id="1_8afob"]
 [ext_resource type="PackedScene" uid="uid://cllx3ikp0iiq6" path="res://scenes/player/aiden_model.tscn" id="2_dovo2"]
 [ext_resource type="Script" uid="uid://dcslo1v335s4o" path="res://scenes/player/hurt_box.gd" id="3_gmlin"]
 [ext_resource type="PackedScene" uid="uid://b6nb1vhgf1r7l" path="res://scenes/player/brenna_model.tscn" id="4_lvxji"]
+[ext_resource type="AudioStream" uid="uid://c3dvh8k7dy572" path="res://audio/rock_hitting_player.mp3" id="5_p47bc"]
+[ext_resource type="AudioStream" uid="uid://cmlun2ic2yyev" path="res://audio/death03.mp3" id="6_5gtgg"]
+[ext_resource type="AudioStream" uid="uid://drar2cicy8v7i" path="res://audio/dash.mp3" id="7_0owmy"]
+[ext_resource type="AudioStream" uid="uid://csnyl28f00yrc" path="res://audio/hit-gasp.mp3" id="8_qek5x"]
+[ext_resource type="AudioStream" uid="uid://b68cv3f12ghe" path="res://audio/walk02.mp3" id="9_h17s1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dovo2"]
 radius = 0.202922
@@ -44,5 +49,27 @@ shape = SubResource("CapsuleShape3D_gmlin")
 [node name="brennaModel" parent="." instance=ExtResource("4_lvxji")]
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Rock_hurt_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_p47bc")
+volume_db = -10.0
+bus = &"hurt"
+
+[node name="death_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_5gtgg")
+volume_db = -4.674
+bus = &"hurt"
+
+[node name="dash_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_0owmy")
+bus = &"dash"
+
+[node name="gasp_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_qek5x")
+bus = &"hurt"
+
+[node name="footsteps_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_h17s1")
+bus = &"walking"
 
 [connection signal="area_entered" from="hurtBox" to="hurtBox" method="_on_area_entered"]

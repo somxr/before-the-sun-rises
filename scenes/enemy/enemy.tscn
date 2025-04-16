@@ -1375,7 +1375,7 @@ _data = {
 
 [node name="enemy" type="Node3D"]
 script = ExtResource("1_a3pup")
-throw_range = 25.0
+throw_range = 20.0
 
 [node name="enemyModel1" type="Node3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
