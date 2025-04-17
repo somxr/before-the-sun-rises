@@ -218,7 +218,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.9076, 0, 7.45681)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.764, 0, 22.1722)
 
 [node name="Torch10" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.15564, 0, 4.24465)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.63828, 0, 3.61049)
 
 [node name="Torch36" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.00628, 0, 14.3611)
@@ -251,7 +251,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.714, 0, 73.3058)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.8919, 0, 66.015)
 
 [node name="Torch23" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9772, 0, 67.1124)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.4579, 0, 67.463)
 
 [node name="Torch24" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6798, 0, 55.372)
@@ -931,6 +931,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.0671, 0, 46.1121)
 throw_interval = 1.5
 throw_speed = 15.0
 
+[node name="enemy_slowest10" parent="enemies" instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.3, 0, 38.4838)
+throwing_mode = false
+throw_interval = 1.5
+throw_speed = 15.0
+
+[node name="enemy_slowest11" parent="enemies" instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.40334, 0, 10.0039)
+throwing_mode = false
+throw_interval = 1.5
+throw_speed = 15.0
+
+[node name="enemy_slowest12" parent="enemies" instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.873, 0, 9.86326)
+throwing_mode = false
+throw_interval = 1.5
+throw_speed = 15.0
+
+[node name="enemy_slowest13" parent="enemies" instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.873, 0, 9.86326)
+throwing_mode = false
+throw_interval = 1.5
+throw_speed = 15.0
+
 [node name="enemy_slowest5" parent="enemies" instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35675, 0, 34.8388)
 throw_interval = 1.5
@@ -943,6 +967,54 @@ throw_speed = 15.0
 
 [node name="enemy_slowest9" parent="enemies" instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7291, 0, 11.9204)
+throw_interval = 1.5
+throw_speed = 15.0
+
+[node name="enemy_slowest20" parent="enemies" instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9377, 0, 21.1662)
+throwing_mode = false
+throw_interval = 1.5
+throw_speed = 15.0
+
+[node name="enemy_slowest21" parent="enemies" instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.671303, 0, 22.336)
+throwing_mode = false
+throw_interval = 1.5
+throw_speed = 15.0
+
+[node name="enemy_slowest14" parent="enemies" instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.7221, 0, 5.96639)
+throwing_mode = false
+throw_interval = 1.5
+throw_speed = 15.0
+
+[node name="enemy_slowest15" parent="enemies" instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.819, 0, -3.35189)
+throwing_mode = false
+throw_interval = 1.5
+throw_speed = 15.0
+
+[node name="enemy_slowest18" parent="enemies" instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.63149, 0, -4.57689)
+throwing_mode = false
+throw_interval = 1.5
+throw_speed = 15.0
+
+[node name="enemy_slowest19" parent="enemies" instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7068, 0, -4.26242)
+throwing_mode = false
+throw_interval = 1.5
+throw_speed = 15.0
+
+[node name="enemy_slowest16" parent="enemies" instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4702, 0, 1.73884)
+throwing_mode = false
+throw_interval = 1.5
+throw_speed = 15.0
+
+[node name="enemy_slowest17" parent="enemies" instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8949, 0, 1.02597)
+throwing_mode = false
 throw_interval = 1.5
 throw_speed = 15.0
 
@@ -977,7 +1049,7 @@ throw_speed = 25.0
 rock_gravity = 8.5
 
 [node name="enemy_fast9" parent="enemies" instance=ExtResource("4_jyhfs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.65337, 0, 9.14128)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.58305, 0, 10.5126)
 throw_interval = 1.1
 throw_speed = 25.0
 rock_gravity = 8.5
