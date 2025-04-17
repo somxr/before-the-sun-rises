@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1lrgs7k4pnig"]
+
+[ext_resource type="AudioStream" uid="uid://wtaw0wje3n3s" path="res://audio/BTSR_main_theme_sam.mp3" id="1_t1so6"]
+[ext_resource type="Script" uid="uid://hx4uem8x8mvy" path="res://scenes/other/music_player.gd" id="2_81xqf"]
+[ext_resource type="AudioStream" uid="uid://dn4g1pclvjhnp" path="res://audio/fire crackling sound.mp3" id="3_mwiou"]
+
+[node name="MusicPlayer" type="Node"]
+script = ExtResource("2_81xqf")
+
+[node name="MainTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_t1so6")
+volume_db = -0.094
+bus = &"Music"
+
+[node name="EndingTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_mwiou")
+volume_db = 4.581

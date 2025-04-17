@@ -11,6 +11,8 @@ const main_menu_scene = preload("uid://w1b4dxwtypo0")
 func _ready() -> void:
 	animation_player.play("fadeOut")
 	background.visible = true
+	MusicPlayer.transition_to_track(MusicPlayer.Tracks.ENDING)
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

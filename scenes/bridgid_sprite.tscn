@@ -1,20 +1,20 @@
 [gd_scene load_steps=5 format=3 uid="uid://cdtss8v574xv1"]
 
-[ext_resource type="Texture2D" uid="uid://dnc3c5drdq1aa" path="res://assets/textures/sprites/bridgid_sprite.png" id="1_l8w7a"]
+[ext_resource type="Texture2D" uid="uid://dudas3lsk5hwg" path="res://assets/textures/sprites/bridgid_sprite02.png" id="1_qhgh1"]
 [ext_resource type="Script" uid="uid://cnn8t5iu0qcbi" path="res://scenes/win_area_3d.gd" id="2_qhgh1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l8w7a"]
 size = Vector3(1.22278, 1.79739, 1.29388)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qhgh1"]
-size = Vector3(1.909, 2.29541, 2.48706)
+size = Vector3(4.46704, 2.29541, 4.41309)
 
 [node name="bridgidSprite" type="StaticBody3D"]
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 transform = Transform3D(0.0909512, -0.0454756, 0.612373, 0, 0.111392, 0.5, -0.0909512, -0.0454756, 0.612373, 0, 1.04682, 0)
 render_priority = 1
-texture = ExtResource("1_l8w7a")
+texture = ExtResource("1_qhgh1")
 
 [node name="physical_collision" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.111389, 0.917832, 0.146942)
