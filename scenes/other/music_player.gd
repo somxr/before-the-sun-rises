@@ -16,6 +16,9 @@ var _current_track_id: int = Tracks.NONE
 	Tracks.ENDING: $EndingTheme
 }
 
+# Sound effect players
+@onready var _button_sound: AudioStreamPlayer = $ButtonSound
+
 # Called when the node enters the scene tree
 func _ready():
 	# Start with all tracks stopped and volume set to minimum
@@ -54,6 +57,24 @@ func stop_music(fade_time: float = 1.5) -> void:
 # Returns the current track ID
 func get_current_track() -> int:
 	return _current_track_id
+	
+# Play the button click sound effect
+func play_button_sound(volume_db: float = 0.0) -> void:
+	# Store original volume
+	var original_volume = _button_sound.volume_db
+	
+	# Set new volume if different from current
+	if volume_db != original_volume:
+		_button_sound.volume_db = volume_db
+	
+	# Play the sound
+	_button_sound.play()
+	
+	# Reset volume to original after playing (if we changed it)
+	if volume_db != original_volume:
+		# Wait until sound is finished before resetting volume
+		await _button_sound.finished
+		_button_sound.volume_db = original_volume
 
 # Private method to handle fading tracks in or out
 func _track_fade(track_id: int, fade_in: bool, fade_time: float) -> void:

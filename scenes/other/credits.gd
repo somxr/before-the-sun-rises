@@ -14,4 +14,5 @@ func _process(delta: float) -> void:
 
 func _on_goback_btn_pressed() -> void:
 	#get_tree().change_scene_to_packed(main_menu_scene)
+	MusicPlayer.play_button_sound()
 	get_tree().change_scene_to_file("uid://w1b4dxwtypo0")

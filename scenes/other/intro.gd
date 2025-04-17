@@ -13,4 +13,5 @@ func _process(delta: float) -> void:
 
 
 func _on_next_btn_pressed() -> void:
+	MusicPlayer.play_button_sound()
 	get_tree().change_scene_to_packed(main_scene)

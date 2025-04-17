@@ -21,9 +21,11 @@ func _process(delta: float) -> void:
 
 
 func _on_menu_btn_pressed() -> void:
+	MusicPlayer.play_button_sound()
 	get_tree().change_scene_to_file("uid://w1b4dxwtypo0")
 
 
 func _on_quit_btn_pressed() -> void:
+	MusicPlayer.play_button_sound()
 	get_tree().quit()
 	

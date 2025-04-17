@@ -1,8 +1,7 @@
-[gd_scene load_steps=35 format=3 uid="uid://j3m2akuejogr"]
+[gd_scene load_steps=33 format=3 uid="uid://j3m2akuejogr"]
 
 [ext_resource type="Material" uid="uid://b331c3hdlx14g" path="res://materials/green_material.tres" id="1_sugp2"]
 [ext_resource type="Script" uid="uid://t5rs5nn4bax1" path="res://scenes/main.gd" id="1_yq6so"]
-[ext_resource type="Material" uid="uid://erx11plvao0j" path="res://materials/wall_material.tres" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://7incfsglra4a" path="res://scenes/player/player.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://wexfg3n2fj54" path="res://scenes/enemy/enemy.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://c8xb7gyrs7n1o" path="res://scenes/UI/game_over_screen.tscn" id="5_tbgi4"]
@@ -11,10 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://bdam1tc3s8n00" path="res://scenes/env/house_2_2.tscn" id="8_85g3d"]
 [ext_resource type="PackedScene" uid="uid://bt3ajwqvryb8g" path="res://scenes/env/house_2_1.tscn" id="9_choun"]
 [ext_resource type="PackedScene" uid="uid://bd1f027628hpf" path="res://scenes/env/church.tscn" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://cstre1706ywkg" path="res://scenes/env/torch_dim.tscn" id="10_vxglm"]
 [ext_resource type="PackedScene" uid="uid://dve58e2g7mifh" path="res://scenes/env/fence_1_pole.tscn" id="11_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://cvb5bkmsnlh2l" path="res://scenes/env/fence_1_wal.tscn" id="12_eb6dy"]
-[ext_resource type="PackedScene" uid="uid://bc1802t148mi0" path="res://scenes/env/fence_2.tscn" id="13_trceg"]
-[ext_resource type="PackedScene" uid="uid://c8xl1dlm4gxr7" path="res://scenes/env/fence_3.tscn" id="14_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://ceghdmd0rogpx" path="res://scenes/env/torch.tscn" id="15_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://cdtss8v574xv1" path="res://scenes/bridgid_sprite.tscn" id="16_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://3q7pbcag2u0h" path="res://scenes/env/house_1_2.tscn" id="17_muem4"]
@@ -69,195 +67,6 @@ shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jscy8")
-
-[node name="blockingmap" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -162.6, -3.8147e-06, -262.219)
-
-[node name="floor2" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55658, -15.5659)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(33.7893, 6.11316, 1.80665)
-
-[node name="floor3" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(-0.00760958, 0, 0.999971, 0, 1, 0, -0.999971, 0, -0.00760958, 194.327, 0.51448, 344.342)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(17.2024, 3.06369, 0.34668)
-
-[node name="floor7" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(-0.00760958, 0, 0.999971, 0, 1, 0, -0.999971, 0, -0.00760958, 194.617, 0.51448, 360.856)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(16.2931, 3.06369, 0.34668)
-
-[node name="floor4" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(-0.00760958, 0, 0.999971, 0, 1, 0, -0.999971, 0, -0.00760958, 182.918, 0.51448, 346.518)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(16.2931, 3.06369, 0.34668)
-
-[node name="floor6" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(-0.00760958, 0, 0.999971, 0, 1, 0, -0.999971, 0, -0.00760958, 182.766, 0.51448, 362.686)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(16.2931, 3.06369, 0.34668)
-
-[node name="floor5" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(-0.565572, 0, 0.824699, 0, 1, 0, -0.824699, 0, -0.565572, 178.946, 0.51448, 331.797)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(14.3794, 3.06369, 0.34668)
-
-[node name="floor9" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(-0.690201, 0, 0.723618, 0, 1, 0, -0.723618, 0, -0.690201, 169.099, 0.51448, 319.908)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(15.2117, 3.06369, 0.34668)
-
-[node name="floor11" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(-0.34097, 0, 0.940074, 0, 1, 0, -0.940074, 0, -0.34097, 157.898, 0.51448, 298.014)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(34.6243, 3.06369, 0.34668)
-
-[node name="floor18" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(0.0141366, 0, 0.9999, 0, 1, 0, -0.9999, 0, 0.0141366, 152.361, 0.51448, 268.186)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(27.6538, 3.06369, 0.34668)
-
-[node name="floor19" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(0.00892041, 0, 1.06858, 0, 1, 0, -0.630951, 0, 0.0151076, 169.961, 0.51448, 292.252)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(13.4075, 3.06369, 0.34668)
-
-[node name="floor20" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(0.00892041, 0, 1.06858, 0, 1, 0, -0.630951, 0, 0.0151076, 172.682, 0.51448, 291.771)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(13.4075, 3.06369, 0.34668)
-
-[node name="floor23" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(0.224345, 0, 0.998859, 0, 1, 0, -0.589786, 0, 0.37995, 157.814, 0.51448, 330.002)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(53.921, 3.06369, 0.34668)
-
-[node name="floor24" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(0.224345, 0, 0.998859, 0, 1, 0, -0.589786, 0, 0.37995, 161.118, 0.51448, 331.995)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(49.3936, 3.06369, 0.34668)
-
-[node name="floor27" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(0.580135, 0, 0.420416, 0, 1, 0, -0.248239, 0, 0.982513, 199.961, 0.51448, 279.673)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(53.921, 3.06369, 0.34668)
-
-[node name="floor28" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(0.580135, 0, 0.420416, 0, 1, 0, -0.248239, 0, 0.982513, 198.08, 0.51448, 286.838)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(49.3936, 3.06369, 0.34668)
-
-[node name="floor25" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(0.63067, 0, 0.0352646, 0, 1, 0, -0.0208224, 0, 1.0681, 138.939, 0.51448, 288.138)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(48.0738, 3.06369, 0.34668)
-
-[node name="floor26" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(0.63067, 0, 0.0352646, 0, 1, 0, -0.0208224, 0, 1.0681, 140.6, 0.51448, 293.983)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(49.3936, 3.06369, 0.34668)
-
-[node name="floor21" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(0.239615, 0, 0.988635, 0, 1, 0, -0.583749, 0, 0.405811, 171.559, 0.51448, 284.562)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(13.4075, 3.06369, 0.34668)
-
-[node name="floor22" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(-0.0172777, 0, 1.06828, 0, 1, 0, -0.630777, 0, -0.0292614, 172.817, 0.51448, 284.616)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(9.72474, 3.06369, 0.34668)
-
-[node name="floor13" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(-0.34097, 0, 0.940074, 0, 1, 0, -0.940074, 0, -0.34097, 172.408, 0.51448, 303.444)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(15.2117, 3.06369, 0.34668)
-
-[node name="floor14" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(-0.170588, 0, 0.985342, 0, 1, 0, -0.985342, 0, -0.170588, 173.921, 0.51448, 303.444)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(15.2117, 3.06369, 0.34668)
-
-[node name="floor8" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(-0.370914, 0, 0.928667, 0, 1, 0, -0.928667, 0, -0.370914, 191.667, 0.51448, 329.086)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(15.6079, 3.06369, 0.34668)
-
-[node name="floor10" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(-0.224203, 0, 0.974542, 0, 1, 0, -0.974542, 0, -0.224203, 187.181, 0.51448, 314.425)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(15.6079, 3.06369, 0.34668)
-
-[node name="floor12" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(-0.108624, 0, 0.994083, 0, 1, 0, -0.994083, 0, -0.108624, 184.458, 0.514484, 298.203)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(17.3806, 3.06369, 0.34668)
-
-[node name="floor15" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(0.155107, 0, 0.987898, 0, 1, 0, -0.987898, 0, 0.155107, 185.132, 0.514484, 280.75)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(18.0502, 3.06369, 0.34668)
-
-[node name="floor17" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(-0.515412, 0, 0.856942, 0, 1, 0, -0.856942, 0, -0.515412, 183.276, 0.514488, 266.371)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(13.6033, 3.06369, 0.34668)
-
-[node name="floor16" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(-0.845728, 0, 0.533614, 0, 1, 0, -0.533614, 0, -0.845728, 174.211, 0.514479, 257.619)
-material_override = ExtResource("1_sugp2")
-use_collision = true
-size = Vector3(12.6144, 3.06369, 0.34668)
-
-[node name="wall" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.08826, 2, -6.95646)
-material_override = ExtResource("2_sugp2")
-use_collision = true
-size = Vector3(1, 3, 10)
-
-[node name="wall2" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.0883, 2, -6.95646)
-material_override = ExtResource("2_sugp2")
-use_collision = true
-size = Vector3(1, 3, 10)
-
-[node name="wall3" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.58826, 2, -11.4565)
-material_override = ExtResource("2_sugp2")
-use_collision = true
-size = Vector3(1, 3, 8)
-
-[node name="wall4" type="CSGBox3D" parent="blockingmap"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.58826, 2, -2.45646)
-material_override = ExtResource("2_sugp2")
-use_collision = true
-size = Vector3(1, 3, 8)
 
 [node name="Player" parent="." instance=ExtResource("3_sugp2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.442, 0, 102.356)
@@ -373,319 +182,6 @@ transform = Transform3D(0.949342, -0.0105751, -0.314067, 0.00899429, 0.999939, -
 [node name="House1_6" parent="actualMap/houses" instance=ExtResource("17_muem4")]
 transform = Transform3D(0.510753, 0, 0.859728, 0, 1, 0, -0.859728, 0, 0.510753, 16.2443, 0, 90.2204)
 
-[node name="fenceGroupOld" type="Node3D" parent="actualMap"]
-transform = Transform3D(0.998813, 0, 0.0487103, 0, 1, 0, -0.0487103, 0, 0.998813, 27.591, 0, 80.856)
-visible = false
-
-[node name="fence2" parent="actualMap/fenceGroupOld" instance=ExtResource("13_trceg")]
-transform = Transform3D(-0.99923, 0, -0.039225, 0, 1, 0, 0.039225, 0, -0.99923, 0.0492096, 0, 26.5537)
-
-[node name="fence5" parent="actualMap/fenceGroupOld" instance=ExtResource("13_trceg")]
-transform = Transform3D(-0.99923, 0, -0.039225, 0, 1, 0, 0.039225, 0, -0.99923, 2.33531, 0, 26.4639)
-
-[node name="fence3" parent="actualMap/fenceGroupOld" instance=ExtResource("13_trceg")]
-transform = Transform3D(-0.99923, 0, -0.039225, 0, 1, 0, 0.039225, 0, -0.99923, 4.64403, -4.76837e-07, 26.3564)
-
-[node name="fence6" parent="actualMap/fenceGroupOld" instance=ExtResource("13_trceg")]
-transform = Transform3D(-0.99923, 0, -0.039225, 0, 1, 0, 0.039225, 0, -0.99923, 6.93014, -4.76837e-07, 26.2666)
-
-[node name="fence4" parent="actualMap/fenceGroupOld" instance=ExtResource("13_trceg")]
-transform = Transform3D(-0.99923, 0, -0.039225, 0, 1, 0, 0.039225, 0, -0.99923, 9.31759, -4.76837e-07, 26.0706)
-
-[node name="fence7" parent="actualMap/fenceGroupOld" instance=ExtResource("13_trceg")]
-transform = Transform3D(-0.99923, 0, -0.039225, 0, 1, 0, 0.039225, 0, -0.99923, 11.6037, -4.76837e-07, 25.9808)
-
-[node name="fence8" parent="actualMap/fenceGroupOld" instance=ExtResource("13_trceg")]
-transform = Transform3D(1, 0, 1.49012e-08, 0, 1, 0, -1.49012e-08, 0, 1, -6.76973, 0, 26.5088)
-
-[node name="fence9" parent="actualMap/fenceGroupOld" instance=ExtResource("13_trceg")]
-transform = Transform3D(1, 0, 1.49012e-08, 0, 1, 0, -1.49012e-08, 0, 1, -9.02179, 0, 26.5088)
-
-[node name="fence10" parent="actualMap/fenceGroupOld" instance=ExtResource("13_trceg")]
-transform = Transform3D(1, 0, 1.49012e-08, 0, 1, 0, -1.49012e-08, 0, 1, -11.3357, 0, 26.4997)
-
-[node name="fence11" parent="actualMap/fenceGroupOld" instance=ExtResource("13_trceg")]
-transform = Transform3D(1, 0, 1.49012e-08, 0, 1, 0, -1.49012e-08, 0, 1, -13.5878, 0, 26.4997)
-
-[node name="scaled down temporary fences" type="Node3D" parent="actualMap/fenceGroupOld"]
-transform = Transform3D(0.08493, 0, 0.996387, 0, 0.452718, 0, -0.996387, 0, 0.08493, -15.7621, 0.00443661, -56.6379)
-
-[node name="fence3" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.805613, 0, 9.31724e-09, 0, 1, 0, -7.45058e-09, 0, 1.00745, 3.63593, -0.0283591, 0.042778)
-
-[node name="fence85" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(1, 0, 7.45058e-09, 0, 1, 0, -7.45058e-09, 0, 1, 5.7176, 0, 0.0273886)
-
-[node name="fence4" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.988191, 0, -0.153227, 0, 1, 0, 0.153227, 0, 0.988191, -2.24862, 0, -0.184574)
-
-[node name="fence5" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.992191, 0, -0.124727, 0, 1, 0, 0.124727, 0, 0.992191, -4.51946, 0, -0.472599)
-
-[node name="fence6" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.998177, 0, -0.0603517, 0, 1, 0, 0.0603517, 0, 0.998177, -6.80362, 0, -0.66962)
-
-[node name="fence7" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.998069, 0, -0.0621111, 0, 1, 0, 0.0621111, 0, 0.998069, -9.11, 0, -0.814849)
-
-[node name="fence8" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.999964, 0, 0.00844735, 0, 1, 0, -0.00844735, 0, 0.999964, -11.3648, 0, -0.839974)
-
-[node name="fence41" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.996416, 0, 0.0845823, 0, 1, 0, -0.0845823, 0, 0.996416, -13.6699, 0, -0.741364)
-
-[node name="fence42" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.987968, 0, 0.154659, 0, 1, 0, -0.154659, 0, 0.987968, -15.9041, 0, -0.43632)
-
-[node name="fence43" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.930354, 0, 0.366664, 0, 1, 0, -0.366664, 0, 0.930354, -18.1773, 0, 0.137138)
-
-[node name="fence44" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.902172, 0, 0.431377, 0, 1, 0, -0.431377, 0, 0.902172, -20.2304, 0, 1.06984)
-
-[node name="fence79" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.998584, 0, 0.0532074, 0, 1, 0, -0.0532074, 0, -0.998584, -22.1089, 1.07288e-06, 2.8552)
-
-[node name="fence84" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.874391, 0, 0.485222, 0, 1, 0, -0.485222, 0, 0.874391, -22.2754, 1.07288e-06, 2.12076)
-
-[node name="fence80" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.957087, 0, -0.2898, 0, 1, 0, 0.2898, 0, -0.957087, -19.8561, 1.07288e-06, 2.53271)
-
-[node name="fence81" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-1.07257, 0, -0.176511, 0, 1, 0, 0.189895, 0, -0.996974, -15.2868, 0.0938573, 1.64286)
-
-[node name="fence83" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.991495, 0, -0.130145, 0, 1, 0, 0.130145, 0, -0.991495, -17.6687, 0, 2.04423)
-
-[node name="fence82" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.895644, 0, -0.135304, 0, 1, 0, 0.124026, 0, -0.977088, -13.081, -2.38419e-07, 1.26556)
-
-[node name="fence15" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.995366, 0, 0.0961585, 0, 1, 0, -0.0961585, 0, 0.995366, -69.2271, 0, 25.6648)
-
-[node name="fence16" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.99952, 0, -0.0309746, 0, 1, 0, 0.0309746, 0, -0.99952, -71.362, 2.38419e-07, 25.9536)
-
-[node name="fence17" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.988547, 0, 0.150916, 0, 1, 0, -0.150916, 0, 0.988547, -74.9316, 0, 13.7357)
-
-[node name="fence18" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.99629, 0, -0.0860602, 0, 1, 0, 0.0860602, 0, -0.99629, -77.0474, 2.38419e-07, 14.1419)
-
-[node name="fence19" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.994696, 0, 0.102862, 0, 1, 0, -0.102862, 0, 0.994696, -62.6121, 0, 25.3996)
-
-[node name="fence20" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.999289, 0, -0.0377075, 0, 1, 0, 0.0377075, 0, -0.999289, -64.7451, 2.38419e-07, 25.7028)
-
-[node name="fence87" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.99952, 0, -0.0309746, 0, 1, 0, 0.0309746, 0, -0.99952, -72.5218, 2.38419e-07, 14.9082)
-
-[node name="fence92" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.999289, 0, -0.0377075, 0, 1, 0, 0.0377075, 0, -0.999289, -65.9049, 2.38419e-07, 14.6574)
-
-[node name="fence93" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.999519, 0, -0.0309746, 0, 0.999999, 0, 0.0309746, 0, -0.999519, -61.1369, 2.38419e-07, 14.4947)
-
-[node name="fence94" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.999289, 0, -0.0377075, 0, 1, 0, 0.0377075, 0, -0.999289, -54.52, 2.38419e-07, 14.2439)
-
-[node name="fence21" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.998805, 0, 0.0488847, 0, 1, 0, -0.0488847, 0, 0.998805, -52.5487, 0, 25.1622)
-
-[node name="fence22" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.999865, 0, 0.0164229, 0, 1, 0, -0.0164229, 0, -0.999865, -54.695, 2.38419e-07, 25.3496)
-
-[node name="fence23" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.910583, 0, 0.413327, 0, 1, 0, -0.413327, 0, 0.910583, -38.5276, 0, 21.6823)
-
-[node name="fence24" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.935623, 0, -0.353001, 0, 1, 0, 0.353001, 0, -0.935623, -40.4539, 2.38419e-07, 22.647)
-
-[node name="fence29" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.910583, 0, 0.413327, 0, 1, 0, -0.413327, 0, 0.910583, -28.614, 0, 18.1777)
-
-[node name="fence30" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.935623, 0, -0.353001, 0, 1, 0, 0.353001, 0, -0.935623, -30.5404, 2.38419e-07, 19.1424)
-
-[node name="fence31" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.922566, 0, 0.385842, 0, 1, 0, -0.385842, 0, 0.922566, -21.0002, 0, 15.3886)
-
-[node name="fence32" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.945786, 0, -0.324792, 0, 1, 0, 0.324792, 0, -0.945786, -22.9547, 2.38419e-07, 16.2952)
-
-[node name="fence33" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.994567, 0, 0.104112, 0, 1, 0, -0.104112, 0, 0.994567, -8.37667, 0, 13.5508)
-
-[node name="fence34" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.999241, 0, -0.038963, 0, 1, 0, 0.038963, 0, -0.999241, -10.5093, 2.38419e-07, 13.8567)
-
-[node name="fence35" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.345872, 0, -0.938283, 0, 1, 0, 0.938283, 0, 0.345872, -4.81875, 0, 17.4002)
-
-[node name="fence36" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.283881, 0, 0.95886, 0, 1, 0, -0.95886, 0, -0.283881, -5.6405, 2.38419e-07, 15.4087)
-
-[node name="fence37" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.570542, 0, -0.821269, 0, 1, 0, 0.821269, 0, 0.570542, 5.70919, 0, 18.0946)
-
-[node name="fence38" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.515711, 0, 0.856763, 0, 1, 0, -0.856763, 0, -0.515711, 4.41337, 2.38419e-07, 16.3734)
-
-[node name="fence39" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.980109, 0, -0.198462, 0, 1, 0, 0.198462, 0, 0.980109, 6.91971, 0, 14.4219)
-
-[node name="fence40" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.965062, 0, 0.262021, 0, 1, 0, -0.262021, 0, -0.965062, 4.79336, 2.38419e-07, 14.0752)
-
-[node name="fence45" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.994655, 0, 0.103261, 0, 1, 0, -0.103261, 0, 0.994655, 14.6147, -2.14577e-06, 14.1133)
-
-[node name="fence46" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.999274, 0, -0.0381085, 0, 1, 0, 0.0381085, 0, -0.999274, 12.4818, -1.78814e-06, 14.4174)
-
-[node name="fence49" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.994655, 0, 0.103261, 0, 1, 0, -0.103261, 0, 0.994655, 14.6147, -2.14577e-06, 14.1133)
-
-[node name="fence50" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.999274, 0, -0.0381085, 0, 1, 0, 0.0381085, 0, -0.999274, 12.4818, -1.78814e-06, 14.4174)
-
-[node name="fence51" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.794087, 0, 0.607806, 0, 1, 0, -0.607806, 0, 0.794087, 29.9744, -2.14577e-06, 7.17318)
-
-[node name="fence52" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.832071, 0, -0.55467, 0, 1, 0, 0.55467, 0, -0.832071, 28.3148, -1.78814e-06, 8.54698)
-
-[node name="fence53" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.34425, 0, 0.938879, 0, 1, 0, -0.938879, 0, 0.34425, 34.9259, -2.14577e-06, 2.40564)
-
-[node name="fence54" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.404807, 0, -0.914402, 0, 1, 0, 0.914402, 0, -0.404807, 34.2619, -1.78814e-06, 4.4552)
-
-[node name="fence55" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.999597, 0, 0.0284277, 0, 1, 0, -0.0284277, 0, -0.999597, 18.6887, -2.14577e-06, -22.7238)
-
-[node name="fence56" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.995608, 0, -0.0936221, 0, 1, 0, 0.0936221, 0, 0.995608, 20.843, -1.78814e-06, -22.7448)
-
-[node name="fence57" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.999597, 0, 0.0284277, 0, 1, 0, -0.0284277, 0, -0.999597, 18.6887, -2.14577e-06, -22.7238)
-
-[node name="fence58" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.995608, 0, -0.0936221, 0, 1, 0, 0.0936221, 0, 0.995608, 20.843, -1.78814e-06, -22.7448)
-
-[node name="fence61" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.999597, 0, 0.0284277, 0, 1, 0, -0.0284277, 0, -0.999597, 28.7244, -2.14577e-06, -22.0195)
-
-[node name="fence62" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.995608, 0, -0.0936221, 0, 1, 0, 0.0936221, 0, 0.995608, 30.8787, -1.78814e-06, -22.0405)
-
-[node name="fence63" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.886374, 0, 0.462972, 0, 1, 0, -0.462972, 0, -0.886374, 1.86469, 6.31809e-06, -21.9245)
-
-[node name="fence64" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.854259, 0, -0.519847, 0, 1, 0, 0.519847, 0, 0.854259, 3.81098, 6.55651e-06, -21.0006)
-
-[node name="fence59" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.984654, 0, -0.174525, 0, 1, 0, 0.174525, 0, -0.984654, 9.28022, -2.14577e-06, -21.2761)
-
-[node name="fence60" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.993946, 0, 0.109873, 0, 1, 0, -0.109873, 0, 0.993946, 11.3857, -1.78814e-06, -21.7327)
-
-[node name="fence65" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.0417886, 0, -0.999128, 0, 1, 0, 0.999128, 0, -0.0417886, -7.23359, -2.14577e-06, -16.673)
-
-[node name="fence66" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.106924, 0, 0.994267, 0, 1, 0, -0.994267, 0, 0.106924, -7.22577, -1.78814e-06, -18.8274)
-
-[node name="fence67" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.96291, 0, -0.269828, 0, 1, 0, 0.269828, 0, -0.96291, -10.8652, -2.14577e-06, -14.1038)
-
-[node name="fence68" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.978469, 0, 0.206392, 0, 1, 0, -0.206392, 0, 0.978469, -8.81438, -1.78814e-06, -14.7638)
-
-[node name="fence69" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.93461, 0, -0.355678, 0, 1, 0, 0.355678, 0, -0.93461, -20.8988, -2.14577e-06, -11.2311)
-
-[node name="fence70" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.955834, 0, 0.293907, 0, 1, 0, -0.293907, 0, 0.955834, -18.9159, -1.78814e-06, -12.0737)
-
-[node name="fence71" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.995674, 0, -0.0929267, 0, 1, 0, 0.0929267, 0, -0.995674, -26.304, -2.14577e-06, -9.04698)
-
-[node name="fence72" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.999615, 0, 0.0277294, 0, 1, 0, -0.0277294, 0, 0.999615, -24.1681, -1.78814e-06, -9.3289)
-
-[node name="fence73" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.586543, 0, -0.80992, 0, 1, 0, 0.80992, 0, -0.586543, -36.8404, -2.14577e-06, 1.57484)
-
-[node name="fence74" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.638164, 0, 0.769901, 0, 1, 0, -0.769901, 0, 0.638164, -35.6443, -1.78814e-06, -0.217017)
-
-[node name="fence75" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.836823, 0, -0.547477, 0, 1, 0, 0.547477, 0, 0.836823, -34.8154, -0.160429, -3.29261)
-
-[node name="fence76" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.799296, 0, 0.600937, 0, 1, 0, -0.600937, 0, -0.799296, -36.662, -0.160428, -4.40244)
-
-[node name="fence77" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.692522, 0, -0.721399, 0, 1, 0, 0.721399, 0, -0.692522, -42.3644, 0.818424, 7.45468)
-
-[node name="fence78" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.738138, 0, 0.67465, 0, 1, 0, -0.67465, 0, 0.738138, -40.9329, 0.818425, 5.84469)
-
-[node name="fence47" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.864854, 0, 0.502024, 0, 1, 0, -0.502024, 0, 0.864854, 19.6893, -2.14577e-06, 12.0936)
-
-[node name="fence48" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.895782, 0, -0.444494, 0, 1, 0, 0.444494, 0, -0.895782, 17.8687, -1.78814e-06, 13.2455)
-
-[node name="fence25" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.931088, 0, 0.364796, 0, 1, 0, -0.364796, 0, 0.931088, -49.3199, 1.07288e-06, 11.3894)
-
-[node name="fence26" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.952916, 0, -0.303235, 0, 1, 0, 0.303235, 0, -0.952916, -51.2944, 1.3113e-06, 12.2513)
-
-[node name="fence27" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.999783, 0, -0.0208551, 0, 1, 0, 0.0208551, 0, 0.999783, -63.3553, 2.14577e-06, 13.4013)
-
-[node name="fence28" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.996289, 0, 0.086078, 0, 1, 0, -0.086078, 0, -0.996289, -65.5094, 2.38419e-06, 13.4386)
-
-[node name="fence9" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.971119, 0, 0.0890639, 0, 0.995425, 0, -0.0870118, 0, -0.994022, -10.9562, 0, 1.20815)
-
-[node name="fence10" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.973909, 0.0192073, 0.0597633, 0.0924394, 1.0002, 0.0146644, -0.0582445, 0.00417682, -0.994538, -8.78282, 0, 1.36358)
-
-[node name="fence11" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.976598, -0.0201849, 0.0623897, 0.0541342, 1.00017, 0.0185554, -0.061352, 0.00567032, -0.994311, -6.50509, 0.0243145, 1.52053)
-
-[node name="fence12" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.969002, 0.0189378, 0.116396, 0.0924394, 1.0002, 0.0146644, -0.113703, 0.00526563, -0.98951, -4.33387, -0.199083, 1.6965)
-
-[node name="fence86" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.975228, 0.0193251, 0.0295898, 0.0924394, 1.0002, 0.0146644, -0.0286968, 0.00359269, -0.995892, -2.12028, -0.199081, 1.84893)
-
-[node name="fence88" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.878939, -0.0211866, 0.161776, 0.0493621, 1.00222, 0.0228342, -0.1419, 0.00755288, -1.00114, 0.0017128, -0.199081, 2.02844)
-
-[node name="fence13" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.943997, 0.019556, -0.25145, 0.0924394, 1.0002, 0.0146644, 0.2465, -0.00198246, -0.964079, 4.0888, -0.199082, 1.60115)
-
-[node name="fence14" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.839909, 0.0153933, -0.507201, 0.0899856, 1.00024, 0.0133027, 0.496883, -0.00718606, -0.857591, 6.05273, -0.100186, 0.749776)
-
-[node name="fence89" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(-0.857401, 0.0197378, -0.110869, 0.0817553, 1.00521, 0.0145349, 0.0971203, 0.000821568, -0.981288, 1.99621, -0.199081, 2.03897)
-
-[node name="fence90" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.816485, 0.0192643, 0.0437319, 0.045311, 1.00428, 0.0228222, -0.0353772, -0.0117003, 1.01265, 1.74706, -0.199081, 0.143014)
-
-[node name="fence91" parent="actualMap/fenceGroupOld/scaled down temporary fences" instance=ExtResource("14_jkv2x")]
-transform = Transform3D(0.861508, -0.0193172, -0.0560354, 0.0817553, 1.00521, 0.0145349, 0.0487161, -0.00413509, 0.98594, -0.123955, -0.199081, 0.0498438)
-
 [node name="torches" type="Node3D" parent="actualMap"]
 
 [node name="Torch" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
@@ -706,11 +202,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.17219, 0, -6.46686)
 [node name="Torch6" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.43379, 0, -6.46441)
 
-[node name="Torch9" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.12575, 0, -4.44956)
-
-[node name="Torch33" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
+[node name="Torch_dim2" parent="actualMap/torches" instance=ExtResource("10_vxglm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5746, 0, -1.76977)
+
+[node name="Torch_dim3" parent="actualMap/torches" instance=ExtResource("10_vxglm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7886, 4.76837e-07, -3.98962)
+
+[node name="Torch_dim4" parent="actualMap/torches" instance=ExtResource("10_vxglm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.97536, 4.76837e-07, -11.7125)
 
 [node name="Torch34" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.9076, 0, 7.45681)
@@ -719,7 +218,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.9076, 0, 7.45681)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.764, 0, 22.1722)
 
 [node name="Torch10" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.52414, 0, 6.12569)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.15564, 0, 4.24465)
+
+[node name="Torch36" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.00628, 0, 14.3611)
 
 [node name="Torch11" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3122, 0, 32.7759)
@@ -754,23 +256,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9772, 0, 67.1124)
 [node name="Torch24" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6798, 0, 55.372)
 
-[node name="Torch25" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.30455, 0, 59.9302)
+[node name="Torch_dim" parent="actualMap/torches" instance=ExtResource("10_vxglm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.69426, 0, 58.5508)
+
+[node name="Torch_dim5" parent="actualMap/torches" instance=ExtResource("10_vxglm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.9858, 0, 22.4077)
 
 [node name="Torch26" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.64366, 0, 58.5517)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7252, 0, 54.2019)
 
 [node name="Torch27" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55348, 0, 52.8615)
-
-[node name="Torch28" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.64295, 0, 44.4996)
-
-[node name="Torch29" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5053, 0, 32.2524)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05152, 0, 50.1288)
 
 [node name="Torch30" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02287, 0, 17.5917)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.54157, 0, 10.5894)
 
 [node name="Torch32" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.93595, 0, 0.113983)
@@ -786,6 +285,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6436, 0, 29.8142)
 
 [node name="Torch15" parent="actualMap/torches" instance=ExtResource("15_jbj1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0599, 0, 47.7846)
+
+[node name="Torch7" parent="actualMap/torches" instance=ExtResource("10_vxglm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.283, 0, 31.427)
 
 [node name="church_area" type="Node3D" parent="actualMap"]
 
@@ -1415,12 +917,12 @@ throw_interval = 1.5
 throw_speed = 15.0
 
 [node name="enemy_slowest7" parent="enemies" instance=ExtResource("4_jyhfs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.39205, 0, -5.15497)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.40014, 0, 2.40578)
 throw_interval = 1.5
 throw_speed = 15.0
 
 [node name="enemy_slowest8" parent="enemies" instance=ExtResource("4_jyhfs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.62109, 0, -4.88518)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.09695, 0, -4.62723)
 throw_interval = 1.5
 throw_speed = 15.0
 
@@ -1535,19 +1037,21 @@ throw_speed = 25.0
 rock_gravity = 8.5
 
 [node name="enemy_fast15" parent="enemies" instance=ExtResource("4_jyhfs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.17424, 0, 13.8822)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65379, 0, 10.9566)
 throw_interval = 1.3
 throw_speed = 25.0
 rock_gravity = 8.5
 
 [node name="enemy_fast7" parent="enemies" instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.10676, 0, -13.3918)
+throwing_mode = false
 throw_interval = 0.2
 throw_speed = 40.0
 rock_gravity = 17.0
 
 [node name="enemy_fast8" parent="enemies" instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.18386, 0, -13.6517)
+throwing_mode = false
 throw_interval = 0.2
 throw_speed = 35.0
 rock_gravity = 17.0
@@ -1559,7 +1063,7 @@ throw_speed = 30.0
 rock_gravity = 8.0
 
 [node name="enemy_fastest7" parent="enemies" instance=ExtResource("4_jyhfs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.47417, 0, -14.3166)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.436548, 2.38419e-07, -13.6977)
 throw_interval = 0.7
 throw_speed = 30.0
 rock_gravity = 8.0
@@ -1571,7 +1075,8 @@ throw_speed = 30.0
 rock_gravity = 8.0
 
 [node name="enemy_fastest8" parent="enemies" instance=ExtResource("4_jyhfs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.47417, 0, -14.3166)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.43966, 0, -14.7425)
+throwing_mode = false
 throw_interval = 0.7
 throw_speed = 30.0
 rock_gravity = 8.0

@@ -46,8 +46,26 @@ offset_bottom = 944.0
 theme_override_constants/line_separation = -16
 theme_override_fonts/normal_font = ExtResource("1_pdoif")
 theme_override_font_sizes/normal_font_size = 50
-text = "Early one morning, your sleep is interupted by a series of frantic knocking at your door. Before you could open it, a letter is slid under your door, written anonymously. It says..."
-horizontal_alignment = 1
+text = "Early one morning, your sleep is interupted by a series of frantic knocking at your door. Before you could open it, a letter is slid under your door, written anonymously. It says...
+
+
+
+
+
+
+"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 95.0
+offset_top = 645.0
+offset_right = 848.0
+offset_bottom = 897.0
+theme_override_constants/line_separation = -16
+theme_override_fonts/normal_font = ExtResource("1_pdoif")
+theme_override_font_sizes/normal_font_size = 50
+text = "Controls:
+Move: WASD
+Dash: Space or L Key"
 
 [node name="Next_btn" type="Button" parent="."]
 offset_left = 95.0
@@ -78,11 +96,10 @@ theme_override_fonts/normal_font = ExtResource("1_pdoif")
 theme_override_font_sizes/normal_font_size = 53
 text = "Dearest Brenna,
 
-We are writing to you in the upmost secrecy. 
-Your sister was taken from her bed in the night while you slept peacefully. 
-A witch, they called her. 
-Those soulless creatures are planning on burning her at the church come sunrise. 
-Be swift, sweet Brenna, and stop the event from taking place. 
-For all of our sakes. "
+We are writing to you in upmost secrecy. 
+Your sister was taken from her bed in the night while you slept. A witch, they called her. 
+Those soulless men plan to burn at the church come sunrise. 
+
+Be swift, sweet Brenna. Reach Bridgid before it's too late... For all of our sakes. "
 
 [connection signal="pressed" from="Next_btn" to="." method="_on_next_btn_pressed"]
