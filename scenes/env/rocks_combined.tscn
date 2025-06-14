@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dih7f0524ud0w"]
+
+[ext_resource type="Script" uid="uid://b2ptd1vqcct38" path="res://scenes/env/rocks_combined.gd" id="1_cd4sp"]
+[ext_resource type="Texture2D" uid="uid://c1dtdbvbo4cpg" path="res://assets/textures/environment/rock01.png" id="3_jqa65"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3sy3h"]
+render_priority = 1
+transparency = 1
+albedo_color = Color(0.5, 0.5, 0.5, 1)
+albedo_texture = ExtResource("3_jqa65")
+backlight_enabled = true
+backlight = Color(1, 1, 1, 1)
+backlight_texture = ExtResource("3_jqa65")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jqa65"]
+
+[node name="rocksCombined" type="Node3D"]
+script = ExtResource("1_cd4sp")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.141421, -0.0707107, 0.122474, 0, 0.173205, 0.0999997, -0.141421, -0.0707107, 0.122474, 0, 0.519, 0)
+material_override = SubResource("StandardMaterial3D_3sy3h")
+render_priority = 1
+texture = ExtResource("3_jqa65")
+region_enabled = true
+region_rect = Rect2(523, 584, 907, 881)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018, 0.575, 0.039)
+shape = SubResource("BoxShape3D_jqa65")

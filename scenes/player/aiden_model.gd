@@ -11,7 +11,7 @@ func _ready() -> void:
 	
 	
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	
 	if get_parent().running and not get_parent().dashing:
 		$AnimationTree.set("parameters/state_anim/transition_request", "running")

@@ -1,12 +1,38 @@
-[gd_scene load_steps=2 format=3 uid="uid://dw2cbbhs4h6j2"]
+[gd_scene load_steps=4 format=3 uid="uid://dw2cbbhs4h6j2"]
 
 [ext_resource type="Texture2D" uid="uid://3lddm2t18u71" path="res://assets/textures/environment/rock02.png" id="1_nghxi"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nghxi"]
+render_priority = 1
+transparency = 1
+albedo_color = Color(0.497474, 0.497474, 0.497474, 1)
+albedo_texture = ExtResource("1_nghxi")
+rim_tint = 0.0
+rim_texture = ExtResource("1_nghxi")
+backlight_enabled = true
+backlight = Color(1, 1, 1, 1)
+backlight_texture = ExtResource("1_nghxi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_osqih"]
+transparency = 1
+albedo_color = Color(0.5, 0.5, 0.5, 1)
+albedo_texture = ExtResource("1_nghxi")
+backlight_enabled = true
+backlight = Color(1, 1, 1, 1)
+backlight_texture = ExtResource("1_nghxi")
+
 [node name="rockSprite" type="Node3D"]
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="Sprite3D_original" type="Sprite3D" parent="."]
 transform = Transform3D(0.141421, -0.0707107, 0.122474, 0, 0.173205, 0.1, -0.141421, -0.0707107, 0.122474, 0, 0.519, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_nghxi")
 modulate = Color(0.6, 0.6, 0.6, 1)
 shaded = true
 render_priority = 1
+texture = ExtResource("1_nghxi")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.141421, -0.0707107, 0.122474, 0, 0.173205, 0.0999997, -0.141421, -0.0707107, 0.122474, 0, 0.519, 0)
+material_override = SubResource("StandardMaterial3D_osqih")
 texture = ExtResource("1_nghxi")
