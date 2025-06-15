@@ -3,7 +3,6 @@ extends Node2D
 const intro_scene = preload("uid://cvwy7kxy7clc6")
 #const credits_scene = preload("uid://c50ulsav63jyb")
 
-@onready var button_sound: AudioStreamPlayer = $ButtonSound
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

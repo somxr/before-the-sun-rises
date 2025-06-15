@@ -20,22 +20,26 @@ var rock_data = {
 	PropVariant.VARIANT_A: {
 		"texture": preload("uid://c1dtdbvbo4cpg"),
 		"collision_size": Vector3(1.0, 1.0, 1.0),  # width, height, depth
-		"collision_position": Vector3(0.018, 0.575,0.039)
+		"collision_position": Vector3(0.018, 0.575,0.039),
+		"sprite_y_position": float(0.676)
 	},
 	PropVariant.VARIANT_B: {
 		"texture": preload("uid://3lddm2t18u71"),
 		"collision_size": Vector3(0.731, 1.0, 0.826),
-		"collision_position": Vector3(0.017, 0.575,-0.048)
+		"collision_position": Vector3(0.017, 0.575,-0.048),
+		"sprite_y_position": float(0.334)
 	},
 	PropVariant.VARIANT_C: {
 		"texture": preload("uid://detnp8fsqft58"),
 		"collision_size": Vector3(1.0, 1.0, 1.0),
-		"collision_position": Vector3(0.018, 0.575,0.039)
+		"collision_position": Vector3(0.018, 0.575,0.039),
+		"sprite_y_position": float(0.594)
 	},
 	PropVariant.VARIANT_D: {
 		"texture": preload("uid://btf3sh6thulmn"),
 		"collision_size": Vector3(1.272, 1.072, 1.377),
-		"collision_position": Vector3(0.083, 0.539,-0.001)
+		"collision_position": Vector3(0.083, 0.539,-0.001),
+		"sprite_y_position": float(0.765)
 	}
 }
 
@@ -59,6 +63,7 @@ func set_variant(value: PropVariant):
 		var current_texture = data.texture
 		var collision_size = data.collision_size
 		var collision_position = data.collision_position
+		var sprite_y_position = data.sprite_y_position
 		
 		# Always set the main sprite texture
 		sprite_3d.texture = current_texture
@@ -81,6 +86,7 @@ func set_variant(value: PropVariant):
 		# Always update textures
 		material.albedo_texture = current_texture
 		material.backlight_texture = current_texture
+		sprite_3d.position.y = sprite_y_position 
 		
 		# Update collision box dimensions
 		if collision_shape:

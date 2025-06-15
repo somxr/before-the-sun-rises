@@ -527,27 +527,26 @@ transform = Transform3D(0.245341, 0, -0.969437, 0, 1, 0, 0.969437, 0, 0.245341, 
 [node name="fence_short_group4" parent="environment/ShortFenceGroup" instance=ExtResource("18_jscy8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8575, 0.688016, -7.7229)
 
-[node name="rockSprites" type="Node3D" parent="environment"]
+[node name="rocks_new" type="Node3D" parent="environment"]
 
-[node name="rocksCombined" parent="environment/rockSprites" instance=ExtResource("25_og1vs")]
+[node name="rocksCombined" parent="environment/rocks_new" instance=ExtResource("25_og1vs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4513, -4.76837e-07, 41.0342)
 variant = 1
 
-[node name="rocksCombined2" parent="environment/rockSprites" instance=ExtResource("25_og1vs")]
+[node name="rocksCombined2" parent="environment/rocks_new" instance=ExtResource("25_og1vs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8649, -4.76837e-07, 48.3859)
 
-[node name="rocksCombined3" parent="environment/rockSprites" instance=ExtResource("25_og1vs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.192, 4.76837e-07, 38.6864)
+[node name="rocksCombined3" parent="environment/rocks_new" instance=ExtResource("25_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7254, 4.76837e-07, 38.9278)
 
-[node name="rocksCombined4" parent="environment/rockSprites" instance=ExtResource("25_og1vs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9179, 4.76837e-07, 28.2845)
-variant = 3
+[node name="rocksCombined4" parent="environment/rocks_new" instance=ExtResource("25_og1vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8865, 2.38418e-07, 27.9794)
 
-[node name="rocksCombined5" parent="environment/rockSprites" instance=ExtResource("25_og1vs")]
+[node name="rocksCombined5" parent="environment/rocks_new" instance=ExtResource("25_og1vs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.92672, 4.76837e-07, 21.0958)
 variant = 2
 
-[node name="rocksCombined6" parent="environment/rockSprites" instance=ExtResource("25_og1vs")]
+[node name="rocksCombined6" parent="environment/rocks_new" instance=ExtResource("25_og1vs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.16842, 4.76837e-07, 18.7431)
 variant = 2
 
