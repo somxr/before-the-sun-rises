@@ -4,7 +4,9 @@ enum State {IDLE, THROWING}
 
 const rock_scene := preload("res://scenes/enemy/rock.tscn")
 @onready var shoot_position: Node3D = $shootPosition
-@onready var animation_player2: AnimationPlayer = $friarModel/AnimationPlayer
+#@onready var animation_player2: AnimationPlayer = $friarModel/AnimationPlayer
+@onready var animation_player2: AnimationPlayer = $enemy_02/AnimationPlayer
+
 
 var player_pos
 var current_state = State.IDLE

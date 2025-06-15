@@ -1,7 +1,6 @@
 @tool
 extends Node3D
 
-
 enum PropVariant {
 	SMALL_ROCK,
 	MEDIUM_ROCK,
