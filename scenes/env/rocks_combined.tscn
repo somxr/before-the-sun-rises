@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dih7f0524ud0w"]
 
 [ext_resource type="Script" uid="uid://b2ptd1vqcct38" path="res://scenes/env/rocks_combined.gd" id="1_cd4sp"]
-[ext_resource type="Texture2D" uid="uid://c1dtdbvbo4cpg" path="res://assets/textures/environment/rock01.png" id="2_3sy3h"]
+[ext_resource type="Texture2D" uid="uid://btf3sh6thulmn" path="res://assets/textures/environment/rock04.png" id="2_3sy3h"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jqa65"]
 render_priority = 1
@@ -13,12 +13,14 @@ backlight = Color(1, 1, 1, 1)
 backlight_texture = ExtResource("2_3sy3h")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pmtgs"]
+size = Vector3(1.272, 1.072, 1.377)
 
 [node name="rocksCombined" type="Node3D"]
 script = ExtResource("1_cd4sp")
+variant = 3
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(0.141421, -0.0707107, 0.122474, 0, 0.173205, 0.0999997, -0.141421, -0.0707107, 0.122474, 0, 0.676, 0)
+transform = Transform3D(0.141421, -0.0707107, 0.122474, 0, 0.173205, 0.0999997, -0.141421, -0.0707107, 0.122474, 0, 0.765, 0)
 material_override = SubResource("StandardMaterial3D_jqa65")
 render_priority = 1
 texture = ExtResource("2_3sy3h")
@@ -28,5 +30,5 @@ region_rect = Rect2(523, 584, 907, 881)
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018, 0.575, 0.039)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.083, 0.539, -0.001)
 shape = SubResource("BoxShape3D_pmtgs")

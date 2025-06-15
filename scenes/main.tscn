@@ -592,7 +592,6 @@ variant = 1
 
 [node name="shrubAdvanced8" parent="environment/shrubs_new" instance=ExtResource("28_fv21b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.3355, 0, 40.4173)
-variant = 2
 
 [node name="shrubAdvanced9" parent="environment/shrubs_new" instance=ExtResource("28_fv21b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.96384, 0, 40.6592)
@@ -600,7 +599,6 @@ variant = 3
 
 [node name="shrubAdvanced10" parent="environment/shrubs_new" instance=ExtResource("28_fv21b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.75508, 0, 36.2251)
-variant = 2
 
 [node name="shrubAdvanced11" parent="environment/shrubs_new" instance=ExtResource("28_fv21b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.69472, 0, 38.5124)
@@ -627,7 +625,6 @@ variant = 3
 
 [node name="shrubAdvanced17" parent="environment/shrubs_new" instance=ExtResource("28_fv21b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.51669, 0, 31.6596)
-variant = 2
 
 [node name="shrubAdvanced18" parent="environment/shrubs_new" instance=ExtResource("28_fv21b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3903, 0, 29.6499)
@@ -670,7 +667,6 @@ variant = 1
 
 [node name="shrubAdvanced24" parent="environment/shrubs_new" instance=ExtResource("28_fv21b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0695, 0, 26.4717)
-variant = 2
 
 [node name="shrubAdvanced25" parent="environment/shrubs_new" instance=ExtResource("28_fv21b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.92016, 0, 27.8089)
@@ -700,7 +696,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0761, 0, 23.0236)
 
 [node name="shrubAdvanced51" parent="environment/shrubs_new" instance=ExtResource("28_fv21b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5947, 0, 22.7096)
-variant = 2
 
 [node name="shrubAdvanced52" parent="environment/shrubs_new" instance=ExtResource("28_fv21b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.77552, 0, 21.9109)
