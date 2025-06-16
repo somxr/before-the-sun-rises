@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://fhjm0rnlnx6c"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bsr4xdg5ptlhr"]
 
-[ext_resource type="Texture2D" uid="uid://d3rcufg8jpnem" path="res://assets/models/enemy_hooded/enemy_02_0.png" id="1_loykm"]
+[ext_resource type="Texture2D" uid="uid://ctbnf5gvb3qi4" path="res://assets/models/enemy_hooded/enemyv02_0.png" id="1_loykm"]
 
 [resource]
 albedo_texture = ExtResource("1_loykm")

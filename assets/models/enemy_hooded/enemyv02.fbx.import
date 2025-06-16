@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dix5q6cvdilpi"
-path="res://.godot/imported/enemy_02.fbx-102e241c1d130a82cca992ea6a831ae0.scn"
+uid="uid://bkvu3bpmirelm"
+path="res://.godot/imported/enemyv02.fbx-cf41404be309ecbb62879c2b1244a245.scn"
 
 [deps]
 
-source_file="res://assets/models/enemy_hooded/enemy_02.fbx"
-dest_files=["res://.godot/imported/enemy_02.fbx-102e241c1d130a82cca992ea6a831ae0.scn"]
+source_file="res://assets/models/enemy_hooded/enemyv02.fbx"
+dest_files=["res://.godot/imported/enemyv02.fbx-cf41404be309ecbb62879c2b1244a245.scn"]
 
 [params]
 
@@ -36,15 +36,7 @@ _subresources={
 "materials": {
 "model:aiStandardSurface1": {
 "use_external/enabled": true,
-"use_external/path": "uid://fhjm0rnlnx6c"
-}
-},
-"nodes": {
-"PATH:aiSkyDomeLight1": {
-"import/skip_import": true
-},
-"PATH:enemy_anim02_directionalLight1": {
-"import/skip_import": true
+"use_external/path": "uid://bsr4xdg5ptlhr"
 }
 }
 }
