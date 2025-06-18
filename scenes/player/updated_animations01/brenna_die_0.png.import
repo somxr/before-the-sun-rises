@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgvslr6m83eaq"
-path.s3tc="res://.godot/imported/tree05.png-29c8c9333d1ddc489bf1c821841f0226.s3tc.ctex"
+uid="uid://d2kxw3e6185qy"
+path.s3tc="res://.godot/imported/brenna_die_0.png-cc662429a620cbb1cde0311cf2aa08a9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "a0bf6915db6d93eaf21d418d164e194b"
+}
 
 [deps]
 
-source_file="res://assets/textures/environment/tree05.png"
-dest_files=["res://.godot/imported/tree05.png-29c8c9333d1ddc489bf1c821841f0226.s3tc.ctex"]
+source_file="res://scenes/player/updated_animations01/brenna_die_0.png"
+dest_files=["res://.godot/imported/brenna_die_0.png-cc662429a620cbb1cde0311cf2aa08a9.s3tc.ctex"]
 
 [params]
 

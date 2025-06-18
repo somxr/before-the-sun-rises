@@ -44,7 +44,8 @@ signal dash_cooldown_progress(percent)
 
 #this is the visual skin of the Player
 @onready var aiden_model: Node3D = $AidenModel
-@onready var brenna_model: Node3D = $brennaModel
+#@onready var brenna_model: Node3D = $brennaModel
+@onready var brenna_model: Node3D = $brenna_model_v05
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
 @onready var hurt_collision_shape_3d: CollisionShape3D = $hurtBox/hurtCollisionShape3D
 @onready var rock_hurt_sound: AudioStreamPlayer = $Rock_hurt_sound

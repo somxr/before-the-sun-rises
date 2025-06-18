@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://d31nctok4l7pn"
-path="res://.godot/imported/brenna.fbx-6a0e6c62bbefa8b2bc812d0ea322affc.scn"
+uid="uid://d3nys1e2camcm"
+path="res://.godot/imported/brenna_v05.fbx-86d54a18d5d5ee697a5c3f91cd223a4b.scn"
 
 [deps]
 
-source_file="res://scenes/player/models/brenna.fbx"
-dest_files=["res://.godot/imported/brenna.fbx-6a0e6c62bbefa8b2bc812d0ea322affc.scn"]
+source_file="res://scenes/player/updated_animations02/brenna_v05.fbx"
+dest_files=["res://.godot/imported/brenna_v05.fbx-86d54a18d5d5ee697a5c3f91cd223a4b.scn"]
 
 [params]
 
@@ -36,7 +36,7 @@ _subresources={
 "materials": {
 "model:model:Brenna_Char02:Brenna_TXT": {
 "use_external/enabled": true,
-"use_external/path": "uid://cumkge8ypkwdw"
+"use_external/path": "uid://b540mfxn6wu2b"
 }
 }
 }

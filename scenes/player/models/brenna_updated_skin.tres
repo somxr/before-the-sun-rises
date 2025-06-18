@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cumkge8ypkwdw"]
+
+[ext_resource type="Texture2D" uid="uid://bgsqx7n60iwis" path="res://scenes/player/models/brenna_updated_BaseColor.png" id="1_qu5ty"]
+
+[resource]
+albedo_texture = ExtResource("1_qu5ty")
