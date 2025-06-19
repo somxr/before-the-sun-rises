@@ -17,7 +17,7 @@ _data = {
 
 [node name="enemy" type="Node3D"]
 script = ExtResource("1_a3pup")
-throw_range = 20.0
+player_awareness_range = 22.0
 
 [node name="shootPosition" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11209, 1.59097, -0.919844)

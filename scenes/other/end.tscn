@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dcdaghr2y3dg5"]
 
 [ext_resource type="Script" uid="uid://bgx0810yu3ifd" path="res://scenes/other/end.gd" id="1_7u13w"]
-[ext_resource type="Texture2D" uid="uid://c5e0knsyo6wos" path="res://extra/background/endtag.png" id="1_mhkwv"]
+[ext_resource type="Texture2D" uid="uid://bapo1hnn2ugws" path="res://extra/background/end_tag02.png" id="2_3uisg"]
 [ext_resource type="FontFile" uid="uid://c8reywm06mjji" path="res://extra/fonts/BlackPoser-Regular.ttf" id="2_7u13w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3uisg"]
@@ -83,7 +83,7 @@ script = ExtResource("1_7u13w")
 
 [node name="End" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-texture = ExtResource("1_mhkwv")
+texture = ExtResource("2_3uisg")
 
 [node name="title" type="RichTextLabel" parent="."]
 offset_left = 776.0
@@ -131,6 +131,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_2g7rd")
 text = "Quit Game"
 
 [node name="background" type="ColorRect" parent="."]
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 size_flags_horizontal = 4

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqdej6j20wkl8"
-path.s3tc="res://.godot/imported/floor plane07.png-9bc9a516b098d859125d33529d309f15.s3tc.ctex"
+uid="uid://70adholxjpxm"
+path.s3tc="res://.godot/imported/floor plane08.png-be204266086e4c1ad9437aee83b74bfa.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/environment/floor plane07.png"
-dest_files=["res://.godot/imported/floor plane07.png-9bc9a516b098d859125d33529d309f15.s3tc.ctex"]
+source_file="res://assets/textures/environment/floor plane08.png"
+dest_files=["res://.godot/imported/floor plane08.png-be204266086e4c1ad9437aee83b74bfa.s3tc.ctex"]
 
 [params]
 

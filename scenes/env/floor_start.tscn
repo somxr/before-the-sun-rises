@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0i6t17vv7wkk"]
+[gd_scene load_steps=3 format=3 uid="uid://cqf5u5hohmev6"]
 
-[ext_resource type="Texture2D" uid="uid://70adholxjpxm" path="res://assets/textures/environment/floor plane08.png" id="1_2qfsa"]
+[ext_resource type="Texture2D" uid="uid://74jljnfp2l4h" path="res://assets/textures/environment/floor plane09.png" id="1_wc8qq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ex708"]
 size = Vector3(141.429, 0.990356, 142.438)
@@ -14,4 +14,4 @@ shape = SubResource("BoxShape3D_ex708")
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(3.52441, 0, 0, 0, -1.5498e-07, 1.00582, 0, -3.54553, -4.3966e-08, 0, 0, 0)
 shaded = true
-texture = ExtResource("1_2qfsa")
+texture = ExtResource("1_wc8qq")

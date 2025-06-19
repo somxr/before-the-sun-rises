@@ -16,7 +16,7 @@ var current_state = State.IDLE
 @export var throw_interval = 2.0  # Seconds between throws
 @export var throw_speed = 14.0
 @export var rock_gravity = 6.0
-@export var throw_range = 30.0  # Maximum distance to throw at player
+@export var player_awareness_range = 30.0  # Maximum distance to throw at player
 
 var throw_timer = 0.0
 
@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 		var distance_to_player = global_position.distance_to(player_pos)
 	
 	
-		if distance_to_player <= throw_range:
+		if distance_to_player <= player_awareness_range:
 			look_at(player_pos, Vector3.UP)
 		# Only throw if player is within range
 			if throwing_mode and current_state == State.IDLE:
@@ -46,9 +46,9 @@ func _physics_process(delta: float) -> void:
 				if throw_timer >= throw_interval:
 					throw_timer = 0
 					throw()
-			elif distance_to_player > throw_range:
-				# Reset timer if player moves out of range
-				throw_timer = 0
+		else:
+			# Reset timer if player moves out of range
+			throw_timer = 0
 
 func throw() -> void:
 	if current_state == State.IDLE:

@@ -43,7 +43,7 @@ signal dash_used(cooldown_duration)
 signal dash_cooldown_progress(percent)
 
 #this is the visual skin of the Player
-@onready var aiden_model: Node3D = $AidenModel
+#@onready var aiden_model: Node3D = $AidenModel
 #@onready var brenna_model: Node3D = $brennaModel
 @onready var brenna_model: Node3D = $brenna_model_v05
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
