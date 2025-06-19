@@ -1,9 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://7incfsglra4a"]
+[gd_scene load_steps=11 format=3 uid="uid://7incfsglra4a"]
 
 [ext_resource type="Script" uid="uid://ds0qu2ojtffvd" path="res://scripts/player/player.gd" id="1_8afob"]
-[ext_resource type="PackedScene" uid="uid://cllx3ikp0iiq6" path="res://scenes/player/aiden_model.tscn" id="2_dovo2"]
 [ext_resource type="Script" uid="uid://dcslo1v335s4o" path="res://scenes/player/hurt_box.gd" id="3_gmlin"]
-[ext_resource type="PackedScene" uid="uid://b6nb1vhgf1r7l" path="res://scenes/player/brenna_model.tscn" id="4_lvxji"]
 [ext_resource type="AudioStream" uid="uid://c3dvh8k7dy572" path="res://audio/rock_hitting_player.mp3" id="5_p47bc"]
 [ext_resource type="AudioStream" uid="uid://cmlun2ic2yyev" path="res://audio/death03.mp3" id="6_5gtgg"]
 [ext_resource type="AudioStream" uid="uid://drar2cicy8v7i" path="res://audio/dash.mp3" id="7_0owmy"]
@@ -32,10 +30,7 @@ shape = SubResource("CapsuleShape3D_dovo2")
 [node name="Camera3D" type="Camera3D" parent="cameraPivot"]
 transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 32.57, 28.584, 32.8812)
 projection = 1
-size = 11.7257
-
-[node name="AidenModel" parent="." instance=ExtResource("2_dovo2")]
-visible = false
+size = 10.7915
 
 [node name="hurtBox" type="Area3D" parent="."]
 collision_layer = 0
@@ -46,9 +41,6 @@ script = ExtResource("3_gmlin")
 [node name="hurtCollisionShape3D" type="CollisionShape3D" parent="hurtBox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0412103, 0.961926, 0)
 shape = SubResource("CapsuleShape3D_gmlin")
-
-[node name="brennaModel" parent="." instance=ExtResource("4_lvxji")]
-visible = false
 
 [node name="Timer" type="Timer" parent="."]
 

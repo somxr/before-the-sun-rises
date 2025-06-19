@@ -34,19 +34,21 @@ func _physics_process(delta: float) -> void:
 		
 		# Calculate distance to player
 		var distance_to_player = global_position.distance_to(player_pos)
-		
-		# Always look at player regardless of distance
-		look_at(player_pos, Vector3.UP)
-		
+	
+	
+		if distance_to_player <= throw_range:
+			look_at(player_pos, Vector3.UP)
 		# Only throw if player is within range
-		if throwing_mode and current_state == State.IDLE and distance_to_player <= throw_range:
-			throw_timer += delta
-			if throw_timer >= throw_interval:
+			if throwing_mode and current_state == State.IDLE:
+				# Always look at player regardless of distance
+				
+				throw_timer += delta
+				if throw_timer >= throw_interval:
+					throw_timer = 0
+					throw()
+			elif distance_to_player > throw_range:
+				# Reset timer if player moves out of range
 				throw_timer = 0
-				throw()
-		elif distance_to_player > throw_range:
-			# Reset timer if player moves out of range
-			throw_timer = 0
 
 func throw() -> void:
 	if current_state == State.IDLE:

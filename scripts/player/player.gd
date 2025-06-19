@@ -187,7 +187,7 @@ func _physics_process(delta: float) -> void:
 		# When dashing, move faster in the saved dash direction
 		velocity.x = dash_direction.x * dash_speed
 		velocity.z = dash_direction.z * dash_speed
-		aiden_model.look_at(dash_direction + position)
+		#aiden_model.look_at(dash_direction + position)
 		brenna_model.look_at(dash_direction + position)
 	else: #normal running movement
 		#WALKING LOGIC: when a direction is detected you can start walking
@@ -196,7 +196,7 @@ func _physics_process(delta: float) -> void:
 			velocity.z = direction.z * run_speed
 			
 			
-			aiden_model.look_at(direction+position)
+			#aiden_model.look_at(direction+position)
 			brenna_model.look_at(direction+position)
 			
 			#if the state was not already "walking" when a direction is input, 
